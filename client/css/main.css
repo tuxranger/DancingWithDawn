@@ -1,0 +1,17 @@
+body {
+    padding-top: 90px;
+}
+
+#topBar {
+    background-color: Black;
+    display: block;
+
+}
+
+#topBarWrap{
+    overflow: auto;
+}
+
+.nav-link{
+    color: White !important;
+}
