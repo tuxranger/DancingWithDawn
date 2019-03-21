@@ -22,4 +22,8 @@ angular.module('app')
 			return svc.getUser()
 		})
 	}
+
+	svc.logout = function() {
+		delete $http.defaults.headers.common['X-Auth']
+	}
 })
