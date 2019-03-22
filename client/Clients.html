@@ -10,7 +10,13 @@
 
 </head>
 <body ng-app="directoryApp" ng-controller="clientsCtrl">
+<!--this is the top navigation bar-->
 <!--links href need to be filled in-->
+    <div class="input-group col-sm fixed-top" id="searchBar">
+        <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"></span></span>
+        <input type="text" class="form-control" placeholder="Search" ng-model="query">
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="topBar">
         <!--this image needs to be changed to the real logo-->
         <div class="container">
@@ -85,15 +91,11 @@
             </div>
         </div>
     </nav>
-    <div class="input-group col-sm fixed-top" id="searchBar">
-        <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"></span></span>
-        <input type="text" class="form-control" placeholder="Search" ng-model="query">
-    </div>
-
+<!--this is the list of clients-->
     <div class="container">
         <ul style="list-style-type: none">
             <!--need to be able to pull the number of clients to input into list function-->
-            <li ng-repeat="n in list(5)">
+            <li ng-repeat="n in list(50)">
                 <div>
                     <!--this needs to pull the information of the current client and display it.-->
                     <!--the name of the client should be a link to the clients information page.-->
@@ -102,6 +104,23 @@
             </li>
         </ul>
     </div>
+
+    <footer class="footer">
+        <div class="row page-bottom align-items-center">
+            <div class="col-md text-center footer-info">
+                <p>contact email:</br>
+                    example@email.com</p>
+            </div>
+            <div class="col-md text-center footer-info">
+                <p>phone number:</br>
+                    305-867-5309</p>
+            </div>
+
+        </div>
+    </footer>
+    <footer class="copyright text-center">
+        copyright and trademark
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
