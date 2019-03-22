@@ -1,5 +1,7 @@
 body {
-    padding-top: 90px;
+    /*actual measurement should be the top margin of searchBar and the height of the search bar*/
+    /*90+38*/
+    padding-top: 128px;
 }
 
 #topBar {
@@ -12,6 +14,14 @@ body {
     overflow: auto;
 }
 
+#searchBar{
+    margin-top: 90px;
+}
+
 .nav-link{
     color: White !important;
+}
+
+.menu-button{
+    height: 54px;
 }

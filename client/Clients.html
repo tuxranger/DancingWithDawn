@@ -9,47 +9,95 @@
     <title>Clients</title>
 
 </head>
-<body>
+<body ng-app="directoryApp">
 <!--links href need to be filled in-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="topBar" >
         <!--this image needs to be changed to the real logo-->
         <div class="container">
             <a class="navbar-brand">
-                <img src="images/dummylogo.jpg">
+                <img src="images/dummylogo.jpg"/>
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
             aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link">Home</a>
+                        <button class="btn menu-button">
+                            <a class="nav-link">
+                                <div>
+                                    <image src="images/m'pengu dab.png"/>
+                                </div>
+                                Home
+                            </a>
+                        </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Classes</a>
+                        <button class="btn menu-button">
+                            <a class="nav-link">
+                                <div>
+                                    <image src="images/m'pengu dab.png"/>
+                                </div>
+                                Classes
+                            </a>
+                        </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">About</a>
+                        <button class="btn menu-button">
+                            <a class="nav-link">
+                                <div>
+                                    <image src="images/m'pengu dab.png"/>
+                                </div>
+                                About
+                            </a>
+                        </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Media</a>
+                        <button class="btn menu-button">
+                            <a class="nav-link">
+                                <div>
+                                    <image src="images/m'pengu dab.png"/>
+                                </div>
+                                Media
+                            </a>
+                        </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Parents</a>
+                        <button class="btn menu-button">
+                            <a class="nav-link">
+                                <div>
+                                    <image src="images/m'pengu dab.png"/>
+                                </div>
+                                Parents
+                            </a>
+                        </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Payments</a>
+                        <button class="btn menu-button">
+                            <a class="nav-link">
+                                <div>
+                                    <image src="images/m'pengu dab.png"/>
+                                </div>
+                                Payments
+                            </a>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="input-group col-sm fixed" id="searchBar">
+    <div class="input-group col-sm fixed-top" id="searchBar">
         <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"></span></span>
         <input type="text" class="form-control" placeholder="Search" ng-model="query">
     </div>
 
     <div class="container">
+        <ul style="list-style-type: none">
+            <li>
+                <div>
 
+                </div>
+            </li>
+        </ul>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
