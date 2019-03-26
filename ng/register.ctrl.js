@@ -4,7 +4,7 @@ angular.module('app')
 		UserSvc.register(username, password)
 		.then(function (response) {
 			$scope.$emit('login', response.data)
-			$location.path('/')
+			$location.path('/user-account')
 		})
 	}
 })

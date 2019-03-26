@@ -11,7 +11,7 @@ app.use('/api/users', require('./controllers/api/users'))
 app.use(require('./controllers/static'))
 
 app.get('/', function (req, res) {
-	res.sendfile('layouts/posts.html')
+	res.sendfile('layouts/index.html')
 })
 
 var server = app.listen(process.env.PORT || 3000, function() {
