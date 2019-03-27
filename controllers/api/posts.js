@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res, next) {
 	var post = new Post({ body: req.body.body })
-	post.username = req.auth.username
+	post.email = req.auth.email
 	post.save(function(err, post) {
 		if (err) { return next(err) }
 		res.status(201).json(post)

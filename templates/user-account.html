@@ -4,30 +4,17 @@
 	<h1 class="display-4">User Account</h1>
 </div>
 
-<div class='container'>
-	<form role='form' ng-show="currentUser">
-		<div class='form-group'>
-			<div class='input-group'>
-				<input ng-model='postBody' class='form-control' />
-				<span class='input-group-btn'>
-					<button ng-click='addPost()' class='btn btn-default'>Add Post</button>
-				</span>
-			</div>
-		</div>
-	</form>
+<div class='container' ng-if='currentUser'>
+	<h2>Contact Information</h2>
+	<p><span class='font-weight-bold'>Parent/Guardian Name</span><br>{{currentUser.firstName}} {{currentUser.lastName}}</p>
+	<p><span class='font-weight-bold'>Address</span><br>{{currentUser.streetAddress}}, {{currentUser.city}}, {{currentUser.state}} {{currentUser.zip}}</p>
+	<p><span class='font-weight-bold'>Email</span><br>{{currentUser.email}}</p>
+	<p><span class='font-weight-bold'>Phone</span><br>{{currentUser.phone}}</p>
 
-	<ul class='list-group'>
-		<li ng-repeat="post in posts | orderBy: '-date'" class='list-group-item'>
-			<strong>@{{ post.username }}</strong>
-			<span>{{ post.body }}</span>
-		</li>
-	</ul>
+	<a class='btn btn-primary' href="">Edit Contact Info</a>
+	&nbsp; &nbsp; &nbsp;
+	<a class='btn btn-primary' href="">Change Password</a>
+	&nbsp; &nbsp; &nbsp;
+	<a class='btn btn-primary' href="">Add Child</a>
+
 </div>
-
-
-<!--
-<p ng-if='currentUser' class="navbar-text navbar-right">
-				Signed in as {{currentUser.username}}   
-				<button ng-click='logout()'>log out</button>
-			</p>
--->
