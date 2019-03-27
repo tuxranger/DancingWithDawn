@@ -34,4 +34,18 @@ angular.module('app')
 	svc.logout = function() {
 		delete $http.defaults.headers.common['X-Auth']
 	}
+
+	svc.update = function (id, email, firstName, lastName, streetAddress, city, state, zip, phone) {
+		return $http.put('/api/users/update', {
+			id: id,
+			email: email,
+			firstName: firstName,
+			lastName: lastName,
+			streetAddress: streetAddress,
+			city: city,
+			state: state,
+			zip: zip,
+			phone: phone
+		})
+	}
 })
