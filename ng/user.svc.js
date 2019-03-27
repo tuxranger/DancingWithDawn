@@ -5,17 +5,25 @@ angular.module('app')
 		return $http.get('/api/users')
 	}
 
-	svc.register = function (username, password) {
+	svc.register = function (email, password, firstName, lastName, streetAddress, city, state, zip, phone) {
 		return $http.post('/api/users', {
-			username: username, password: password
+			email: email,
+			password: password,
+			firstName: firstName,
+			lastName: lastName,
+			streetAddress: streetAddress,
+			city: city,
+			state: state,
+			zip: zip,
+			phone: phone
 		}).then(function () {
-			return svc.login(username, password)
+			return svc.login(email, password)
 		})
 	}
 
-	svc.login = function (username, password) {
+	svc.login = function (email, password) {
 		return $http.post('/api/sessions', {
-			username: username, password: password
+			email: email, password: password
 		}).then(function (val) {
 			svc.token = val.data
 			$http.defaults.headers.common['X-Auth'] = val.data
