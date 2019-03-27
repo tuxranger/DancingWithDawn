@@ -50,7 +50,6 @@ router.put('/update', function (req, res, next) {
       		console.log(err);
       		return res.status(400).send(err);
     	} else {
-    		console.log("Updated?")
       		return res.json(obj);
     	}
     })
