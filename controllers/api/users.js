@@ -43,4 +43,17 @@ router.post('/', function (req, res, next) {
 	})
 })
 
+router.put('/update', function (req, res, next) {
+	
+	User.findByIdAndUpdate(req.body.id, req.body, function (err, obj) {
+    	if (err) {
+      		console.log(err);
+      		return res.status(400).send(err);
+    	} else {
+    		console.log("Updated?")
+      		return res.json(obj);
+    	}
+    })
+})
+
 module.exports = router

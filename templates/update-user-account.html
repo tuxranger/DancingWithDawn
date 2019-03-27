@@ -1,0 +1,48 @@
+<ng-include src="'navigation.html'"></ng-include>
+
+<div class='container' ng-if='currentUser'>
+	<form ng-submit="update(currentUser._id, currentUser.email, currentUser.firstName, currentUser.lastName, currentUser.streetAddress, currentUser.city, currentUser.state, currentUser.zip, currentUser.phone)" class='w-50 mx-auto p-3'>
+
+		<div class="form-group">
+			<label>Email Address</label>
+			<input class="form-control" type="text" ng-model="currentUser.email">
+		</div>
+
+		<div class="form-group">
+			<label>Parent/Guardian First Name</label>
+			<input class="form-control" type="text" ng-model="currentUser.firstName">
+		</div>
+
+		<div class="form-group">
+			<label>Parent/Guardian Last Name</label>
+			<input class="form-control" type="text" ng-model="currentUser.lastName">
+		</div>
+
+		<div class="form-group">
+			<label>Street Address</label>
+			<input class="form-control" type="text" ng-model="currentUser.streetAddress">
+		</div>
+
+		<div class="form-group">
+			<label>City</label>
+			<input class="form-control" type="text" ng-model="currentUser.city">
+		</div>
+
+		<div class="form-group">
+			<label>State</label>
+			<input class="form-control" type="text" ng-model="currentUser.state">
+		</div>
+
+		<div class="form-group">
+			<label>Zip Code</label>
+			<input class="form-control" type="text" ng-model="currentUser.zip">
+		</div>
+
+		<div class="form-group">
+			<label>Phone Number</label>
+			<input class="form-control" type="text" ng-model="currentUser.phone">
+		</div>
+
+		<input class="btn btn-success btn-lg btn-block" type="submit" value="Update Information">
+	</form>
+</div>
