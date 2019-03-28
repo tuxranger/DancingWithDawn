@@ -1,0 +1,78 @@
+html {
+    position: relative;
+    min-height: 100%;
+
+}
+body {
+    /*actual measurement should be the top margin of searchBar and the height of the search bar*/
+    /*90+38*/
+    /*margin bottom needs to be height of footer*/
+    /*48+48 (for mobile stacking)*/
+
+    padding-top: 128px;
+    margin-bottom: 148px;
+}
+
+#topBar {
+    background-color: Black;
+    display: block;
+    width: 100% !important;
+}
+
+#topBarWrap{
+    overflow: auto;
+}
+
+#searchBar{
+    margin-top: 90px;
+    width: 100% !important;
+}
+
+.nav-link{
+    color: White !important;
+}
+
+.menu-button{
+    height: 54px;
+}
+
+.footer{
+    position: absolute;
+    padding-right: 16px;
+    bottom: 22px;
+    width: 100%;
+    /*height: $height-bottom;*/
+    background-color: black
+}
+
+.footer-info{
+    color: White;
+}
+
+
+
+
+
+
+
+
+
+
+.register-form {
+  background-color: grey;
+}
+
+
+
+
+
+
+
+.copyright{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 12pt;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
