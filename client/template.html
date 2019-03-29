@@ -1,75 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>template</title>
-</head>
+    <title>Clients</title>
 
+</head>
 <body ng-app="directoryApp" ng-controller="clientsCtrl">
 <!--this is the top navigation bar-->
 <!--links href need to be filled in-->
 
-<!--... Navbar needs to be right justified whilst logo is left justified-->
-
-<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="topBar">
-  <div class="container-fluid">
-
-    <a class="navbar-brand" id="logo">
-      <!--....NEEDS REAL LOGO-->
-      <img src="images/logo.jpg"/>
-    </a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-    aria-expanded="true" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto align-items-center">
-        <li class="nav-item">
-          <a class="nav-link" href="/Classes.html">Classes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/FAQ.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/About.html">FAQ</a>
-        </li>
-        <li class="nav-item">
-          <p>       </p>
-        </li>
-        <li class="nav-item">
-          <!-- Login + Needs To Hide if Already logged in-->
-          <button type="button" ng-hide='currentUser' href="/Login.html" class="btn btn-primary btn-sm">Login / Register</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- SECOND NAVBAR IF LOGGED IN-->
-  <!-- This needs to Be Edited in the Case of the Navigation Bar -->
-  <div ng-if='currentUser' class="container-fluid d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark">
-    <h5 class="my-0 mr-md-auto text-light">Welcome, {{currentUser.firstName}}!</h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-light" href="/#/user-account">Account</a>
-      <a class="p-2 text-light" href="/#/user-classes">Classes</a>
-      <a class="p-2 text-light" href="/#/user-photos">Photos</a>
-      <a class="p-2 text-light" href="/#/user-payments">Payments</a>
-      <a class="p-2 text-light" href="/#/user-forms">Forms</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="topBar">
+        <div class="container">
+            <a class="navbar-brand ">
+<!--            -change to the real logo-->
+                <img src="images/logo.jpg"/>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Classes.html">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="/FAQ.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="/About.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link">      </a>
+                    </li>
+<!-- Login + Needs To Hide if Already logged in-->
+                    <li class="nav-item">
+                        <button type="button" href="/Login.html" class="btn btn-primary btn-sm">Login / Register</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </div>
-</nav>
-</div>
-
-<!--...I imagine that we will also have another form here,
-    ... With ng-if='admin', for example. so admin controls can be used-->
-
-<!--...Needs to Remove bottom margin of navbar Here-->
-
 <!--TEMPLATE BOTTOM-->
-
-
-
-
 
 
 
@@ -85,37 +59,48 @@
 
 
 
+
+
+
+
+
 <!--TEMPLATE BOTTOM-->
 <!-- Contact Area-->
 <!-- I have to alter This Footer Code from Aristotles-->
-    <footer class="footer">
-        <div class="row page-bottom align-items-center">
-          <div class="col-md-4 ">
-              <h5>Please Contact Dawn Directly At:</h5>
-          </div>
-            <div class="media col-md-4 px-0 ">
-<!-- ++NEED ICON FILES for PHONE + EMAIL -->
-                      <img src="images/icon-email.jpg" class="img-fluid align-self-center">
-                      <h6 class="align-self-center">dancewithdawn@gmail.com</h6>
-            </div>
-            <div class="media col-md-4 px-0">
-                    <img src="images/icon-email.jpg" class="img-fluid align-self-center">
-                    <h6 class="align-self-center">(352)-225-8960</h6>
-            </div>
-        </div>
-        <div class="copyright">
-          Dance With Dance © 2019
-        </div>
-    </footer>
+<footer class="footer">
+  <div class="row page-bottom align-items-center">
+    <div class="col-md-4 text-center footer-info">
+      <h5>Please Contact Dawn Directly At:</h5>
+    </div>
+    <div class="col-md-4 text-center footer-info">
+      <div class="col-md-4 px-0">
+        <!-- ++NEED ICON FILES for PHONE + EMAIL -->
+        <img src="images/icon-email.jpg" class="img-fluid">
+      </div>
+      <h5>dancewithdawn@gmail.com</h5>
+    </div>
+    <div class="col-md text-center footer-info">
+      <div class="col-md-4 px-0">
+        <img src="images/icon-email.jpg" class="img-fluid">
+      </div>
+      <h5>352-225-8960</h5>
+    </div>
+  </div>
+</footer>
 
 
+<!-- This Needs to be turned into a sticky footer -->
+<div class="container copyright">
+  <b>Copyright © 2019 Dance With Dance. All Rights Reserved.</b>
+</div>
 
-<!--SCRIPTS-->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="../node_modules/angular/angular.js"></script>
     <script src="js/app.js"></script>
     <script src="js/clientsController.js"></script>
+
 </body>
 </html>
