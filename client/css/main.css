@@ -43,11 +43,6 @@ body {
     overflow: auto;
 }
 
-#searchBar{
-    margin-top: 90px;
-    width: 100% !important;
-}
-
 #quote{
     background-color: rgba(201,201,202,0.5);
     border: none;
@@ -110,6 +105,13 @@ body {
     padding-bottom: 3px;
 }
 
+.contentBox{
+    background-color: lightgray;
+    margin-left: 2%;
+    margin-right: 2%;
+    overflow: hidden;
+}
+
 /*FAQ page*/
 #faqSubheading{
     background-color: black;
@@ -122,6 +124,11 @@ body {
 }
 
 /*Admin view of all clients page*/
+#searchBar{
+    margin-top: 90px;
+    width: 100% !important;
+}
+
 .clientsInfo{
     border-style: solid;
     height: 100px;
@@ -131,4 +138,27 @@ body {
 .clientLink{
     /*figure out what should be done on hover and visited*/
     color: black;
+}
+
+/*Admin account page*/
+.changeInfo, .changeInfo:hover{
+    background-color: #a0a0a0;
+    border-color: #707070;
+    margin-bottom: 20px;
+}
+
+.changeInfo:active:focus, .changeInfo:active, .changeInfo:focus {
+    background-color: grey!important;
+    border-color: #707070!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+.resetPassword, .resetPassword:hover{
+    color: red;
+    float: right;
+}
+
+.accountPageSpacing{
+    margin: 6px;
 }
