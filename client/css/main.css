@@ -10,7 +10,10 @@ body {
     /*48+48 (for mobile stacking)*/
 
     padding-top: 128px;
-    margin-bottom: 148px;
+    /*I commented this out and left it because these are the current values for desktop viewing vs mobile viewing. without the adjustment to the margin
+    the mobile view's footer covers content from the page. So we need to figure out a way to make this a bit more dynamic if possible*/
+    /*margin-bottom: 148px;*/
+    margin-bottom: 296px;
 }
 
 .navbar {
@@ -94,7 +97,31 @@ body {
     color: White;
 }
 
-/*This is related to the view of all clients page*/
+.register-form {
+  background-color: grey;
+}
+
+.copyright{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 12pt;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/*FAQ page*/
+#faqSubheading{
+    background-color: black;
+    color: white;
+    width: 100% !important;
+}
+/*This can be used instead of the <b> element so we can control color and acutal size of the bolding and such for the questions text*/
+.questions{
+
+}
+
+/*Admin view of all clients page*/
 .clientsInfo{
     border-style: solid;
     height: 100px;
@@ -104,27 +131,4 @@ body {
 .clientLink{
     /*figure out what should be done on hover and visited*/
     color: black;
-}
-
-
-
-
-
-.register-form {
-  background-color: grey;
-}
-
-
-
-
-
-
-
-.copyright{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-size: 12pt;
-    padding-top: 3px;
-    padding-bottom: 3px;
 }
