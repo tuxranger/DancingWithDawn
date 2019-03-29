@@ -94,10 +94,17 @@ body {
     color: White;
 }
 
+/*This is related to the view of all clients page*/
+.clientsInfo{
+    border-style: solid;
+    height: 100px;
+    margin: 10px;
+}
 
-
-
-
+.clientLink{
+    /*figure out what should be done on hover and visited*/
+    color: black;
+}
 
 
 
