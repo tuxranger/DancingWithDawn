@@ -1,3 +1,6 @@
+
+/* Template CSS - Anything Related to main Template is Here*/
+
 html {
     position: relative;
     min-height: 100%;
@@ -23,10 +26,10 @@ body {
     overflow: auto;
 }
 
-#searchBar{
-    margin-top: 90px;
-    width: 100% !important;
+#logo {
+  align-content: left;
 }
+
 
 .nav-link{
     color: White !important;
@@ -36,43 +39,53 @@ body {
     height: 54px;
 }
 
-.footer{
-    position: absolute;
-    padding-right: 16px;
-    bottom: 22px;
-    width: 100%;
-    /*height: $height-bottom;*/
-    background-color: black
-}
-
-.footer-info{
-    color: White;
-}
-
-
-
-
-
-
-
-
-
+.nav {margin-bottom: 0;}
 
 .register-form {
   background-color: grey;
 }
 
-
-
-
-
-
+.footer{
+    position: fixed;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    bottom: 22px;
+    width: 100%;
+    /*height: $height-bottom;*/
+    background-color: black;
+    color: white;
+    text-align: center;
+}
 
 .copyright{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    font-size: 12pt;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 2px;
+    background-color: white;
+        font-size: 12pt;
+        color: black;
 }
+
+.alt-container{ /* This is used with inside Grey Boxes */
+  background-color: grey;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* ADMIN Template */
+
+
+
+/* USER Template */
+
+
+
+
+
+
+/* Static Pages */
+/* Anything classes related to Static Content Place Here */
