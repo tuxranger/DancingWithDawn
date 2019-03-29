@@ -5,6 +5,7 @@
 </div>
 
 <div class='container' ng-if='currentUser'>
+
 	<h2>Contact Information</h2>
 	<p><span class='font-weight-bold'>Parent/Guardian Name</span><br>{{currentUser.firstName}} {{currentUser.lastName}}</p>
 	<p><span class='font-weight-bold'>Address</span><br>{{currentUser.streetAddress}}, {{currentUser.city}}, {{currentUser.state}} {{currentUser.zip}}</p>
@@ -15,6 +16,8 @@
 	&nbsp; &nbsp; &nbsp;
 	<a class='btn btn-primary disabled' href="">Change Password</a>
 	&nbsp; &nbsp; &nbsp;
-	<a class='btn btn-primary disabled' href="">Add Child</a>
+	<a class='btn btn-primary' href="/#/add-child">Add Child</a>
 
 </div>
+
+<ng-include src="'footer.html'"></ng-include>

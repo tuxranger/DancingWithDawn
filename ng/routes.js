@@ -16,4 +16,5 @@ angular.module('app')
 	.when('/user-forms', { templateUrl: 'user-forms.html' })
 
 	.when('/update-user-account', { controller: 'UpdateCtrl', templateUrl: 'update-user-account.html' })
+	.when('/add-child', { controller: 'ChildCtrl', templateUrl: 'add-child.html' })
 })
