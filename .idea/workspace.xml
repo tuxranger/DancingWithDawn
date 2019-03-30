@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="173a8eaf-6fe6-458a-b074-0c682c142722" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/FAQ.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/FAQ.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/user/adminclasses.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/user/adminclasses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,7 +27,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/user/adminclasses.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
+            <state relative-caret-position="629">
               <caret line="175" column="61" selection-start-line="175" selection-start-column="61" selection-end-line="175" selection-end-column="61" />
             </state>
           </provider>
@@ -195,12 +193,12 @@
       <workItem from="1553820415180" duration="10593000" />
       <workItem from="1553842204179" duration="4437000" />
       <workItem from="1553872044644" duration="137000" />
-      <workItem from="1553872274817" duration="20722000" />
+      <workItem from="1553872274817" duration="21322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37123000" />
+    <option name="totallyTimeSpent" value="37723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -402,7 +400,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/user/adminclasses.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
+        <state relative-caret-position="629">
           <caret line="175" column="61" selection-start-line="175" selection-start-column="61" selection-end-line="175" selection-end-column="61" />
         </state>
       </provider>
