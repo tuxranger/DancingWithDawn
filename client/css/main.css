@@ -162,3 +162,40 @@ body {
 .accountPageSpacing{
     margin: 6px;
 }
+
+/*Admin classes page*/
+.className{
+    font-size: x-large;
+    display: block;
+}
+
+.classSubheading{
+    font-size: large;
+    font-style: italic;
+}
+
+.classInfoButton, .classInfoButton:hover{
+    width: 65%;
+    background-color: #a0a0a0;
+    border-color: #707070;
+}
+
+.classInfoButton:active:focus, .classInfoButton:active, .classInfoButton:focus {
+    background-color: grey!important;
+    border-color: #707070!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+.classEditButton,.classEditButton:hover{
+    width: 30%;
+    background-color: #a0a0a0;
+    border-color: #707070;
+}
+
+.classEditButton:active:focus, .classEditButton:active, .classEditButton:focus {
+    background-color: grey!important;
+    border-color: #707070!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
