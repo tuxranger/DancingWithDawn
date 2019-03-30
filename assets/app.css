@@ -2,10 +2,9 @@ h1 {
   color: #333;
 }
 .child-container {
-  border: 1px solid #333;
-  margin: 20px;
-  padding: 20px;
+  border: 1px solid #aaa;
+  background-color: #fff;
 }
-.child-container btn {
-  float: right;
+.grey-bg {
+  background-color: #f3f3f3;
 }
