@@ -1,20 +1,40 @@
-<ng-include src="'navigation.html'"></ng-include>
-	
-<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-	<h1 class="display-4">User Account</h1>
-</div>
+<div class="grey-bg">
 
-<div class='container' ng-if='currentUser'>
-	<h2>Contact Information</h2>
-	<p><span class='font-weight-bold'>Parent/Guardian Name</span><br>{{currentUser.firstName}} {{currentUser.lastName}}</p>
-	<p><span class='font-weight-bold'>Address</span><br>{{currentUser.streetAddress}}, {{currentUser.city}}, {{currentUser.state}} {{currentUser.zip}}</p>
-	<p><span class='font-weight-bold'>Email</span><br>{{currentUser.email}}</p>
-	<p><span class='font-weight-bold'>Phone</span><br>{{currentUser.phone}}</p>
+	<ng-include src="'navigation.html'"></ng-include>
 
-	<a class='btn btn-primary' href="/#/update-user-account">Edit Contact Info</a>
-	&nbsp; &nbsp; &nbsp;
-	<a class='btn btn-primary disabled' href="">Change Password</a>
-	&nbsp; &nbsp; &nbsp;
-	<a class='btn btn-primary disabled' href="">Add Child</a>
+	<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+		<h1 class="display-4">User Account</h1>
+	</div>
+
+	<div class='container' ng-if='currentUser'>
+	<div class='row'>
+		<div class='col-6'>
+			<h2>Children</h2>
+			<div ng-repeat="child in testChildren" class='container child-container p-3 my-3'>
+				<p><span class='font-weight-bold'>Child Name</span><br>{{child.firstName}} {{child.lastName}}</p>
+				<a class='btn btn-primary  disabled' href="">Edit Child Info</a>
+			</div>
+		<a class='btn btn-primary w-100' href="/#/add-child">Add Child</a>
+		</div>
+		
+		<div class='col-6'>
+			<h2>Contact Information</h2>
+			<div class='container child-container p-3 m-3'>
+				<p><span class='font-weight-bold'>Parent/Guardian Name</span><br>{{currentUser.firstName}} {{currentUser.lastName}}</p>
+				<p><span class='font-weight-bold'>Address</span><br>{{currentUser.streetAddress}}, {{currentUser.city}}, {{currentUser.state}} {{currentUser.zip}}</p>
+				<p><span class='font-weight-bold'>Email</span><br>{{currentUser.email}}</p>
+				<p><span class='font-weight-bold'>Phone</span><br>{{currentUser.phone}}</p>
+
+				<a class='btn btn-primary' href="/#/update-user-account">Edit Contact Info</a>
+				&nbsp; &nbsp; &nbsp;
+				<a class='btn btn-primary disabled' href="">Change Password</a>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<p></p>
+
+	<ng-include src="'footer.html'"></ng-include>
 
 </div>

@@ -1,6 +1,7 @@
 angular.module('app')
 .service('UserSvc', function ($http) {
 	var svc = this
+
 	svc.getUser = function () {
 		return $http.get('/api/users')
 	}
@@ -48,4 +49,21 @@ angular.module('app')
 			phone: phone
 		})
 	}
+
+	svc.addChild = function (adultId, firstName, lastName, dob, notes) {
+		console.log(adultId)
+
+		return $http.post('/api/users/addChild', {
+			adultId: adultId,
+			firstName: firstName,
+			lastName: lastName,
+			dob: dob,
+			notes: notes
+		})
+	}
+
+	svc.getAllChildren = function () {
+		return $http.get('/api/users/getAllChildren')
+	}
+
 })
