@@ -86,6 +86,18 @@ router.post('/addChild', function (req, res, next) {
 
 })
 
+// Used to update user account information
+router.put('/updateChild', function (req, res, next) {
+	Child.findByIdAndUpdate(req.body._id, req.body, function (err, child) {
+    	if (err) {
+      		console.log(err);
+      		return res.status(400).send(err);
+    	} else {
+      		return res.json(child);
+    	}
+    })
+})
+
 // Returns all children docs attached to a parent
 router.get('/getAllChildren', function (req, res, next) {
 	if (!req.headers['x-auth']) {

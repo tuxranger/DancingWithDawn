@@ -1,0 +1,36 @@
+<ng-include src='"navigation.html"'></ng-include>
+
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+	<h1 class="display-4">Edit Child Information</h1>
+</div>
+
+<div class='container' ng-if='currentUser'>
+	<form ng-submit="updateChild(currentUser.childToUpdate)" class='w-50 mx-auto p-3'>
+
+		<div class="form-group">
+			<label>Child First Name</label>
+			<input class="form-control" type="text" ng-model="currentUser.childToUpdate.firstName">
+		</div>
+
+		<div class="form-group">
+			<label>Child Last Name</label>
+			<input class="form-control" type="text" ng-model="currentUser.childToUpdate.lastName">
+		</div>
+
+		<div class="form-group">
+			<label>Date of Birth (MM/DD/YYYY)</label>
+			<input class="form-control" type="text" ng-model="currentUser.childToUpdate.dob">
+		</div>
+
+		<div class="form-group">
+			<label>Notes (please include any medical conditions, allergies, or any additional information you would like me to know): </label>
+			<textarea rows="4" class="form-control" type="text" ng-model="currentUser.childToUpdate.notes"></textarea>
+		</div>
+
+		<input class="btn btn-success btn-lg btn-block" type="submit" value="Update Information">
+	</form>
+
+	<div class='container w-50 mx-auto'>
+		<a class="btn btn-danger btn-lg btn-block disabled" ng-click="">Delete Child Information</a>
+	</div>
+</div>
