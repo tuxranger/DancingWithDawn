@@ -86,4 +86,26 @@ router.post('/addChild', function (req, res, next) {
 
 })
 
+// Returns all children docs attached to a parent
+router.get('/getAllChildren', function (req, res, next) {
+	if (!req.headers['x-auth']) {
+		return res.sendStatus(401)
+	}
+
+	var auth = jwt.decode(req.headers['x-auth'], config.secret)
+	User.findOne({email: auth.email}, function (err, user) {
+		if (err) { return next(err) }
+
+		var childrenIds = user.children
+
+		Child.find({
+    		'_id': { $in: childrenIds}
+		}, function(err, children){
+			if (err) { return next(err) }
+     		res.json(children)
+		});
+		
+	})
+})
+
 module.exports = router
