@@ -56,6 +56,27 @@ router.put('/update', function (req, res, next) {
     })
 })
 
+// Updates password by hashing new password and storing it in database
+router.put('/updatePassword', function (req, res, next) {
+
+	User.findOne( {_id: req.body.id}, function (err, user) {
+		if (err) { return next(err) }
+		
+		bcrypt.hash(req.body.password, 10, function (err, hash) {
+			if (err) { return next(err) }
+		
+			user.password = hash
+		
+			user.save(function (err) {
+				if (err) { return next(err) }
+				res.sendStatus(201)
+			})
+		})
+	})
+
+})
+
+
 // Creates new user account and saves to database
 router.post('/addChild', function (req, res, next) {
 

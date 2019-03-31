@@ -11,6 +11,7 @@ angular.module('app')
 	
 	.when('/user-account', { controller: 'UserCtrl', templateUrl: 'user-account.html' })
 	.when('/update-user-account', { controller: 'UpdateCtrl', templateUrl: 'update-user-account.html' })
+	.when('/update-user-password', { controller: 'UpdateCtrl', templateUrl: 'update-user-password.html' })
 
 	.when('/add-child', { controller: 'ChildCtrl', templateUrl: 'add-child.html' })
 	.when('/update-child', { controller: 'UserCtrl', templateUrl: 'update-child.html' })

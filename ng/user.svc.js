@@ -50,6 +50,13 @@ angular.module('app')
 		})
 	}
 
+	svc.updatePassword = function (id, newPassword) {
+		return $http.put('/api/users/updatePassword', {
+			id: id,
+			password: newPassword
+		})
+	}
+
 	svc.updateChild = function (child) {
 		return $http.put('/api/users/updateChild', child)
 	}

@@ -6,4 +6,19 @@ angular.module('app')
 			$location.path('/user-account')
 		})
 	}
+
+	$scope.updatePassword = function (id, newPassword, checkPassword) {
+		if (newPassword != checkPassword) {
+			$scope.passwordsMatch = true
+			return false
+		}
+
+		$scope.passwordsMatch = false
+	
+		UserSvc.updatePassword(id, newPassword)
+		.then(function (res) {
+			$location.path('/user-account')
+		})
+	}
+
 })
