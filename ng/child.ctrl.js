@@ -6,5 +6,5 @@ angular.module('app')
 		.then(function (response) {
 			$location.path('/user-account')
 		})
-	}	
+	}
 })

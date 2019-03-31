@@ -1,5 +1,5 @@
 angular.module('app')
-.controller('ApplicationCtrl', function ($scope, UserSvc) {
+.controller('ApplicationCtrl', function ($scope, UserSvc, $location) {
 	$scope.$on('login', function(_, user) {
 		$scope.currentUser = user
 	})
@@ -7,6 +7,7 @@ angular.module('app')
 	$scope.logout = function() {
 		UserSvc.logout()
 		delete $scope.currentUser
+		$location.path('/login')
 	}
 
 })
