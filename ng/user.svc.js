@@ -25,10 +25,13 @@ angular.module('app')
 	svc.login = function (email, password) {
 		return $http.post('/api/sessions', {
 			email: email, password: password
-		}).then(function (val) {
+		})
+		.then(function (val) {
 			svc.token = val.data
 			$http.defaults.headers.common['X-Auth'] = val.data
 			return svc.getUser()
+		}, function(err) {
+			return err
 		})
 	}
 

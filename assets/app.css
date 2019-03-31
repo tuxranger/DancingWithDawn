@@ -1,10 +1,17 @@
 h1 {
-  color: #333;
+	color: #333333;
 }
-.child-container {
-  border: 1px solid #aaa;
-  background-color: #fff;
+
+.child-container {	
+	border: 1px solid #aaa;
+	background-color: #fff;
 }
+
 .grey-bg {
-  background-color: #f3f3f3;
+	background-color: #f3f3f3;
 }
+
+.user-form {
+	background-color: #fff;
+	border: 1px solid #aaa;
+} 
