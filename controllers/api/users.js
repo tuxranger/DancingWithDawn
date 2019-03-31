@@ -98,6 +98,27 @@ router.put('/updateChild', function (req, res, next) {
     })
 })
 
+// Used to update user account information
+router.put('/deleteChild', function (req, res, next) {
+	var parentId = req.body.adult
+	var childId = req.body._id
+
+	Child.deleteOne({_id :childId}, function (err) {
+		if (err) {
+      		return res.status(400).send(err);
+    	} else {
+      		User.findByIdAndUpdate(parentId, {$pull: {children: childId}}, function (err, user) {
+    			if (err) {
+    	  			console.log(err);
+    	  			return res.status(400).send(err);
+    			} else {
+    	  			return res.json(user);
+    			}
+    		})
+    	}
+	})
+})
+
 // Returns all children docs attached to a parent
 router.get('/getAllChildren', function (req, res, next) {
 	if (!req.headers['x-auth']) {

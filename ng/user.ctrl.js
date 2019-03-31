@@ -16,4 +16,11 @@ angular.module('app')
 		})
 	}
 
+	$scope.deleteChild = function(child) {
+		UserSvc.deleteChild(child)
+		.then(function (response) {
+			$location.path('/user-account')
+		})
+	}
+
 })

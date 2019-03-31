@@ -54,6 +54,10 @@ angular.module('app')
 		return $http.put('/api/users/updateChild', child)
 	}
 
+	svc.deleteChild = function (child) {
+		return $http.put('/api/users/deleteChild', child)
+	}
+
 	svc.addChild = function (adultId, firstName, lastName, dob, notes) {
 		console.log(adultId)
 
