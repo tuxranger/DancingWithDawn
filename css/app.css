@@ -10,3 +10,8 @@ h1 {
 .grey-bg {
 	background-color: #f3f3f3;
 }
+
+.user-form {
+	background-color: #fff;
+	border: 1px solid #aaa;
+} 
