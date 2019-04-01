@@ -233,3 +233,44 @@ body {
     outline: none!important;
     box-shadow: none!important;
 }
+
+/*User account page*/
+.VdividingLine{
+    border-right-style: solid;
+    border-color: #707070;
+}
+
+.HdividingLine{
+    border-bottom-style: solid;
+    border-color: #707070;
+}
+
+.Hspacer{
+    width: 100%;
+    margin: 20px;
+}
+
+.addChildBtn, .addChildBtn:hover{
+    background-color: #a0a0a0;
+    border-color: #707070;
+}
+
+.addChildBtn:active:focus, .addChildBtn:active, .addChildBtn:focus {
+    background-color: grey!important;
+    border-color: #707070!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+.editChildBtn, .editChildBtn:hover{
+    background-color: #a0a0a0;
+    border-color: #707070;
+    float: right;
+}
+
+.editChildBtn:active:focus, .editChildBtn:active, .editChildBtn:focus{
+    background-color: grey!important;
+    border-color: #707070!important;
+    outline: none!important;
+    box-shadow: none!important;
+}

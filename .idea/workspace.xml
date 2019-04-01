@@ -4,8 +4,8 @@
     <list default="true" id="173a8eaf-6fe6-458a-b074-0c682c142722" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/user/adminphotos.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/user/adminphotos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/user/adminusers.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/user/adminusers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/user/useraccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/user/useraccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/user/userclasses.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/user/userclasses.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,22 +19,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/templateadmin.html">
+        <entry file="file://$PROJECT_DIR$/client/templateuser.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="120" selection-end-column="7" />
+              <caret lean-forward="true" selection-end-line="132" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/user/adminsingleuser.html">
+        <entry file="file://$PROJECT_DIR$/client/user/userclasses.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-              <folding>
-                <marker date="1554077045148" expanded="true" signature="4545:5265" ph="..." />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="88" column="69" selection-start-line="88" selection-start-column="69" selection-end-line="88" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/user/useraccount.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="98" column="35" lean-forward="true" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -42,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1349">
-              <caret line="111" column="137" selection-start-line="111" selection-start-column="137" selection-end-line="111" selection-end-column="137" />
+            <state relative-caret-position="691">
+              <caret line="267" column="15" selection-start-line="267" selection-start-column="15" selection-end-line="267" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -64,6 +70,7 @@
       <find>&lt;/h7&gt;</find>
       <find>classes</find>
       <find>btn</find>
+      <find>contentbox</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;h6&gt;</replace>
@@ -96,9 +103,11 @@
         <option value="$PROJECT_DIR$/client/templateuser.html" />
         <option value="$PROJECT_DIR$/client/user/adminphotos.html" />
         <option value="$PROJECT_DIR$/client/user/adminusers.html" />
-        <option value="$PROJECT_DIR$/client/css/main.css" />
         <option value="$PROJECT_DIR$/client/js/jquery.ios.picker.js" />
         <option value="$PROJECT_DIR$/client/user/adminsingleuser.html" />
+        <option value="$PROJECT_DIR$/client/css/main.css" />
+        <option value="$PROJECT_DIR$/client/user/useraccount.html" />
+        <option value="$PROJECT_DIR$/client/user/userclasses.html" />
       </list>
     </option>
   </component>
@@ -226,12 +235,12 @@
       <workItem from="1553820415180" duration="10593000" />
       <workItem from="1553842204179" duration="4437000" />
       <workItem from="1553872044644" duration="137000" />
-      <workItem from="1553872274817" duration="32220000" />
+      <workItem from="1553872274817" duration="41919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48621000" />
+    <option name="totallyTimeSpent" value="58320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -369,13 +378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/user/adminaccount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="52" selection-start-line="52" selection-end-line="52" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/FAQ.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-60">
@@ -390,24 +392,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templateuser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="129" column="51" selection-start-line="129" selection-start-column="51" selection-end-line="129" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/Register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/user/adminclasses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="175" column="61" selection-start-line="175" selection-start-column="61" selection-end-line="175" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -432,24 +420,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templateadmin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="120" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/user/adminusers.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1589">
           <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1349">
-          <caret line="111" column="137" selection-start-line="111" selection-start-column="137" selection-end-line="111" selection-end-column="137" />
         </state>
       </provider>
     </entry>
@@ -463,6 +437,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/templateadmin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/user/adminclasses.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="175" column="61" selection-start-line="175" selection-start-column="61" selection-end-line="175" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/user/adminaccount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="53" selection-start-line="53" selection-end-line="65" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/user/adminsingleuser.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
@@ -470,6 +465,34 @@
           <folding>
             <marker date="1554077045148" expanded="true" signature="4545:5265" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="267" column="15" selection-start-line="267" selection-start-column="15" selection-end-line="267" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templateuser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/user/useraccount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="98" column="35" lean-forward="true" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/user/userclasses.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="88" column="69" selection-start-line="88" selection-start-column="69" selection-end-line="88" selection-end-column="69" />
         </state>
       </provider>
     </entry>
