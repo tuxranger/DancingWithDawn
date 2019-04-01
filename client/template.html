@@ -12,19 +12,14 @@
 <!--this is the top navigation bar-->
 <!--Still Need to Redesign this to fit areas better-->
 
-
-<!--
-
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="topBar">
   <div class="container-fluid">
-    <a class="navbar-brand align-items-start" href="/Home.html">
-      <img src="images/logo.jpg" href="/Home.html"></img>
+    <a class="navbar-brand align-items-start">
+      <img src="images/logo.jpg"></img>
     </a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-toggle" aria-controls="navbarResponsive"
-    aria-expanded="false" aria-label="Toggle Navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse navbar-toggle" id="navbarResponsive">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto align-items-center">
         <li class="nav-item">
           <a class="nav-link" href="/Classes.html">Classes</a>
@@ -32,12 +27,10 @@
         <li class="nav-item">
           <a class="nav-link" href="/FAQ.html">About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item p-1">
           <a class="nav-link" href="/About.html">FAQ</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link">      </a>
-        </li>
+
         <li class="nav-item">
           <button type="button" href="/Login.html" class="btn btn-primary btn-sm">Login / Register</button>
         </li>
@@ -45,18 +38,28 @@
     </div>
   </div>
 </nav>
-<nav class="navbar navbar-expand-md navbar-dark">
-  <a class="navbar-brand" href="user/Useraccount.html">Welcome, {{currentUser.firstName}}!</a>
-  <div class="collapse navbar-collapse navbar-toggle" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="/user/useraccount.html">View Account Page</a>
-      <a class="nav-item"> | </a>
-      <a class="p-0 text-light" ng-click='logout()' ng-show="currentUser" href="/Home.html">Sign Out</a>
-
+<nav class="navbar navbar-expand-md navbar-dark bg-secondary sticky-top" ng-if='currentUser'>
+  <div class="container-fluid">
+    <a class="navbar-brand align-items-start">
+      <h5 class="my-0 mr-md-auto font-weight-normal text-light">Welcome, {{currentUser.firstName}}!</h5>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto align-items-center">
+        <li class="nav-item">
+          <a class="p-1 text-light" href="/user/useraccount.html">View Account Page</a>
+        </li>
+        <li class="nav-item">
+          <a class="p-1 text-light"> | </a>
+        </li>
+        <li class="nav-item">
+          <a class="p-1 text-light" ng-click='logout()' ng-show="currentUser" href="/Home.html">Sign Out</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
-
 
   <div ng-if='currentUser' class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark">
     <h5 class="my-0 mr-md-auto font-weight-normal text-light">Welcome, {{currentUser.firstName}}!</h5>
@@ -67,10 +70,12 @@
     	</nav>
   </div>
 
--->
 
 
 
+
+
+<!--
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="topBar">
   <div class="container-fluid">
     <a class="navbar-brand align-items-start">
@@ -107,14 +112,8 @@
       <a class="p-0 text-light" ng-click='logout()' ng-show="currentUser" href="/Home.html">Sign Out</a>
     	</nav>
   </div>
-
+-->
 <!--TEMPLATE BOTTOM-->
-
-
-
-
-
-
 
 
 
@@ -147,7 +146,7 @@
 
 <!--TEMPLATE BOTTOM-->
 <footer class="footer">
-  <div class="row page-bottom align-items-center">
+  <div class="row page-bottom align-items-center justify-content-center">
     <div class="col-md-4 p-2 footer-info">
       <h5>Please Contact Dawn Directly At:</h5>
     </div>
@@ -166,9 +165,16 @@
     </div>
   </div>
   <div class="row copyright justify-content-center">
+  </div>
+  <div class="row copyright justify-content-center">
     <a>Dance With Dance. © 2019</a>
-</div>
+  </div>
 </footer>
+<div class="row copyright justify-content-center">
+  <div class="column">
+    <a>Dance With Dance. © 2019</a>
+  </div>
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
