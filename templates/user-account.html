@@ -7,36 +7,35 @@
 	</div>
 
 	<div class='container' ng-if='currentUser'>
-	<div class='row'>
-		<div class='col-12 col-md-6'>
-			<h2 class='text-center'>Children</h2>
-			<div ng-repeat="child in children" class='container child-container p-3 my-3'>
-				<p><span class='font-weight-bold'>Child Name</span><br>{{child.firstName}} {{child.lastName}}</p>
-				<p><span class='font-weight-bold'>Birthday</span><br>{{child.dob | date}}</p>
-				<p><span class='font-weight-bold'>Notes</span><br>{{child.notes}}</p>
-
-				<a class='btn btn-primary' href="/#/update-child" ng-click="setChildToUpdate(child)">Edit Child Info</a>
-			</div>
-		<a class='btn btn-primary w-100' href="/#/add-child">Add Child</a>
-		</div>
 		
-		<div class='col-12 col-md-6'>
-			<h2 class='text-center'>Contact Information</h2>
-			<div class='container child-container p-3 m-3'>
-				<p><span class='font-weight-bold'>Parent/Guardian Name</span><br>{{currentUser.firstName}} {{currentUser.lastName}}</p>
-				<p><span class='font-weight-bold'>Address</span><br>{{currentUser.streetAddress}}, {{currentUser.city}}, {{currentUser.state}} {{currentUser.zip}}</p>
-				<p><span class='font-weight-bold'>Email</span><br>{{currentUser.email}}</p>
-				<p><span class='font-weight-bold'>Phone</span><br>{{currentUser.phone}}</p>
+		<div class='row'>
+			<div class='col-12 col-md-6'>
+				<h2 class='text-center'>Children</h2>
+				<div ng-repeat="child in children" class='container child-container p-3 my-3'>
+					<p><span class='font-weight-bold'>Child Name</span><br>{{child.firstName}} {{child.lastName}}</p>
+					<p><span class='font-weight-bold'>Birthday</span><br>{{child.dob | date}}</p>
+					<p><span class='font-weight-bold'>Notes</span><br>{{child.notes}}</p>
 
-				<a class='btn btn-primary' href="/#/update-user-account">Edit Contact Info</a>
-				&nbsp; &nbsp; &nbsp;
-				<a class='btn btn-primary' href="/#/update-user-password">Change Password</a>
+					<a class='btn btn-primary' href="/#/update-child" ng-click="setChildToUpdate(child)">Edit Child Info</a>
+				</div>
+			<a class='btn btn-primary w-100' href="/#/add-child">Add Child</a>
+			</div>
+			
+			<div class='col-12 col-md-6'>
+				<h2 class='text-center'>Contact Information</h2>
+				<div class='container child-container p-3 m-3'>
+					<p><span class='font-weight-bold'>Parent/Guardian Name</span><br>{{currentUser.firstName}} {{currentUser.lastName}}</p>
+					<p><span class='font-weight-bold'>Address</span><br>{{currentUser.streetAddress}}, {{currentUser.city}}, {{currentUser.state}} {{currentUser.zip}}</p>
+					<p><span class='font-weight-bold'>Email</span><br>{{currentUser.email}}</p>
+					<p><span class='font-weight-bold'>Phone</span><br>{{currentUser.phone}}</p>
+
+					<a class='btn btn-primary' href="/#/update-user-account">Edit Contact Info</a>
+					&nbsp; &nbsp; &nbsp;
+					<a class='btn btn-primary' href="/#/update-user-password">Change Password</a>
+				</div>
 			</div>
 		</div>
 	</div>
-	</div>
-
-	<p></p>
 
 	<ng-include src="'footer.html'"></ng-include>
 
