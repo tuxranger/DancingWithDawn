@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>template</title>
+
+</head>
+<body ng-app="directoryApp" ng-controller="clientsCtrl">
+<!--this is the top navigation bar-->
+<!--links href need to be filled in-->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="topBar">
+    <div class="container">
+        <a class="navbar-brand">
+            <!--....NEEDS REAL LOGO-->
+            <img src="../images/logo.JPG"/>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Classes.html">Classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../FAQ.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../About.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <p> </p>
+                </li>
+                <!-- Login + Needs To Hide if Already logged in-->
+                <li class="nav-item">
+                    <button type="button" href="../Login.html" class="btn btn-primary btn-sm">Login / Register</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--TEMPLATE BOTTOM-->
+
+
+
+
+
+
+<!--ADMIN TEMPLATE TOP-->
+<div class="user-nav">
+
+</div>
+
+
+
+<div class="user-nav">
+
+</div>
+
+<!--ADMIN TEMPLATE END-->
+
+
+
+
+
+<!--.....PLACE WEBSITE CODE HERE-->
+<div class="contentBox">
+    <div class="container userInfoBox">
+        <b>Parent Information</b> <br/>
+<!--        this all needs to be replaced with the user's information-->
+        <p>Name: Jane Doe</p>
+        <p>Address: 9999 SW Ilivehere LN 33333</p>
+        <p>Email Address: example@email.com</p>
+        <p>Phone Number: 305-867-5309</p>
+    </div>
+
+<!--    The loop should start here so that each box is repeated as needed.-->
+    <div class="container userInfoBox">
+        <b>Child Information</b> <br/>
+<!--        this all needs to be replaced with the user's child's information-->
+        <p>Name: June Doe</p>
+        <p>Date of Birth: 4/1/2014</p>
+        <p>Classes:</p>
+<!--        this should be a loop that gets all the classes the child is enrolled in-->
+        <div class="row classOptions">
+            <div class="col" align="left">
+                <span class="childClasses">Pre Ballet</span>
+            </div>
+            <div class="col" align="right">
+                <button class="btn removeClassBtn">Remove Class</button>
+            </div>
+        </div>
+
+        <div class="row classOptions">
+            <div class="col" align="left">
+                <span class="childClasses">Creative Movement</span>
+            </div>
+            <div class="col" align="right">
+                <button class="btn removeClassBtn">Remove Class</button>
+            </div>
+        </div>
+
+        <div class="row classOptions d-none d-md-flex">
+            <div class="col" align="center">
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle addChildClasses" data-toggle="dropdown">Add Classes</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Creative Movement</a>
+                        <a class="dropdown-item" href="#">Pre Ballet</a>
+                        <a class="dropdown-item" href="#">Worship Dance</a>
+                        <a class="dropdown-item" href="#">Tap Dancing</a>
+                        <a class="dropdown-item" href="#">Creative Dramatics</a>
+                        <a class="dropdown-item" href="#">Hippity Hop</a>
+                    </div>
+                </div>
+                <button class="btn btn btn-link removeChildBtn">Remove Child</button>
+            </div>
+        </div>
+
+        <div class="row classOptions d-md-none">
+            <div class="col" align="center">
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle addChildClasses" data-toggle="dropdown">Add Classes</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Creative Movement</a>
+                        <a class="dropdown-item" href="#">Pre Ballet</a>
+                        <a class="dropdown-item" href="#">Worship Dance</a>
+                        <a class="dropdown-item" href="#">Tap Dancing</a>
+                        <a class="dropdown-item" href="#">Creative Dramatics</a>
+                        <a class="dropdown-item" href="#">Hippity Hop</a>
+                    </div>
+                </div>
+                <button class="btn btn btn-link removeChildBtn">Remove Child</button>
+            </div>
+        </div>
+
+    </div>
+<!--    this can be altered once we decided what to do with the square api-->
+    <div class="container userInfoBox">
+        <p>Charges Due</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--TEMPLATE BOTTOM-->
+<!-- Contact Area-->
+<!-- I have to alter This Footer Code from Aristotles-->
+
+<footer class="footer">
+    <div class="row page-bottom align-items-center">
+        <div class="col-md-4">
+            <h5>Please Contact Dawn Directly At:</h5>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-4 px-0">
+                <!-- ++NEED ICON FILES for PHONE + EMAIL -->
+                <img src="../images/icon-email.jpg" class="img-fluid">
+            </div>
+            <h6>dancewithdawn@gmail.com</h6>
+        </div>
+        <div class="col-md">
+            <div class="col-md-4 px-0">
+                <img src="../images/icon-email.jpg" class="img-fluid">
+            </div>
+            <h6>(352)-225-8960</h6>
+        </div>
+    </div>
+    <div class="copyright">
+        Dance With Dance © 2019
+    </div>
+</footer>
+
+<!--SCRIPTS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="../../node_modules/angular/angular.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/clientsController.js"></script>
+</body>
+</html>
