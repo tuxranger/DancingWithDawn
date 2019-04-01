@@ -50,14 +50,20 @@
 
 
 <!--REGISTER TEMPLATE-->
-<div class="container">
-  <img src="images/icon-register.jpg" class="mx-auto d-block"></img>
-  <h4 class="mx-auto">Register A New Account</h4>
+<div class="d-flex justify-content-center px-1">
+  <img src="images/icon-register.jpg" class=" d-block"></img>
+</div>
+<div class="d-flex justify-content-center px-1 k">
+  <h2>Register A New Account</h2>
 </div>
 
 
+<div class="d-none d-md-bloc">   <h2>Hi</h2>
+</div>
+
 <!--WE HAVE TO CREATE BORDER LIKE ON WIREFRAME THAT CHANGES -->
-<div class='container alt-container'>
+<div class='container alt-container bg-secondary hidden-md-down'>
+  <h3> Account Information </h3>
 	<form ng-submit="register(email, password, firstName, lastName, streetAddress, city, state, zip, phone)" class='w-50 mx-auto p-3'>
 
 		<div class="form-group">
@@ -70,13 +76,20 @@
 			<input class="form-control" type="password" ng-model="password">
 		</div>
 
+    <div class="form-group flex-wrap">
+			<label>Password</label>
+			<input class="form-control" type="password" ng-model="password">
+		</div>
+
+  <h3> Parent Contact Information </h3>
+
 		<div class="form-group">
-			<label>Parent/Guardian First Name</label>
+			<label>Parent First Name</label>
 			<input class="form-control" type="text" ng-model="firstName">
 		</div>
 
-		<div class="form-group">
-			<label>Parent/Guardian Last Name</label>
+		<div class="form-group flex-wrap">
+			<label>Parent Last Name</label>
 			<input class="form-control" type="text" ng-model="lastName">
 		</div>
 
@@ -90,12 +103,12 @@
 			<input class="form-control" type="text" ng-model="city">
 		</div>
 
-		<div class="form-group">
+		<div class="form-group flex-wrap">
 			<label>State</label>
 			<input class="form-control" type="text" ng-model="state">
 		</div>
 
-		<div class="form-group">
+		<div class="form-group flex-wrap">
 			<label>Zip Code</label>
 			<input class="form-control" type="text" ng-model="zip">
 		</div>
@@ -104,6 +117,8 @@
 			<label>Phone Number</label>
 			<input class="form-control" type="text" ng-model="phone">
 		</div>
+
+    <i>Please do not forgot to add your children on the account page</i>
 
 		<input class="btn btn-success btn-lg btn-block" type="submit" value="Register New Account">
 	</form>
