@@ -2,8 +2,9 @@
 
 	<ng-include src="'navigation.html'"></ng-include>
 
-	<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-		<h1 class="display-4">User Account</h1>
+	<div class="pt-3 mx-auto text-center">
+		<div class="icon-bg-circle"><i class="fas fa-user user-icon"></i></div>
+		<p class="user-page-headline">User Account</p>
 	</div>
 
 	<div class='container' ng-if='currentUser'>
@@ -18,7 +19,7 @@
 
 					<a class='btn btn-primary' href="/update-child" ng-click="setChildToUpdate(child)">Edit Child Info</a>
 				</div>
-			<a class='btn btn-primary w-100' href="/add-child">Add Child</a>
+			<a class='btn btn-primary w-100 mb-3' href="/add-child">Add Child</a>
 			</div>
 			
 			<div class='col-12 col-md-6'>
