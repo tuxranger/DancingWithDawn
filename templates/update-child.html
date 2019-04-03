@@ -1,36 +1,45 @@
-<ng-include src='"navigation.html"'></ng-include>
+<div class="grey-bg">
 
-<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-	<h1 class="display-4">Edit Child Information</h1>
-</div>
+	<ng-include src='"navigation.html"'></ng-include>
 
-<div class='container' ng-if='currentUser'>
-	<form ng-submit="updateChild(currentUser.childToUpdate)" class='w-50 mx-auto p-3'>
-
-		<div class="form-group">
-			<label>Child First Name</label>
-			<input class="form-control" type="text" ng-model="currentUser.childToUpdate.firstName">
-		</div>
-
-		<div class="form-group">
-			<label>Child Last Name</label>
-			<input class="form-control" type="text" ng-model="currentUser.childToUpdate.lastName">
-		</div>
-
-		<div class="form-group">
-			<label>Date of Birth (MM/DD/YYYY)</label>
-			<input class="form-control" type="text" ng-model="currentUser.childToUpdate.dob">
-		</div>
-
-		<div class="form-group">
-			<label>Notes (please include any medical conditions, allergies, or any additional information you would like me to know): </label>
-			<textarea rows="4" class="form-control" type="text" ng-model="currentUser.childToUpdate.notes"></textarea>
-		</div>
-
-		<input class="btn btn-success btn-lg btn-block" type="submit" value="Update Information">
-	</form>
-
-	<div class='container w-50 mx-auto'>
-		<a class="btn btn-danger btn-lg btn-block text-white" ng-click="deleteChild(currentUser.childToUpdate)" href="">Delete Child Information</a>
+	<div class="pt-3 mx-auto text-center">
+		<div class="icon-bg-circle"><i class="fas fa-child user-icon"></i></div>
+		<p class="user-page-headline">Edit Child Information</p>
 	</div>
+
+	<div class='container' ng-if='currentUser'>
+		<form ng-submit="updateChild(currentUser.childToUpdate)" class='col-md-9 mx-auto px-5 py-3 user-form'>
+
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label>Child First Name</label>
+					<input class="form-control" type="text" ng-model="currentUser.childToUpdate.firstName">
+				</div>
+				<div class="form-group col-md-6">
+					<label>Child Last Name</label>
+					<input class="form-control" type="text" ng-model="currentUser.childToUpdate.lastName">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label>Date of Birth (YYYY-MM-DD)</label>
+				<input class="form-control" type="text" ng-model="currentUser.childToUpdate.dob">
+			</div>
+
+			<div class="form-group">
+				<label>Notes (please include any medical conditions, allergies, or any additional information you would like me to know): </label>
+				<textarea rows="4" class="form-control" type="text" ng-model="currentUser.childToUpdate.notes"></textarea>
+			</div>
+
+			<input class="btn btn-success btn-lg btn-block" type="submit" value="Update Information">
+		</form>
+
+		<div class='container col-md-6 my-5 mx-auto'>
+			<a class="btn btn-danger btn-lg btn-block text-white" ng-click="deleteChild(currentUser.childToUpdate)" href="">Delete Child From Account</a>
+		</div>
+		<br><br>
+	</div>
+
+	<ng-include src="'user-footer.html'"></ng-include>
+
 </div>

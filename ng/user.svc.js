@@ -69,8 +69,6 @@ angular.module('app')
 	}
 
 	svc.addChild = function (adultId, firstName, lastName, dob, notes) {
-		console.log(adultId)
-
 		return $http.post('/api/users/addChild', {
 			adultId: adultId,
 			firstName: firstName,
