@@ -2,17 +2,25 @@ h1 {
 	color: #333333;
 }
 
-.test-bg {
+body {
+	background-color: #f3f3f3;
+}
+
+.test-bg1 {
 	background-color:red;
+}
+
+.test-bg2 {
+	background-color:yellow;
+}
+
+.test-bg3 {
+	background-color:cyan;
 }
 
 .child-container {	
 	border: 1px solid #aaa;
 	background-color: #fff;
-}
-
-.grey-bg {
-	background-color: #f3f3f3;
 }
 
 .user-page-headline {
@@ -43,3 +51,26 @@ h1 {
 	text-align: center;
 	line-height: 1.2em;
 }
+
+
+.user-footer {
+	background-color: #fff;
+	width:100%;
+	font-size: 1em;
+	color: #999;
+	margin:2em 0 0.5em;
+	box-shadow: 0px 0px 2px #ccc;
+}
+
+	.user-footer .contact-icon {
+		color: #aaa;
+		font-size: 1.8em;
+	}
+
+.copyright {
+	font-size: 0.75em;
+	text-align: center;
+	padding: 0.5em 0;
+	color:#aaa;
+}
+
