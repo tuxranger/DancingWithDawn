@@ -173,21 +173,21 @@
 
 <!--PLACE WEBSITE CODE HERE-->
 
-<div class="row">
+<div class="row rowBox">
     <div class="col-md-12">
         <img src="images/icon-home-top.jpg">
     </div>
 </div>
 
 
-<div class="row">
+<div class="row rowBox">
     <div class="col-md-12" align="center" id="faqSubheading">
         <p><i>Bringing Enrichment Classes To Your School</i></p>
     </div>
 </div>
 
 
-<div class="row" align="center">
+<div class="row rowBox" align="center">
     <div class="col-md-4">
         <div class="container">
             <img src="images/icon-home-1.jpg">
@@ -226,14 +226,17 @@
             </p>
         </div>
     </div>
+</div>
+
+<div class="row rowBox">
     <div class="col text-center">
-        <button type="button" class="btn btn-primary">Learn More About Available Classes</button>
+        <button type="button" class="btn btn-primary" id="classesLearnMoreBtn">Learn More About Available Classes</button>
     </div>
 </div>
 
 <div class="Hspacer"></div>
 
-<div class="row" id="homeAbout">
+<div class="row rowBox" id="homeAbout">
         <div class="col-md-3">
             <img src="images/icon-home-dawn.jpg">
         </div>
@@ -245,22 +248,22 @@
                     "I Can Do It" atmosphere for all learners.  Sharing the joy of music and movement
                     helps me to teach children the important lesson to love themselves and others.
                 </p>
-                <button type="button" class="btn btn-primary">Learn More About Dawn</button>
+                <button type="button" class="btn btn-primary" id="dawnLearnMoreBtn">Learn More About Dawn</button>
             </div>
         </div>
 </div>
 
 <div class="Hspacer"></div>
 
-<div class="row">
+<div class="row rowBox">
     <div class="col-md-6" align="center">
         <h4>Parental Accounts</h4>
         <p>Parents and guardians of my students can create an account
             to easily manage payments and view fun photos and videos!
             Login with an existing account or register a new one by clicking below!
         </p>
-        <button type="button" class="btn btn-primary">Log In</button>
-        <button type="button" class="btn btn-primary">Register</button>
+        <button type="button" class="btn btn-primary" id="loginBtn">Log In</button>
+        <button type="button" class="btn btn-primary" id="registerBtn">Register</button>
     </div>
     <div class="col-md-6" align="center">
         <img src="images/icon-home-account-1.jpg">
@@ -276,14 +279,16 @@
 
 <div class="Hspacer"></div>
 
-<div class="row">
+<div class="row rowBox">
     <div class="col-md-12" id="emailMoreInfo" align="center">
         <h3>Get Additional Information!</h3>
         <p>Contact me today to see how we can create a unique program specific for your center</p>
-        <input type="email">
-        <button type="button" class="btn btn-primary">Please Send Me Information!</button>
+        <input type="email" placeholder="Enter Email Address" id="emailMoreInfoInput">
+        <!--        this button needs to send an email to the input email address-->
+        <button type="button" class="btn btn-primary" id="emailMoreInfoBtn">Please Send Me Information!</button>
     </div>
 </div>
+
 
 
 
