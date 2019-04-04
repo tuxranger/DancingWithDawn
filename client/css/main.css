@@ -113,6 +113,16 @@ body {
     /*overflow: hidden;*/
 }
 
+/*Home page*/
+#homeAbout{
+    background-color: lightgray;
+    /*width: 100% !important;*/
+}
+
+#emailMoreInfo{
+    background-color: lightgray;
+}
+
 /*FAQ page*/
 #faqSubheading{
     background-color: black;
