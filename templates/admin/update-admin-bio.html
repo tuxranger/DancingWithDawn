@@ -1,0 +1,24 @@
+<div class="grey-bg">
+
+    <div class="pt-3 mx-auto text-center">
+        <div class="icon-bg-circle"><i class="fas fa-user user-icon"></i></div>
+        <p class="user-page-headline">Edit Bio</p>
+    </div>
+
+    <div class='container' ng-if='currentAdmin'>
+        <form ng-submit="updateBio(currentAdmin._id, currentAdmin.bio)" class='col-md-9 mx-auto px-5 py-3 user-form'>
+
+            <div class="form-group">
+                <label>Bio</label>
+                <textarea rows="6" class="form-control" type="text" ng-model="currentAdmin.bio"></textarea>
+            </div>
+
+            <input class="btn btn-success btn-lg btn-block" type="submit" value="Update Bio">
+        </form>
+
+        <br><br><br><br>
+    </div>
+
+    <ng-include src="'user-footer.html'"></ng-include>
+
+</div>
