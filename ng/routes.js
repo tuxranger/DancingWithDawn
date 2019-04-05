@@ -23,7 +23,11 @@ angular.module('app')
 	
 	.when('/admin', { controller: 'AdminLoginCtrl', templateUrl: 'admin/admin-login.html' })
 	.when('/admin-register', { controller: 'AdminLoginCtrl', templateUrl: 'admin/registration.html' })
-	.when('/admin-account', { templateUrl: 'admin/admin-account.html' });
+
+	.when('/admin-account', { templateUrl: 'admin/admin-account.html' })
+	.when('/update-admin-account', { controller: 'UpdateAdminCtrl', templateUrl: 'admin/update-admin-account.html'})
+	.when('/update-admin-password', { controller: 'UpdateAdminCtrl', templateUrl: 'admin/update-admin-password.html'})
+	.when('/update-admin-bio', { controller: 'UpdateAdminCtrl', templateUrl: 'admin/update-admin-bio.html'})
 
 	$locationProvider.html5Mode(true);
 })
