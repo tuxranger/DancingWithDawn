@@ -29,11 +29,11 @@ angular.module('app')
 	.when('/update-admin-password', { controller: 'UpdateAdminCtrl', templateUrl: 'admin/update-admin-password.html'})
 	.when('/update-admin-bio', { controller: 'UpdateAdminCtrl', templateUrl: 'admin/update-admin-bio.html'})
 
-	.when('/admin-classes', {templateUrl: 'admin/admin-classes.html'})
-	.when('/admin-clients', {templateUrl: 'admin/admin-clients.html'})
-	.when('/admin-photos', {templateUrl: 'admin/admin-photos.html'})
-	.when('/admin-payments', {templateUrl: 'admin/admin-payments.html'})
-	.when('/admin-forms', {templateUrl: 'admin/admin-forms.html'})
+	.when('/admin-classes', { templateUrl: 'admin/admin-classes.html'})
+	.when('/admin-clients', { controller: 'ClientsCtrl', templateUrl: 'admin/admin-clients.html'})
+	.when('/admin-photos', { templateUrl: 'admin/admin-photos.html'})
+	.when('/admin-payments', { templateUrl: 'admin/admin-payments.html'})
+	.when('/admin-forms', { templateUrl: 'admin/admin-forms.html'})
 
 	$locationProvider.html5Mode(true);
 })
