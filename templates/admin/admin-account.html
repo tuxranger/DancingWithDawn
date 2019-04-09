@@ -1,13 +1,38 @@
 <div class="grey-bg">
 
-	<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-		<h1 class="display-4">Admin Account</h1>
+	<ng-include src="'admin/admin-navigation.html'"></ng-include>
+
+	<div class="pt-3 mx-auto text-center">
+		<div class="icon-bg-circle"><i class="fas fa-user user-icon"></i></div>
+		<p class="user-page-headline">Admin Account</p>
 	</div>
 
 	<div class='container' ng-if='currentAdmin'>
-		
-		<p>You are logged in as an admin! Lucky!</p>
 
+		<div class='row'>
+			<div class="col-12 col-md-6">
+				<h2 class="text-center">Bio</h2>
+				<div class="container child-container p-3 m-3">
+					<p>{{currentAdmin.bio}}</p>
+					<a class="btn btn-primary" href="/update-admin-bio">Update bio</a>
+				</div>
+			</div>
+			<div class='col-12 col-md-6'>
+				<h2 class='text-center'>Contact Information</h2>
+				<div class='container child-container p-3 m-3'>
+					<p><span class='font-weight-bold'>Username</span><br>{{currentAdmin.username}}</p>
+					<p><span class='font-weight-bold'>Admin Name</span><br>{{currentAdmin.firstName}} {{currentAdmin.lastName}}</p>
+					<p><span class='font-weight-bold'>Email</span><br>{{currentAdmin.email}}</p>
+					<p><span class='font-weight-bold'>Phone</span><br>{{currentAdmin.phone}}</p>
+
+					<a class='btn btn-primary' href="/update-admin-account">Edit Contact Info</a>
+					&nbsp; &nbsp; &nbsp;
+					<a class='btn btn-primary' href="/update-admin-password">Change Password</a>
+				</div>
+			</div>
+		</div>
 	</div>
+
+	<ng-include src="'user-footer.html'"></ng-include>
 
 </div>

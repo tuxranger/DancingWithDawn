@@ -18,8 +18,16 @@ angular.module('app')
 		})
 	}
 
-	$scope.register = function (username, password) {
-		AdminSvc.register(username, password)
+	$scope.register = function (email, username, password, checkpass, firstName, lastName, phone) {
+		if (password != checkpass) {
+			$scope.registerError = true
+			$scope.errorMessage = 'Error: Passwords must match'
+			return false
+		}
+
+		$scope.registerError = false
+
+		AdminSvc.register(email, username, password, firstName, lastName, phone)
 		.then(function (response) {
 			$scope.$emit('login', response.data)
 			$location.path('/admin-account')

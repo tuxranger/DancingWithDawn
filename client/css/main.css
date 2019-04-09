@@ -109,7 +109,39 @@ body {
     background-color: lightgray;
     margin-left: 2%;
     margin-right: 2%;
-    overflow: hidden;
+    /*IDR why the overflow hidden was here, I turned it off for a dropdown in the Admin Single User view, lmk if it is needed though ~Ari*/
+    /*overflow: hidden;*/
+}
+
+/*Home page*/
+.rowBox{
+    width: 100% !important;
+    margin: 0;
+}
+
+#homeAbout{
+    background-color: lightgray;
+    /*width: 100% !important;*/
+}
+
+#emailMoreInfo{
+    background-color: lightgray;
+}
+
+#emailMoreInfoInput{
+    width: 220px;
+}
+
+#emailMoreInfoBtn:active:focus, #emailMoreInfoBtn:active, #emailMoreInfoBtn:focus{
+    background-color: grey!important;
+    border-color: #707070!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+#emailMoreInfoBtn, #emailMoreInfoBtn:hover{
+    background-color: #a0a0a0;
+    border-color: #707070;
 }
 
 /*FAQ page*/
@@ -194,6 +226,80 @@ body {
 }
 
 .classEditButton:active:focus, .classEditButton:active, .classEditButton:focus {
+    background-color: grey!important;
+    border-color: #707070!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+/*Admin single user view*/
+
+.userInfoBox {
+    border-style: solid;
+    border-color: black;
+}
+
+.classOptions{
+    border-top-style: solid;
+    border-color: grey;
+}
+
+.removeClassBtn{
+    color: red;
+}
+
+.removeChildBtn{
+    color: red;
+    float: right;
+}
+
+.addChildClasses,.addChildClasses:hover{
+    background-color: #a0a0a0;
+    border-color: #707070;
+}
+
+.addChildClasses:active:focus, .addChildClasses:active, .addChildClasses:focus {
+    background-color: grey!important;
+    border-color: #707070!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+/*User account page*/
+.VdividingLine{
+    border-right-style: solid;
+    border-color: #707070;
+}
+
+.HdividingLine{
+    border-bottom-style: solid;
+    border-color: #707070;
+}
+
+.Hspacer{
+    width: 100%;
+    margin: 20px;
+}
+
+.addChildBtn, .addChildBtn:hover{
+    background-color: #a0a0a0;
+    border-color: #707070;
+}
+
+.addChildBtn:active:focus, .addChildBtn:active, .addChildBtn:focus {
+    background-color: grey!important;
+    border-color: #707070!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+.editChildBtn, .editChildBtn:hover{
+    background-color: #a0a0a0;
+    border-color: #707070;
+    float: right;
+}
+
+.editChildBtn:active:focus, .editChildBtn:active, .editChildBtn:focus{
     background-color: grey!important;
     border-color: #707070!important;
     outline: none!important;

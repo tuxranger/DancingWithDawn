@@ -6,10 +6,14 @@ angular.module('app')
 		return $http.get('/api/admin')
 	}
 
-	svc.register = function (username, password) {
+	svc.register = function (email, username, password, firstName, lastName, phone) {
 		return $http.post('/api/admin', {
 			username: username,
-			password: password
+			password: password,
+			email: email,
+			firstName: firstName,
+			lastName: lastName,
+			phone: phone
 		}).then(function () {
 			return svc.login(username, password)
 		})
@@ -30,6 +34,31 @@ angular.module('app')
 
 	svc.logout = function() {
 		delete $http.defaults.headers.common['X-Auth']
+	}
+
+	svc.update = function (id, username, firstName, lastName, email, phone) {
+		return $http.put('/api/admin/update', {
+			id: id,
+			username: username,
+			firstName: firstName,
+			lastName: lastName,
+			email: email,
+			phone: phone
+		})
+	}
+
+	svc.updatePassword = function (id, newPassword) {
+		return $http.put('/api/admin/updatePassword', {
+			id: id,
+			password: newPassword
+		})
+	}
+
+	svc.updateBio = function (id, bio) {
+		return $http.put('/api/admin/updateBio', {
+			id: id,
+			bio: bio
+		})
 	}
 
 })
