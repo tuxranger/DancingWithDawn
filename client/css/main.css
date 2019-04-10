@@ -113,6 +113,37 @@ body {
     /*overflow: hidden;*/
 }
 
+/*Home page*/
+.rowBox{
+    width: 100% !important;
+    margin: 0;
+}
+
+#homeAbout{
+    background-color: lightgray;
+    /*width: 100% !important;*/
+}
+
+#emailMoreInfo{
+    background-color: lightgray;
+}
+
+#emailMoreInfoInput{
+    width: 220px;
+}
+
+#emailMoreInfoBtn:active:focus, #emailMoreInfoBtn:active, #emailMoreInfoBtn:focus{
+    background-color: grey!important;
+    border-color: #707070!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+#emailMoreInfoBtn, #emailMoreInfoBtn:hover{
+    background-color: #a0a0a0;
+    border-color: #707070;
+}
+
 /*FAQ page*/
 #faqSubheading{
     background-color: black;

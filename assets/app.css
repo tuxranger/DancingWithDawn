@@ -2,16 +2,75 @@ h1 {
 	color: #333333;
 }
 
+body {
+	background-color: #f3f3f3;
+}
+
+.test-bg1 {
+	background-color:red;
+}
+
+.test-bg2 {
+	background-color:yellow;
+}
+
+.test-bg3 {
+	background-color:cyan;
+}
+
 .child-container {	
 	border: 1px solid #aaa;
 	background-color: #fff;
 }
 
-.grey-bg {
-	background-color: #f3f3f3;
+.user-page-headline {
+	color: #aaa;
+	font-size: 1.8em;
+	font-weight: 300;
 }
 
 .user-form {
 	background-color: #fff;
-	border: 1px solid #aaa;
+	border-radius: 0.25em;
+	border: 1px solid #ddd;
 } 
+
+.icon-bg-circle {
+	display: inline-block;
+	width:4em;
+	height:4em;
+	border-radius: 50%;
+	box-shadow: 0px 0px 2px #888;
+	padding: 0.5em 0.6em;
+	background-color:#ccc;
+}
+
+.user-icon {
+	color:#f3f3f3;
+	font-size:2.5em;
+	text-align: center;
+	line-height: 1.2em;
+}
+
+
+.user-footer {
+	background-color: #fff;
+	width:100%;
+	font-size: 1em;
+	color: #999;
+	margin:2em 0 0.5em;
+	box-shadow: 0px 0px 2px #ccc;
+}
+
+	.user-footer .contact-icon {
+		color: #aaa;
+		font-size: 1.8em;
+	}
+
+.copyright {
+	font-size: 0.75em;
+	text-align: center;
+	padding: 0.5em 0;
+	color:#aaa;
+}
+

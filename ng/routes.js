@@ -1,5 +1,5 @@
 angular.module('app')
-.config(function ($routeProvider) {
+.config(function ($routeProvider, $locationProvider) {
 	$routeProvider
 	.when('/', { templateUrl: 'index.html' })
 	.when('/classes', { templateUrl: 'classes.html' })
@@ -21,6 +21,19 @@ angular.module('app')
 	.when('/user-payments', { templateUrl: 'user-payments.html' })
 	.when('/user-forms', { templateUrl: 'user-forms.html' })
 	
-	// From starting example. Can be deleted after templates are done
-	.when('/posts', { controller: 'PostsCtrl', templateUrl: 'posts.html' })
+	.when('/admin', { controller: 'AdminLoginCtrl', templateUrl: 'admin/admin-login.html' })
+	.when('/admin-register', { controller: 'AdminLoginCtrl', templateUrl: 'admin/registration.html' })
+
+	.when('/admin-account', { templateUrl: 'admin/admin-account.html' })
+	.when('/update-admin-account', { controller: 'UpdateAdminCtrl', templateUrl: 'admin/update-admin-account.html'})
+	.when('/update-admin-password', { controller: 'UpdateAdminCtrl', templateUrl: 'admin/update-admin-password.html'})
+	.when('/update-admin-bio', { controller: 'UpdateAdminCtrl', templateUrl: 'admin/update-admin-bio.html'})
+
+	.when('/admin-classes', {templateUrl: 'admin/admin-classes.html'})
+	.when('/admin-clients', {templateUrl: 'admin/admin-clients.html'})
+	.when('/admin-photos', {templateUrl: 'admin/admin-photos.html'})
+	.when('/admin-payments', {templateUrl: 'admin/admin-payments.html'})
+	.when('/admin-forms', {templateUrl: 'admin/admin-forms.html'})
+
+	$locationProvider.html5Mode(true);
 })

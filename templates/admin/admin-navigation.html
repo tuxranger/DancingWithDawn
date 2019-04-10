@@ -1,0 +1,21 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal"><a class="text-dark" href="/">Dance With Dawn</a></h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="/classes">Classes</a>
+        <a class="p-2 text-dark" href="/about">About</a>
+        <a class="p-2 text-dark" href="/faq">FAQ</a>
+    </nav>
+    <button class="btn btn-outline-primary" ng-click='logout()' ng-show="currentAdmin">Log Out</button>
+</div>
+
+<div ng-if='currentAdmin' class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark">
+    <h5 class="my-0 mr-md-auto font-weight-normal text-light">Welcome, {{currentAdmin.firstName}}!</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-light" href="/admin-account">Account</a>
+        <a class="p-2 text-light" href="/admin-classes">Classes</a>
+        <a class="p-2 text-light" href="/admin-clients">Clients</a>
+        <a class="p-2 text-light" href="/admin-photos">Photos</a>
+        <a class="p-2 text-light" href="/admin-payments">Payments</a>
+        <a class="p-2 text-light" href="/admin-forms">Forms</a>
+    </nav>
+</div>
