@@ -11,7 +11,8 @@ var user = db.Schema({
 	zip: 			{ type: Number },
 	phone: 			{ type: String, required: true },
 	children: 	   [{ type: db.Schema.ObjectId, ref: 'Child' }],
-	created: 		{ type: Date, default: Date.now}
+	created: 		{ type: Date, default: Date.now},
+	childrenName:	[{ type: String}]
 })
 
 module.exports = db.model('User', user)

@@ -65,8 +65,8 @@ angular.module('app')
 		return $http.get('/api/admin/getAllUsers')
 	}
 
-	svc.getAllChildren = function () {
-		return $http.get('/api/admin/getAllChildren')
-	}
+	// svc.getAllChildren = function () {
+	// 	return $http.get('/api/admin/getAllChildren')
+	// }
 
 })

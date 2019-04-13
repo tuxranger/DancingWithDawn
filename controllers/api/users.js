@@ -29,6 +29,7 @@ router.post('/', function (req, res, next) {
 		state: req.body.state,
 		zip: req.body.zip,
 		phone: req.body.phone,
+		childrenName: []
 	})
 
 	bcrypt.hash(req.body.password, 10, function (err, hash) {
@@ -77,7 +78,7 @@ router.put('/updatePassword', function (req, res, next) {
 })
 
 
-// Creates new user account and saves to database
+// Creates new chidlren and saves to database
 router.post('/addChild', function (req, res, next) {
 
 	var adultId = req.body.adultId
@@ -87,14 +88,16 @@ router.post('/addChild', function (req, res, next) {
 		firstName: req.body.firstName,
 		lastName: req.body.lastName,
 		dob: req.body.dob,
-		notes: req.body.notes
+		notes: req.body.notes,
+		//fullName: req.body.firstName + req.body.lastName
 	})
 
 	child.save(function (err, newChild) {
 		if (err) { return next(err) }
 		var childId = newChild._id
-
-		User.findByIdAndUpdate(adultId, {$push: {children: childId}}, function (err, obj) {
+		var fullName_ = newChild.firstName + ' ' + newChild.lastName
+		//console.log('fullName is: ' + fullName_)
+		User.findByIdAndUpdate(adultId, {$push: {children: childId, childrenName: fullName_}}, function (err, obj) {
     		if (err) {
     	  		console.log(err);
     	  		return res.status(400).send(err);
@@ -102,7 +105,6 @@ router.post('/addChild', function (req, res, next) {
     	  		return res.json(obj);
     		}
     	})
-
 	})
 
 })
@@ -152,9 +154,7 @@ router.get('/getAllChildren', function (req, res, next) {
 
 		var childrenIds = user.children
 
-		Child.find({
-    		'_id': { $in: childrenIds}
-		}, function(err, children){
+		Child.find({'_id': { $in: childrenIds}}, function(err, children){
 			if (err) { return next(err) }
      		res.json(children)
 		});
