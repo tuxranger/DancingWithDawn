@@ -16,18 +16,12 @@ angular.module('app')
             })
         }
 
-        svc.updateClass = function (title, description, time, days, album) {
-            return $http.put('/api/classes/update', {
-                title: title,
-                description: description,
-                time: time,
-                days: days,
-                album: album
-            })
+        svc.updateClass = function (class_) {
+            return $http.put('/api/classes/updateClass', class_)
         }
 
-        svc.deleteClass = function (child) {
-            return $http.put('/api/classes/deleteClass', child)
+        svc.deleteClass = function (class_) {
+            return $http.put('/api/classes/deleteClass', class_)
         }
 
         svc.getAllClasses = function () {

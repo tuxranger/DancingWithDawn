@@ -79,7 +79,11 @@ router.get('/admin-classes', function (req, res) {
 	res.sendFile('layouts/admin.html', {root: './'})
 })
 
-router.get('/admin-add-classes', function (req, res) {
+router.get('/admin-add-class', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/admin-update-class', function (req, res) {
 	res.sendFile('layouts/admin.html', {root: './'})
 })
 

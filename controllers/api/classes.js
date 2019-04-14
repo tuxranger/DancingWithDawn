@@ -28,7 +28,7 @@ router.post('/addClass', function (req, res, next) {
         description: req.body.description,
         time: req.body.time, //possible problem casting time to string
         days: req.body.days,
-        //album: req.body.album
+        album: req.body.album
     })
 
     class_.save(function (err) {
@@ -40,12 +40,12 @@ router.post('/addClass', function (req, res, next) {
 })
 
 router.put('/updateClass', function (req, res, next) {
-    Class.findByIdAndUpdate(req.body.id, req.body, function (err, obj) {
+    Class.findByIdAndUpdate(req.body._id, req.body, function (err, class_) {
         if (err) {
             console.log(err);
             return res.status(400).send(err);
         } else {
-            return res.json(obj);
+            return res.json(class_);
         }
     })
 })

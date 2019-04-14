@@ -1,0 +1,47 @@
+<ng-include src="'admin/admin-navigation.html'"></ng-include>
+
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Update Class</h1>
+</div>
+
+<div class="container" ng-if="currentAdmin">
+
+    <form ng-submit="updateClass(currentAdmin.classToUpdate)" class='col-md-9 mx-auto px-5 py-3 user-form'>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Title</label>
+                <input class="form-control" type="text" ng-model="currentAdmin.classToUpdate.title">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Description</label>
+                <textarea rows="4" class="form-control" type="text" ng-model="currentAdmin.classToUpdate.description"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Time</label>
+            <input class="form-control" type="time" ng-model="currentAdmin.classToUpdate.time">
+        </div>
+
+        <div class="form-group">
+            <label>Days: </label>
+            <input class="form-control" type="text" ng-model="currentAdmin.classToUpdate.days">
+        </div>
+
+        <div class="form-group">
+            <label>Photo album: </label>
+            <input class="form-control" type="text" ng-model="currentAdmin.classToUpdate.album">
+        </div>
+
+        <input class="btn btn-success btn-lg btn-block" type="submit" value="Update Class">
+    </form>
+
+    <div class='container col-md-6 my-5 mx-auto'>
+        <a class="btn btn-danger btn-lg btn-block text-white" ng-click="deleteClass(currentAdmin.classToUpdate)" href="">Delete Class</a>
+    </div>
+
+
+
+</div>
