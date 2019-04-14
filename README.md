@@ -3,4 +3,4 @@ Dance With Dawn, Web Application
 
 (root) files are for the build version of web app with working functionality
 
-/client/ is for current version of content, design, layout, and styling
+Current build: https://dancewithdawn.herokuapp.com/
