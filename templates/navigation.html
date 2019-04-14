@@ -1,3 +1,60 @@
+<nav class="navbar navbar-dark navbar-expand-sm">
+  <div class="container">
+      
+    <a class="navbar-brand" href="/">
+      <span class="font-coiny logo-1">DANCE</span>&nbsp;
+      <span class="font-pacifico logo-2">with Dawn</span>
+    </a>
+      
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-md-3 mr-0">
+          <a class="nav-link" href="/classes">Classes</a>
+        </li>
+        <li class="nav-item mr-md-3 mr-0">
+          <a class="nav-link" href="/about">About Dawn</a>
+        </li>
+        <li class="nav-item mr-md-3 mr-0">
+          <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+      </ul>
+        
+      <a class="btn btn-outline-light ml-sm-3 ml-0" href="/#/login" ng-hide="currentUser">Log In</a>
+      <button class="btn btn-outline-light ml-sm-3 ml-0" ng-click='logout()' ng-show="currentUser">Log Out</button>
+    </div>
+  </div>
+</nav> 
+
+<nav class="navbar navbar-dark navbar-expand-sm"> 
+    <div ng-if="currentUser" class="collapse navbar-collapse text-center user-nav dwd-blue-bg" id="navbar">
+      <div class="container">
+        <ul class="navbar-nav justify-content-center">
+          <li class="nav-item mr-md-3 mr-0">
+            <a class="nav-link" href="/user-account">Account</a>
+          </li>
+          <li class="nav-item mr-md-3 mr-0">
+            <a class="nav-link" href="/user-classes">Classes</a>
+          </li>
+          <li class="nav-item mr-md-3 mr-0">
+            <a class="nav-link" href="/user-photos">Photos</a>
+          </li>
+          <li class="nav-item mr-md-3 mr-0">
+            <a class="nav-link" href="/user-payments">Payments</a>
+          </li>
+          <li class="nav-item mr-md-3 mr-0">
+            <a class="nav-link" href="/user-forms">Forms</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<!-- OLD NAVIGATION
+
 	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom shadow-sm">
 		<h5 class="my-0 mr-md-auto font-weight-normal"><a class="text-dark" href="/">Dance With Dawn</a></h5>
   		<nav class="my-2 my-md-0 mr-md-3">
@@ -19,3 +76,5 @@
     	<a class="p-2 text-light" href="/user-forms">Forms</a>
   	</nav>
 </div>
+
+-->
