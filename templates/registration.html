@@ -1,13 +1,13 @@
-<div class="grey-bg">
-
-	<ng-include src='"navigation.html"'></ng-include>
+<div class="dwd-dk-gray-bg">
+  <ng-include src="'navigation.html'"></ng-include>
+</div>
 
 	<div class="pt-3 mx-auto text-center">
 		<div class="icon-bg-circle"><i class="fas fa-user-plus user-icon"></i></div>
 		<p class="user-page-headline">New Account Registration</p>
 	</div>
 
-	<div class='container'>
+	<div class='container mb-5'>
 		<form ng-submit="register(email, password, checkpass, firstName, lastName, streetAddress, city, state, zip, phone)" class='col-md-9 mx-auto px-5 py-3 user-form'>
 
 			<div ng-show="registerError" class='alert alert-danger'>{{ errorMessage }}</div>
@@ -73,5 +73,4 @@
 		</form>
 	</div>
 
-	<ng-include src="'user-footer.html'"></ng-include>
-<div>
+<ng-include src="'footer.html'"></ng-include>

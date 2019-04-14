@@ -1,13 +1,13 @@
-<div class="grey-bg">
+<div class="dwd-dk-gray-bg">
+  <ng-include src="'navigation.html'"></ng-include>
+</div>
 
-	<ng-include src="'navigation.html'"></ng-include>
+<div class="mt-4 mx-auto text-center">
+	<div class="icon-bg-circle"><i class="fas fa-child user-icon"></i></div>
+	<p class="user-page-headline">Add Child Information</p>
+</div>
 
-	<div class="pt-3 mx-auto text-center">
-		<div class="icon-bg-circle"><i class="fas fa-child user-icon"></i></div>
-		<p class="user-page-headline">Add Child Information</p>
-	</div>
-
-	<div class='container' ng-if='currentUser'>
+	<div class='container mb-3' ng-if='currentUser'>
 		<form ng-submit="addChild(currentUser._id, firstName, lastName, dob, notes)" class='col-md-9 mx-auto px-5 py-3 user-form'>
 
 			<div class="form-row">
@@ -36,6 +36,4 @@
 		</form>
 	</div>
 
-	<br><br><br><br>
-
-</div>
+<ng-include src="'footer.html'"></ng-include>
