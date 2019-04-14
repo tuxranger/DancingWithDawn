@@ -113,5 +113,6 @@ router.get('/update-admin-password', function (req, res) {
 
 router.use(express.static(__dirname + '/../assets'))
 router.use(express.static(__dirname + '/../templates'))
+router.use(express.static(__dirname + '/../img'))
 
 module.exports = router
