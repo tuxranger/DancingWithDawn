@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="173a8eaf-6fe6-458a-b074-0c682c142722" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/admin/admin-update-class.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/api/classes.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/classes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/static.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/static.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ng/admin.add.class.js" beforeDir="false" afterPath="$PROJECT_DIR$/ng/admin.class.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ng/admin.classes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ng/class.svc.js" beforeDir="false" afterPath="$PROJECT_DIR$/ng/class.svc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ng/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/ng/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/admin-add-classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin-add-class.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/admin-classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin-classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/child.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/child.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.66484267">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -32,6 +24,15 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="235">
                   <caret line="98" column="127" selection-start-line="98" selection-start-column="117" selection-end-line="98" selection-end-column="127" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models/child.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -46,21 +47,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/controllers/api/admin.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-                  <folding>
-                    <element signature="e#950#1107#0" />
-                    <element signature="e#1161#1349#0" />
-                    <element signature="e#1408#1730#0" />
-                    <element signature="e#1784#1970#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ng/class.svc.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="330">
@@ -69,11 +55,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/controllers/api/classes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="182">
-                  <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+                <state relative-caret-position="15">
+                  <caret line="18" selection-start-line="18" selection-end-line="19" />
                 </state>
               </provider>
             </entry>
@@ -105,15 +91,28 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/controllers/api/users.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-49">
+                  <caret line="137" column="4" selection-start-line="137" selection-start-column="7" selection-end-line="142" />
+                  <folding>
+                    <element signature="e#320#353#0" />
+                    <element signature="e#624#1112#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/update-child.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="14" />
+                <state relative-caret-position="375">
+                  <caret line="25" column="84" selection-start-line="25" selection-start-column="84" selection-end-line="25" selection-end-column="84" />
                 </state>
               </provider>
             </entry>
@@ -121,8 +120,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ng/user.ctrl.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="40" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="40" />
+                <state relative-caret-position="375">
+                  <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -130,8 +129,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ng/user.svc.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="79">
-                  <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+                <state relative-caret-position="378">
+                  <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
                   <folding>
                     <element signature="e#578#829#0" />
                     <element signature="e#856#909#0" />
@@ -140,14 +139,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/controllers/api/users.js">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models/user.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="561">
-                  <caret line="147" column="20" selection-start-line="147" selection-start-column="20" selection-end-line="147" selection-end-column="20" />
-                  <folding>
-                    <element signature="e#624#1112#0" />
-                  </folding>
+                <state relative-caret-position="240">
+                  <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
                 </state>
               </provider>
             </entry>
@@ -175,12 +171,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add child</find>
-      <find>childctrl</find>
-      <find>classesCtr</find>
-      <find>addcla</find>
-      <find>addchild</find>
-      <find>classsvc</find>
       <find>svc =</find>
       <find>route</find>
       <find>day</find>
@@ -197,14 +187,20 @@
       <find>.when</find>
       <find>add-class</find>
       <find>update-class</find>
-      <find>updateChild</find>
       <find>location.path</find>
       <find>setchildto</find>
       <find>currentuser.child</find>
       <find>childToUpdate</find>
       <find>svc.update</find>
-      <find>edit child</find>
       <find>router.put</find>
+      <find>addClass</find>
+      <find>updateChild</find>
+      <find>childtoupda</find>
+      <find>$set</find>
+      <find>getallch</find>
+      <find>fullname</find>
+      <find>updatechil</find>
+      <find>edit child</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;h6&gt;</replace>
@@ -223,7 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/user/adminsingleuser.html" />
         <option value="$PROJECT_DIR$/client/user/Forms.html" />
         <option value="$PROJECT_DIR$/client/user/userphotos.html" />
         <option value="$PROJECT_DIR$/client/user/userforms.html" />
@@ -263,7 +258,6 @@
         <option value="$PROJECT_DIR$/ng/admin.classes.js" />
         <option value="$PROJECT_DIR$/ng/classes.ctrl.js" />
         <option value="$PROJECT_DIR$/ng/classes.svc.js" />
-        <option value="$PROJECT_DIR$/controllers/api/users.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/templates/admin/admin-add-classes.html" />
         <option value="$PROJECT_DIR$/ng/admin.add.class.js" />
@@ -274,6 +268,8 @@
         <option value="$PROJECT_DIR$/ng/admin.class.ctrl.js" />
         <option value="$PROJECT_DIR$/ng/class.svc.js" />
         <option value="$PROJECT_DIR$/controllers/api/classes.js" />
+        <option value="$PROJECT_DIR$/models/child.js" />
+        <option value="$PROJECT_DIR$/controllers/api/users.js" />
       </list>
     </option>
   </component>
@@ -408,14 +404,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148480000" />
+    <option name="totallyTimeSpent" value="166000000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="558" height="900" extended-state="6" />
+    <frame x="0" y="0" width="788" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.2923077" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.29074314" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -428,7 +424,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" x="11" y="716" width="688" height="184" id="Terminal" order="9" type="WINDOWED" visible="true" weight="0.32837301" />
+      <window_info active="true" anchor="bottom" x="57" y="602" width="688" height="316" id="Terminal" order="9" type="WINDOWED" visible="true" weight="0.32837301" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003524" side_tool="true" weight="0.32771084" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -476,9 +472,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/user-forms.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/user-payments.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -496,24 +489,10 @@
     <entry file="file://$PROJECT_DIR$/client/js/clientsController.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/post.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="2" lean-forward="true" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/child.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -704,29 +683,8 @@
     <entry file="file://$PROJECT_DIR$/ng/admin.classes.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/admin-update-class.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ng/update.ctrl.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng/user.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng/child.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/class.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -742,13 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update-child.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ng/admin.class.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -756,14 +707,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/classes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="18" selection-start-line="18" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/admin-update-class.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng/child.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ng/user.svc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+        <state relative-caret-position="378">
+          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
           <folding>
             <element signature="e#578#829#0" />
             <element signature="e#856#909#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng/user.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -774,18 +760,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/classes.js">
+    <entry file="file://$PROJECT_DIR$/models/child.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        <state relative-caret-position="195">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70485">
+          <caret line="4699" selection-start-line="4699" selection-end-line="4699" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/update-child.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="84" selection-start-line="25" selection-start-column="84" selection-end-line="25" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/api/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="147" column="20" selection-start-line="147" selection-start-column="20" selection-end-line="147" selection-end-column="20" />
+        <state relative-caret-position="-49">
+          <caret line="137" column="4" selection-start-line="137" selection-start-column="7" selection-end-line="142" />
           <folding>
+            <element signature="e#320#353#0" />
             <element signature="e#624#1112#0" />
           </folding>
         </state>

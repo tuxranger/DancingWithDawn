@@ -1,4 +1,5 @@
 var router = require('express').Router()
+var mongoose = require('mongoose')
 var bcrypt = require('bcrypt')
 var jwt = require('jwt-simple')
 var User = require('../../models/user')
@@ -87,9 +88,9 @@ router.post('/addChild', function (req, res, next) {
 		adult: req.body.adultId,
 		firstName: req.body.firstName,
 		lastName: req.body.lastName,
+		fullName: req.body.firstName + ' ' + req.body.lastName,
 		dob: req.body.dob,
 		notes: req.body.notes,
-		//fullName: req.body.firstName + req.body.lastName
 	})
 
 	child.save(function (err, newChild) {
@@ -111,11 +112,30 @@ router.post('/addChild', function (req, res, next) {
 
 // Used to update user account information
 router.put('/updateChild', function (req, res, next) {
+
+	var oldFullName = req.body.fullName
+	var newFullName = req.body.firstName + ' ' + req.body.lastName
+
+	var query  = Child.where({ _id: req.body._id })
+
 	Child.findByIdAndUpdate(req.body._id, req.body, function (err, child) {
     	if (err) {
       		console.log(err);
       		return res.status(400).send(err);
     	} else {
+    		//console.log(child)
+			query.findOneAndUpdate({$set:{fullName: newFullName}},function (err, info) {
+				if(err) res.status(400).send(err)
+				info.fullName = newFullName
+			})
+			User.update({_id: req.body.adult, childrenName: oldFullName},
+				{$set: {"childrenName.$" : newFullName},}, function (err, results) {
+					if(err) res.status(400).send(err)
+					//console.log(results)
+				})
+			User.findOne({_id: req.body.adult}, function (err, user) {
+				//console.log(user)
+			})
       		return res.json(child);
     	}
     })
@@ -125,11 +145,31 @@ router.put('/updateChild', function (req, res, next) {
 router.put('/deleteChild', function (req, res, next) {
 	var parentId = req.body.adult
 	var childId = req.body._id
+	var fullName = req.body.firstName + ' ' + req.body.lastName
+
+
+	// Child.findOne({_id: childId}, function (err, user) {
+	// 	console.log(user)
+	// })
+
+
+	//console.log(fullName)
+
+
+	//
+	// User.findOne({_id: parentId}, function (err, user) {
+	// 	console.log(user)
+	// })
 
 	Child.deleteOne({_id :childId}, function (err) {
 		if (err) {
       		return res.status(400).send(err);
     	} else {
+			User.update({_id: parentId},
+				{$pull: {childrenName: fullName},}, function (err, results) {
+					if(err) res.status(400).send(err)
+					//console.log(results)
+				})
       		User.findByIdAndUpdate(parentId, {$pull: {children: childId}}, function (err, user) {
     			if (err) {
     	  			console.log(err);
