@@ -10,43 +10,25 @@
 
 </div>
 
-<div class="white-bg-row pt-4 pb-2">
+<div class="white-bg-row py-4">
   <div class="container">
 
     <div class='row justify-content-center'>
-      <p class='text-center col-sm-8 font-italic'>Below are answers to common questions I recieve about myself and my service. If you have any additional questions, please feel free to contact me.</p>
+      <p class='text-center col-md-10 font-italic'>Below are answers to common questions I recieve about myself and my service. If you have any additional questions, please feel free to contact me.</p>
     </div>
 
-    <hr>
+    <div ng-repeat="qanda in faq">
+      
+      <div class="faq-divider"><i class="far fa-question-circle divider-icon dwd-green"></i></div>
 
-    <p class="font-weight-bold">How much do you charge for your teaching services?</p>
-    <p>I will be delighted to contract directly with your school to provide instruction for all your classes, or I can work directly with the parents who choose dance and theater classes for their children. You will find my rates competitive and affordable.</p>
-
-    <hr>
-
-    <p class="font-weight-bold">Where do you hold your lessons?</p>
-    <p>Classes are held at preschools, churches, and childcare centers in the Gainesville, Florida area.</p>
-
-    <hr>
-
-    <p class="font-weight-bold">What is your teaching expereince?</p>
-    <p>I began teaching little ones when my dance teacher asked me to be her assistant while still in high school. This expereince has led me to a life-long love of working with children. I was the director of a dance program for Dade County Public Schools in Miami, Florida for 5 years prior to opening my own dance studio.</p>
-    <p>After Hurricane Andrew, I closed my studio and began offering traveling dance/gymnastics/physical education/dramatics classes directly to schools and churches. I love visiting each site on a weekly basis and developing relationships with the staff and children.</p>
-
-    <hr>
-
-    <p class="font-weight-bold">Is special dance attire required?</p>
-    <p>Children can enjoy dance and movement classes in their school clothes. I do recommend girls wear shorts underneath dresses. It is necessary to wear tap shoes for tap class and ballet slippers for ballet. However, it is just a simple change of shoes that is required for those two classes.</p>
-
-    <hr>
-
-    <p class="font-weight-bold">Are you insured?</p>
-    <p>Yes, I am licensed and insured.</p>
-
-    <hr>
-
-    <p class="font-weight-bold">Do you offer a free trial class?</p>
-    <p>Yes, I will bring in music and props and offer a free 20 minute class in your age range(s) and class styles of your choice.</p>
+      <div class='row justify-content-center'> 
+        <div class="col-md-10">
+          <p class="font-weight-bold">{{qanda.question}}</p>
+          <p class="">{{qanda.answer}}</p>
+        </div>
+      </div>
+    
+    </div>
 
   </div>
 </div>
