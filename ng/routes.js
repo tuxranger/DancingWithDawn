@@ -4,7 +4,7 @@ angular.module('app')
 	.when('/', { templateUrl: 'index.html' })
 	.when('/classes', { templateUrl: 'classes.html' })
 	.when('/about', { templateUrl: 'about.html' })
-	.when('/faq', { templateUrl: 'faq.html' })
+	.when('/faq', { controller: 'ContentCtrl', templateUrl: 'faq.html' })
 
 	.when('/login', { controller: 'LoginCtrl', templateUrl: 'login.html' })
 	.when('/register', { controller: 'RegisterCtrl', templateUrl: 'registration.html' })
