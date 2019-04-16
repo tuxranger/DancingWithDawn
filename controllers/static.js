@@ -111,6 +111,14 @@ router.get('/update-admin-password', function (req, res) {
 	res.sendFile('layouts/admin.html', {root: './'})
 })
 
+router.get('/cm', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-faq', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
 router.use(express.static(__dirname + '/../assets'))
 router.use(express.static(__dirname + '/../templates'))
 router.use(express.static(__dirname + '/../img'))

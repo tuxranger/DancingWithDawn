@@ -1,0 +1,19 @@
+<ng-include src="'cm/cm-nav.html'"></ng-include>
+
+<div class="mt-4 mx-auto text-center">
+	<div class="icon-bg-circle"><i class="fas fa-question user-icon"></i></div>
+	<p class="user-page-headline">Frequenty Asked Questions</p>
+</div>
+
+<div class="container my-3" ng-if='currentAdmin'>
+
+	<div ng-repeat="qanda in faq" class='container child-container p-3 my-3'>
+		<a class='btn btn-primary float-right' href="/cm-faq-edit" ng-click="setFaqToUpdate(qanda)">Edit FAQ</a>
+
+		<p><span class='font-weight-bold'>Question</span><br>{{qanda.question}}</p>
+		<p><span class='font-weight-bold'>Answer</span><br>{{qanda.answer}}</p>
+	</div>
+
+	<a class="btn btn-primary w-50 block mx-auto py-2" href="/cm-faq-add">Add New FAQ</a>
+
+</div>
