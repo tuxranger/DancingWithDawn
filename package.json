@@ -9,7 +9,6 @@
 		"bcrypt": "^3.0.4",
 		"body-parser": "^1.18.3",
 		"express": "^4.16.4",
-		"gulp": "^4.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-ng-annotate": "^2.1.0",
 		"gulp-nodemon": "^2.4.2",
@@ -18,5 +17,8 @@
 		"gulp-uglify": "^3.0.2",
 		"jwt-simple": "^0.5.5",
 		"mongoose": "^5.4.16"
+	},
+	"devDependencies": {
+		"gulp": "^4.0.0"
 	}
 }
