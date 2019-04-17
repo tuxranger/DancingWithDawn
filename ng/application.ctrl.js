@@ -11,7 +11,6 @@ angular.module('app')
 
 	$scope.$on('login', function(_, user) {
 		$scope.currentUser = user
-		console.log($scope.currentUser)
 	})
 
 	$scope.logout = function() {
