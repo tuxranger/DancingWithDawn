@@ -1,7 +1,17 @@
 angular.module('app')
-.controller('ApplicationCtrl', function ($scope, UserSvc, $location) {
+.controller('ApplicationCtrl', function ($scope, UserSvc, $location, $http) {
+	$scope.init = function () {
+		if(window.sessionStorage.token) {
+			UserSvc.checkToken()
+			.then(function(res) {
+				$scope.currentUser = res.data
+			})
+		}
+	}
+
 	$scope.$on('login', function(_, user) {
 		$scope.currentUser = user
+		console.log($scope.currentUser)
 	})
 
 	$scope.logout = function() {

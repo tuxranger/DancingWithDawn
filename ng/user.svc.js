@@ -22,12 +22,17 @@ angular.module('app')
 		})
 	}
 
+	svc.checkToken = function() {
+		$http.defaults.headers.common['X-Auth'] = window.sessionStorage.token
+		return svc.getUser()
+	}
+
 	svc.login = function (email, password) {
 		return $http.post('/api/sessions', {
 			email: email, password: password
 		})
 		.then(function (val) {
-			svc.token = val.data
+			window.sessionStorage.token = val.data
 			$http.defaults.headers.common['X-Auth'] = val.data
 			return svc.getUser()
 		}, function(err) {
@@ -37,6 +42,7 @@ angular.module('app')
 
 	svc.logout = function() {
 		delete $http.defaults.headers.common['X-Auth']
+		sessionStorage.clear();
 	}
 
 	svc.update = function (id, email, firstName, lastName, streetAddress, city, state, zip, phone) {
