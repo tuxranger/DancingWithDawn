@@ -1,4 +1,5 @@
 <div class="dwd-dk-gray-bg">
+
   <ng-include src="'navigation.html'"></ng-include>
 </div>
 
@@ -7,8 +8,14 @@
 	<p class="user-page-headline">Class Photos</p>
 </div>
 
-<div class='container mb-3' ng-if='currentUser'>
+<!-- <div class='container mb-3' ng-if='currentUser'>
 	<a href="https://photos.app.goo.gl/GbCygMibSN12V4V66" class="btn btn-primary block mx-auto my-3 px-4 py-2">View Photo Album</a>
-</div>
+</div> -->
+
+<div class="gallery">
+  	<div class='container py-4'>
+      <ng-include src="'gallery.html'"></ng-include>
+  </div>
+  </div>
 
 <ng-include src="'footer.html'"></ng-include>
