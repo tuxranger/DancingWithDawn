@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 
-mongoose.connect('mongodb://jonsessa:bc4x86@ds161335.mlab.com:61335/social_test', {useNewUrlParser: true}, function() {
+mongoose.connect('mongodb+srv://dwd_db:bc4x86@cluster0-yone8.mongodb.net/test?retryWrites=true', {useNewUrlParser: true}, function() {
 	console.log('mongodb connected')
 })
 
@@ -11,3 +11,8 @@ mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 
 module.exports = mongoose
+
+
+// mongodb+srv://dwd_db:bc4x86@cluster0-yone8.mongodb.net/test?retryWrites=true
+// User: dwd_db
+// Pass: bc4x86
