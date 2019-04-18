@@ -1,22 +1,304 @@
-h1 {
-	color: #333333;
-}
+/* Universal Styles */
 
 body {
 	background-color: #f3f3f3;
+	font-size: 100%;
+	font-family: 'Open Sans', sans-serif;
+} 
+
+
+/* Typography */
+
+.font-coiny { font-family: 'Coiny', cursive; }
+.font-pacifico { font-family: 'Pacifico', cursive; }
+
+
+
+.jumbotron {
+ 	border-radius: 0;
+ 	height: 22rem;
+ 	width: 100%; 
+ 	margin: 0;
+ 	padding: 2rem 0;
 }
 
-.test-bg1 {
-	background-color:red;
+.jumbotron-text-bg {
+	border-radius: 50%;
+	height: 18rem;
+	width:  18rem;
+	color: #fff;
+	text-align: center;
 }
 
-.test-bg2 {
-	background-color:yellow;
+#jumbotron-homepage-text-bg {
+	background-color: rgba(138, 71, 226, 0.7);
 }
 
-.test-bg3 {
-	background-color:cyan;
+.home-line1 {
+	font-size: 4em;
+	padding: 1.3em 0 0;
+	margin: 0;
 }
+
+.home-line2 {
+	font-size: 2.5em;
+	margin: -0.8em 0 0;
+	padding: 0;
+}
+
+
+/* Brand Colors */
+.dwd-purple { color: #803bdb; }
+.dwd-purple-bg { background-color: #803bdb; }
+
+.dwd-green { color: #08b063; }
+.dwd-green-bg { background-color: #08b063; }
+
+.dwd-blue { color: #01b2f5; }
+.dwd-blue-bg { background-color: #01b2f5; }
+
+.dwd-red { color: #e75054; }
+.dwd-red-bg { background-color: #e75054; }
+
+.dwd-orange { color: #efa010; }
+.dwd-orange-bg { background-color: #efa010; }
+
+.dwd-dk-gray { color: #555555; }
+.dwd-dk-gray-bg { background-color: #555555; }
+
+
+.white-bg-row {
+	width:100%;
+	background-color: #ffffff;
+}
+
+.grey-bg-row {
+	width: 100%;
+	background-color: #f3f3f3;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0px 0px 3px #eee;
+}
+
+.color-bg-row {
+	width: 100%;
+}
+
+.block {
+	display: block;
+}
+
+
+/* Navigation */
+
+nav {
+	font-size: 1rem;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	margin: 0;
+	padding: 0;
+}
+
+a.nav-link {color: #eee !important;}
+a.nav-link:hover {color: #fff !important;}
+
+.logo-1 {font-size: 1.9em; line-height: 1em;}
+.logo-2 {font-size: 1.4em;}
+
+ul.navbar-nav {
+	font-size: 1.1em;
+}
+
+.user-nav {
+	width:100%;
+}
+
+/* Footer */
+
+.footer {
+	width:100%;
+	background-color: #fff;
+	font-size: 1em;
+	color: #666;
+	box-shadow: 0px 0px 2px #ccc;
+}
+
+	.footer .contact-icon {
+		color: #aaa;
+		font-size: 1.8em;
+	}
+
+.copyright {
+	font-size: 0.75em;
+	text-align: center;
+	padding: 0.5em 0 0;
+	color:#aaa;
+}
+
+
+/* Homepage */
+
+#homepage-bg {
+	background: url("../img/homepage-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+	border-bottom: 3px solid #803bdb;
+}
+
+
+.homepage-icon-bg-circle {
+	display: block;
+	width:6em;
+	height:6em;
+	border-radius: 50%;
+	padding: 0.5em 0.6em;
+}
+
+.homepage-icon {
+	color:#ffffff;
+	font-size: 3.5em;
+	line-height: 1.4em;
+	text-align: center;
+}
+
+ul.parental-accounts {
+	list-style: none;
+}
+
+	ul.parental-accounts li {
+		border: 0;
+		font-size: 1em;
+		line-height: 4em;
+	}
+
+	.pa-icon-bg-circle {
+		display: block;
+		border-radius: 50%;
+		width: 4em;
+		height: 4em;
+		margin: 0 0.5em 0 0;
+		float:left;
+	}
+
+	.pa-icon {
+		color:#ffffff;
+		font-size: 2.5em;
+		line-height: 1.6em;
+		width:1.6em;
+		text-align: center;
+	}
+
+
+/* Classes Page */
+
+#classes-bg {
+	background: url("../img/classes-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-bottom: 3px solid #e75054;
+}
+
+
+#jumbotron-classes-text-bg {
+	background-color: rgba(231, 80, 84, 0.7);
+}
+
+.classes-line1 {
+	font-size: 3.2em;
+	padding: 2.1em 0 0;
+	margin: 0;
+}
+
+/* About Dawn Page */
+
+#about-bg {
+	background: url("../img/about-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-bottom: 3px solid #efa010;
+}
+
+
+#jumbotron-about-text-bg {
+	background-color: rgba(239, 160, 16, 0.7);
+}
+
+.about-line1 {
+	font-size: 3.5em;
+	padding: 1.5em 0 0;
+	margin: 0;
+}
+
+.about-line2 {
+	font-size: 3.5em;
+	margin: -0.5em 0 0;
+	padding: 0;
+}
+
+/* FAQ Page */
+
+#faq-bg {
+	background: url("../img/faq-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+	border-bottom: 3px solid #55d03b;
+}
+
+#jumbotron-faq-text-bg {
+	background-color: rgba(85, 208, 59, 0.7);
+}
+
+.faq-line1 {
+	font-size: 2.2em;
+	line-height: 1.2em;
+	padding: 2.6em 0 0;
+	margin: 0;
+}
+
+.faq-divider {
+	width: 100%;
+	height: 3em;
+	margin: 1.5em 0;
+	text-align: center;
+	position: relative;
+}
+
+.faq-divider::before {
+	width: 45%;
+    height:1px;
+    border-top: 1px solid #cccccc;
+    display: inline-block;
+    content:'';
+    position:absolute;
+      left: 0;
+      top: 50%;
+}
+
+.faq-divider::after {
+	width: 45%;
+    height:1px;
+    border-top: 1px solid #cccccc;
+    display: inline-block;
+    content:'';
+    position:absolute;
+      right: 0;
+      top: 50%;
+}
+
+.divider-icon {
+	font-size: 3em;
+	line-height: 1em;
+	z-index: 10;
+}
+
+/* User Account Section */
 
 .child-container {	
 	border: 1px solid #aaa;
@@ -70,7 +352,6 @@ body {
 .copyright {
 	font-size: 0.75em;
 	text-align: center;
-	padding: 0.5em 0;
-	color:#aaa;
+	color: #aaa;
 }
 

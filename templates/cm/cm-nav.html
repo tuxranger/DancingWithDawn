@@ -1,11 +1,11 @@
-<nav class="navbar navbar-dark navbar-expand-md">
+<nav class="navbar navbar-dark navbar-expand-md dwd-dk-gray-bg">
   <div class="container">
       
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="#">
       <span class="font-coiny logo-1">DANCE</span>&nbsp;
       <span class="font-pacifico logo-2">with Dawn</span>
     </a>
-      
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,40 +13,34 @@
     <div class="collapse navbar-collapse text-center" id="navbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mr-md-3 mr-0">
-          <a class="nav-link" href="/classes">Classes</a>
+          <a class="nav-link" href="/admin-account">Admin Account</a>
         </li>
         <li class="nav-item mr-md-3 mr-0">
-          <a class="nav-link" href="/about">About Dawn</a>
-        </li>
-        <li class="nav-item mr-md-3 mr-0">
-          <a class="nav-link" href="/faq">FAQ</a>
+          <a class="nav-link" href="/cm">Content Management</a>
         </li>
       </ul>
         
-      <a class="btn btn-outline-light ml-sm-3 ml-0" href="/#/login" ng-hide="currentUser">Log In</a>
-      <button class="btn btn-outline-light ml-sm-3 ml-0" ng-click='logout()' ng-show="currentUser">Log Out</button>
+      <a class="btn btn-outline-light ml-sm-3 ml-0" href="/admin" ng-hide="currentAdmin">Log In</a>
+      <button class="btn btn-outline-light ml-sm-3 ml-0" ng-click='logout()' ng-show="currentAdmin">Log Out</button>
     </div>
   </div>
-</nav> 
+</nav>
 
 <nav class="navbar navbar-dark navbar-expand-sm"> 
-    <div ng-if="currentUser" class="collapse navbar-collapse text-center user-nav dwd-blue-bg" id="navbar">
+    <div ng-if="currentAdmin" class="collapse navbar-collapse text-center user-nav dwd-purple-bg" id="navbar">
       <div class="container">
         <ul class="navbar-nav justify-content-center">
           <li class="nav-item mr-md-3 mr-0">
-            <a class="nav-link" href="/user-account">Account</a>
+            <a class="nav-link" href="#">Homepage</a>
           </li>
           <li class="nav-item mr-md-3 mr-0">
-            <a class="nav-link" href="/user-classes">Classes</a>
+            <a class="nav-link" href="#">Classes</a>
           </li>
           <li class="nav-item mr-md-3 mr-0">
-            <a class="nav-link" href="/user-photos">Photos</a>
+            <a class="nav-link" href="#">About Dawn</a>
           </li>
           <li class="nav-item mr-md-3 mr-0">
-            <a class="nav-link" href="/user-payments">Payments</a>
-          </li>
-          <li class="nav-item mr-md-3 mr-0">
-            <a class="nav-link" href="/user-forms">Forms</a>
+            <a class="nav-link" href="/cm-faq">FAQ</a>
           </li>
         </ul>
       </div>

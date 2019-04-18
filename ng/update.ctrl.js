@@ -1,8 +1,12 @@
 angular.module('app')
 .controller('UpdateCtrl', function($scope, UserSvc, $location) {
 	$scope.update = function (id, email, firstName, lastName, streetAddress, city, state, zip, phone) {
-		UserSvc.update(id, email, firstName, lastName, streetAddress, city, state, zip, phone)
+		
+		var modifiedEmail = email.toLowerCase()
+
+		UserSvc.update(id, modifiedEmail, firstName, lastName, streetAddress, city, state, zip, phone)
 		.then(function (response) {
+			$scope.currentUser.email = modifiedEmail
 			$location.path('/user-account')
 		})
 	}
