@@ -17,4 +17,6 @@ angular.module('app')
 		return $http.put('/api/content/updateFaq', faq)
 	}
 
+	
+
 })
