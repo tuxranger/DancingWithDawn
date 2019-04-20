@@ -4,6 +4,7 @@ var jwt = require('jwt-simple')
 var User = require('../../models/user')
 var Child = require('../../models/child')
 var config = require('../../config')
+var nodemailer = require('nodemailer');
 
 // Returns user object
 router.get('/', function (req, res, next) {
@@ -75,6 +76,31 @@ router.put('/updatePassword', function (req, res, next) {
 		})
 	})
 
+})
+
+router.put('/resetPassword', function (req, res, next) {
+	User.findOne( {email: req.body.email}, function (err, user) {
+		console.log(err)
+		if (err) {
+			console.log(err);
+			return next(err);
+		}
+		if (user) {
+			bcrypt.hash(req.body.newPassword, 10, function (err, hash) {
+				if (err) { return next(err) }
+				user.password = hash;
+				user.save(function (err) {
+					if (err) { return next(err) }
+					res.sendStatus(201)
+				})
+			})
+		} if (!user) {
+			console.log("Email not in DB")
+			return res.status(401).send('Invalid email address')
+		}
+
+
+	})
 })
 
 
@@ -162,5 +188,34 @@ router.get('/getAllChildren', function (req, res, next) {
 		
 	})
 })
+//send an email to the specified email address with new password
+router.post('/sendEmail', function (req, res, next) {
+	console.log(req.body.email)
+	var transporter = nodemailer.createTransport({
+		service: 'gmail',
+		auth: {
+			user: 'DwDresetpass@gmail.com',
+			pass: 'testpass!'
+		}
+	});
+
+	var mailOptions = {
+		from: 'DwDresetpass@gmail.com',
+		to: req.body.email,
+		subject: 'Password has been reset',
+		text: 'Your password has been reset. Your new password is ' + req.body.newPassword + '      ' +
+			'This is an automated message, please do not respond.'
+	};
+
+	transporter.sendMail(mailOptions, function(error, info){
+		if (error) {
+			console.log(error);
+		} else {
+			console.log('Email sent: ' + info.response);
+		}
+	});
+})
 
 module.exports = router
+
+
