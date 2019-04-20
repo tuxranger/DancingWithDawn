@@ -200,7 +200,7 @@ router.post('/sendEmail', function (req, res, next) {
 	});
 
 	var mailOptions = {
-		from: 'tuxranger@gmail.com',
+		from: 'DwDresetpass@gmail.com',
 		to: req.body.email,
 		subject: 'Password has been reset',
 		text: 'Your password has been reset. Your new password is ' + req.body.newPassword + '      ' +
