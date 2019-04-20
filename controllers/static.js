@@ -25,6 +25,10 @@ router.get('/register', function (req, res) {
 	res.sendFile('layouts/app.html', { root: './'})
 })
 
+router.get('/reset-password', function (req, res) {
+	res.sendFile('layouts/app.html', { root: './'})
+})
+
 router.get('/user-account', function (req, res) {
 	res.sendFile('layouts/app.html', { root: './'})
 })

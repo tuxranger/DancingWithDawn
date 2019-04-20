@@ -8,6 +8,7 @@ angular.module('app')
 
 	.when('/login', { controller: 'LoginCtrl', templateUrl: 'login.html' })
 	.when('/register', { controller: 'RegisterCtrl', templateUrl: 'registration.html' })
+	.when('/reset-password', { controller: 'ResetCtrl', templateUrl: 'reset-password.html'})
 	
 	.when('/user-account', { controller: 'UserCtrl', templateUrl: 'user/user-account.html' })
 	.when('/update-user-account', { controller: 'UpdateCtrl', templateUrl: 'user/update-user-account.html' })

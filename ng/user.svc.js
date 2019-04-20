@@ -66,6 +66,13 @@ angular.module('app')
 		})
 	}
 
+	svc.resetPassword =  function (email, newPassword) {
+		return $http.put('/api/users/resetPassword', {
+			email: email,
+			newPassword: newPassword
+		})
+	}
+
 	svc.updateChild = function (child) {
 		return $http.put('/api/users/updateChild', child)
 	}
@@ -87,5 +94,13 @@ angular.module('app')
 	svc.getAllChildren = function () {
 		return $http.get('/api/users/getAllChildren')
 	}
+
+	svc.email = function (email, newPassword) {
+		return $http.post('/api/users/sendEmail',{
+			email: email,
+			newPassword: newPassword
+		})
+	}
+
 
 })
