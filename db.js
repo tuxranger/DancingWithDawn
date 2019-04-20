@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 
-mongoose.connect('mongodb://jonsessa:bc4x86@ds161335.mlab.com:61335/social_test', {useNewUrlParser: true}, function() {
+mongoose.connect('mongodb://dwd_db:bc4x86@ds037907.mlab.com:37907/dancewithdawn', {useNewUrlParser: true}, function() {
 	console.log('mongodb connected')
 })
 

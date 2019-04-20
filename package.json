@@ -1,5 +1,5 @@
 {
-	"name": "socialapp",
+	"name": "dancewithdawn",
 	"scripts": {
 		"postinstall": "gulp build"
 	},
