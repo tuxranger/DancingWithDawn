@@ -30,4 +30,22 @@ angular.module('app')
                 })
         }
 
+        ClassSVC.getAllChildren().then(function(res) {
+            $scope.children = res.data
+        })
+
+        // ClassSVC.getAllStudents().then(function(res) {
+        //     $scope.students = res.data
+        // })
+
+        // $scope.setClassToModifyRoster = function(classRoster) {
+        //     $scope.currentAdmin.classToModifyRoster = classRoster
+        // }
+        //
+        // $scope.addToClass = function(class_id, childrenToEnroll) {
+        //     console.log('childrenToEnroll' + childrenToEnroll)
+        //     console.log('class_' + class_id)
+        //     ClassSVC.addToClass(class_id, childrenToEnroll)
+        // }
+
     })

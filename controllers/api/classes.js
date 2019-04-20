@@ -4,7 +4,7 @@ var jwt = require('jwt-simple')
 var config = require('../../config')
 var Admin = require('../../models/admin')
 var User = require('../../models/user')
-//var Child = require('../../models/child')
+var Child = require('../../models/child')
 var Class = require('../../models/class')
 
 //Returns admin account
@@ -40,6 +40,7 @@ router.post('/addClass', function (req, res, next) {
 })
 
 router.put('/updateClass', function (req, res, next) {
+    console.log(req.body)
     Class.findByIdAndUpdate(req.body._id, req.body, function (err, class_) {
         if (err) {
             console.log(err);
@@ -71,8 +72,68 @@ router.get('/getAllClasses', function (req, res, next) {
 	})
 
 	Class.find().then(function (class_) {
+	    //console.log(class_)
 		res.json(class_)
 	})
 })
+
+router.get('/getAllChildren', function (req, res, next) {
+	if (!req.headers['x-auth']) {
+		return res.sendStatus(401)
+	}
+
+	var auth = jwt.decode(req.headers['x-auth'], config.secret)
+	Admin.findOne({username: auth.username}, function (err) {
+		if (err) { return next(err) }
+	})
+
+	Child.find().then(function (children) {
+		//console.log(children)
+	    res.json(children)
+	})
+})
+
+
+
+// router.get('/getAllStudents', function (req, res, next) {
+//     if (!req.headers['x-auth']) {
+//         return res.sendStatus(401)
+//     }
+//
+//     var auth = jwt.decode(req.headers['x-auth'], config.secret)
+//     Admin.findOne({username: auth.username}, function (err) {
+//         if (err) { return next(err) }
+//     })
+//
+//     Class.findOne({_id: req.body._id}).then(function (class_) {
+//         console.log(class_.children)
+//         res.json(class_.children)
+//     })
+// })
+
+// router.patch('/addToClass', function (req, res, next) {
+//
+//     console.log(req.body)
+//     console.log(req.body.childrenToEnroll)
+//
+//     // if (!req.headers['x-auth']) {
+//     //     return res.sendStatus(401)
+//     // }
+//
+//     // var auth = jwt.decode(req.headers['x-auth'], config.secret)
+//     // Admin.findOne({username: auth.username}, function (err) {
+//     //     if (err) { return next(err) }
+//     // })
+//
+//     Class.findByIdAndUpdate(req.body._id,{$addToSet: {children: req}}, function (err, class_) {
+//         if (err) {
+//             console.log(err)
+//             return res.status(400).send(err);
+//         } else {
+//             console.log(class_)
+//             return res.json(class_)
+//         }
+//     })
+// })
 
 module.exports = router

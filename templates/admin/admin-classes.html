@@ -13,9 +13,8 @@
         <p><span class="font-weight-bold">Time: </span>{{class.time}}</p>
         <p><span class="font-weight-bold">Days: </span>{{class.days}}</p>
         <p><span class="font-weight-bold">Photo Album: </span>{{class.album}}</p>
-
         <!--<a class='btn btn-primary' href="/update-child" ng-click="setChildToUpdate(child)">Edit Child Info</a>-->
-        <a class='btn btn-primary' href="/admin-update-class" ng-click="setClassToUpdate(class)">Edit Class Info</a>
+        <a class='btn btn-primary' href="/admin-update-class" ng-click="setClassToUpdate(class); setClassToModifyRoster(class)">Edit Class Info</a>
         <!--<p ng-repeat="child in client.childrenName"><span class="font-weight-bold">Child name: </span>{{child}}</p>-->
     </div>
 

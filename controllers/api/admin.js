@@ -109,7 +109,6 @@ router.get('/getAllUsers', function (req, res, next) {
 // 	})
 //
 // 	Child.find().then(function (children) {
-// 		console.log(chil)
 // 		res.json(children)
 // 	})
 // })
