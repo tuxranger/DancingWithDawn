@@ -3,6 +3,8 @@ var bcrypt = require('bcrypt')
 var jwt = require('jwt-simple')
 var config = require('../../config')
 var Admin = require('../../models/admin')
+var User = require('../../models/user')
+var Child = require('../../models/child')
 
 // Returns admin account
 router.get('/', function (req, res, next) {
@@ -80,5 +82,35 @@ router.put('/updateBio', function (req, res, next) {
 		}
 	})
 })
+
+router.get('/getAllUsers', function (req, res, next) {
+	if (!req.headers['x-auth']) {
+		return res.sendStatus(401)
+	}
+
+	var auth = jwt.decode(req.headers['x-auth'], config.secret)
+	Admin.findOne({username: auth.username}, function (err) {
+		if (err) { return next(err) }
+	})
+
+	User.find().then(function (users) {
+		res.json(users)
+	})
+})
+
+// router.get('/getAllChildren', function (req, res, next) {
+// 	if (!req.headers['x-auth']) {
+// 		return res.sendStatus(401)
+// 	}
+//
+// 	var auth = jwt.decode(req.headers['x-auth'], config.secret)
+// 	Admin.findOne({username: auth.username}, function (err) {
+// 		if (err) { return next(err) }
+// 	})
+//
+// 	Child.find().then(function (children) {
+// 		res.json(children)
+// 	})
+// })
 
 module.exports = router
