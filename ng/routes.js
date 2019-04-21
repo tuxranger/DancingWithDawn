@@ -36,6 +36,9 @@ angular.module('app')
 	.when('/admin-forms', {templateUrl: 'admin/admin-forms.html'})
 
 	.when('/cm', { controller: 'ContentCtrl', templateUrl: 'cm/cm.html'})
+	.when('/cm-element-add', { controller: 'ContentCtrl', templateUrl: 'cm/cm-element-add.html'})
+	.when('/cm-element-edit', { controller: 'ContentCtrl', templateUrl: 'cm/cm-element-edit.html'})
+
 	.when('/cm-faq', { controller: 'ContentCtrl', templateUrl: 'cm/cm-faq.html'})
 	.when('/cm-faq-add', { controller: 'ContentCtrl', templateUrl: 'cm/cm-faq-add.html'})
 	.when('/cm-faq-edit', { controller: 'ContentCtrl', templateUrl: 'cm/cm-faq-edit.html'})

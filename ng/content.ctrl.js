@@ -1,6 +1,14 @@
 angular.module('app')
 .controller('ContentCtrl', function($scope, ContentSvc, $location) {
 
+	ContentSvc.getAllElements().then(function(elems) {
+		$scope.content = elems.data
+
+		angular.forEach(elems.data, function(value, index) {
+			$scope[value.name] = value.value
+		})
+	})
+
 	ContentSvc.getAllFaqs().then(function(res) {
 		$scope.faq = res.data
 	})
@@ -21,14 +29,10 @@ angular.module('app')
 		$scope.inputError = false
 		$scope.errorMessage = ''
 
-		if(!question) {
+		if(!question || !answer) {
 			$scope.inputError = true
-			$scope.errorMessage = 'Submission must include a question'
-		}
-
-		if(!answer) {
-			$scope.inputError = true
-			$scope.errorMessage = 'Submission must include an answer'
+			$scope.errorMessage = 'All text fields must contain content'
+			return
 		}
 
 		ContentSvc.addFaq(question, answer)
@@ -37,6 +41,20 @@ angular.module('app')
 		})
 	}
 
+	$scope.deleteFaq = function(faq) {
+		ContentSvc.deleteFaq(faq)
+		.then(function (response) {
+			$location.path('/cm-faq')
+		})
+	}
 
+	$scope.addElement = function (name, location, desc, value) {
+		$scope.inputError = false
+		$scope.errorMessage = ''
 
+		ContentSvc.addElement(name, location, desc, value)
+		.then(function (response) {
+			$location.path('/cm')
+		})
+	}
 })
