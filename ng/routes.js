@@ -34,7 +34,7 @@ angular.module('app')
 			.when('/admin-add-class', { controller: 'ClassCtrl', templateUrl: 'admin/admin-add-class.html'})
 			.when('/admin-update-class', { controller: 'ClassCtrl', templateUrl: 'admin/admin-update-class.html' })
 
-			.when('/admin-clients', {templateUrl: 'admin/admin-clients.html'})
+			.when('/admin-clients', {controller: 'ClientsCtrl', templateUrl: 'admin/admin-clients.html'})
 			.when('/admin-photos', {templateUrl: 'admin/admin-photos.html'})
 			.when('/admin-payments', {templateUrl: 'admin/admin-payments.html'})
 			.when('/admin-forms', {templateUrl: 'admin/admin-forms.html'})
