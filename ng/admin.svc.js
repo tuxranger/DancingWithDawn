@@ -67,4 +67,12 @@ angular.module('app')
 		})
 	}
 
+	svc.getAllUsers = function () {
+		return $http.get('/api/admin/getAllUsers')
+	}
+
+	// svc.getAllChildren = function () {
+	// 	return $http.get('/api/admin/getAllChildren')
+	// }
+
 })

@@ -1,5 +1,23 @@
 <ng-include src="'admin/admin-navigation.html'"></ng-include>
 
 <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Admin Classes</h1>
+    <h1 class="display-4">Classes</h1>
 </div>
+
+<div class="container" ng-if="currentAdmin">
+
+    <h2 class="text-center">Classes</h2>
+    <div ng-repeat="class in classes" class="container child-container p-3 my-3">
+        <p><span class="font-weight-bold">Title: </span>{{class.title}}</p>
+        <p><span class="font-weight-bold">Description: </span>{{class.description}}</p>
+        <p><span class="font-weight-bold">Time: </span>{{class.time}}</p>
+        <p><span class="font-weight-bold">Days: </span>{{class.days}}</p>
+        <p><span class="font-weight-bold">Photo Album: </span>{{class.album}}</p>
+        <!--<a class='btn btn-primary' href="/update-child" ng-click="setChildToUpdate(child)">Edit Child Info</a>-->
+        <a class='btn btn-primary' href="/admin-update-class" ng-click="setClassToUpdate(class); setClassToModifyRoster(class)">Edit Class Info</a>
+        <!--<p ng-repeat="child in client.childrenName"><span class="font-weight-bold">Child name: </span>{{child}}</p>-->
+    </div>
+
+</div>
+
+<a class='btn btn-primary w-100 mb-3' href="/admin-add-class">Add Class</a>

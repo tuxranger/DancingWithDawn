@@ -3,3 +3,15 @@
 <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Clients</h1>
 </div>
+
+<div class="container" ng-if="currentAdmin">
+
+    <h2 class="text-center">Clients</h2>
+    <div ng-repeat="client in clients" class="container child-container p-3 my-3">
+        <p><span class="font-weight-bold">Client Name: </span>{{client.firstName}} {{client.lastName}}</p>
+        <p><span class="font-weight-bold">Client Email: </span>{{client.email}}</p>
+        <p><span class="font-weight-bold">Client Phone Number: </span>{{client.phone}}</p>
+        <p ng-repeat="child in client.childrenName"><span class="font-weight-bold">Child name: </span>{{child}}</p>
+    </div>
+
+</div>

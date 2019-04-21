@@ -5,6 +5,7 @@ var child = db.Schema({
 	class:     [{ type: db.Schema.ObjectId }], 
 	firstName:  { type: String, required: true },
 	lastName:   { type: String, required: true },
+	fullName:	{ type: String},
 	dob:        { type: Date },
 	notes:      { type: String },
 	created:    { type: Date, default: Date.now }

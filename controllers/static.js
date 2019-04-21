@@ -25,6 +25,10 @@ router.get('/register', function (req, res) {
 	res.sendFile('layouts/app.html', { root: './'})
 })
 
+router.get('/reset-password', function (req, res) {
+	res.sendFile('layouts/app.html', { root: './'})
+})
+
 router.get('/user-account', function (req, res) {
 	res.sendFile('layouts/app.html', { root: './'})
 })
@@ -76,6 +80,14 @@ router.get('/admin-account', function (req, res) {
 })
 
 router.get('/admin-classes', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/admin-add-class', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/admin-update-class', function (req, res) {
 	res.sendFile('layouts/admin.html', {root: './'})
 })
 
