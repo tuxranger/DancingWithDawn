@@ -2,6 +2,66 @@ var router = require('express').Router()
 var Content = require('../../models/content')
 var ContentFaq = require('../../models/contentFaq')
 
+
+// Returns all text elements for content management
+router.get('/getAllElements', function (req, res, next) {
+	Content.find().then(function (elements) {
+		res.json(elements)
+	})
+})
+
+router.get('/getAllHomepageElements', function (req, res, next) {
+	Content.find({location: 'homepage'}).then(function (elements) {
+		res.json(elements)
+	})
+})
+
+router.get('/getAllClassesElements', function (req, res, next) {
+	Content.find({location: 'classes'}).then(function (elements) {
+		res.json(elements)
+	})
+})
+
+router.get('/getAllAboutElements', function (req, res, next) {
+	Content.find({location: 'about'}).then(function (elements) {
+		res.json(elements)
+	})
+})
+
+// Returns all text elements for content management
+router.get('/getAllFaqElements', function (req, res, next) {
+	Content.find({location: 'faq'}).then(function (elements) {
+		res.json(elements)
+	})
+})
+
+// Creates new text element for content management
+router.post('/addElement', function (req, res, next) {
+	var element = new Content({
+		name: req.body.name,
+		location: req.body.location,
+		description: req.body.description,
+		value: req.body.value
+	})
+
+	element.save(function (err, newElement) {
+		if (err) { return next(err) }
+		else { return res.json(newElement) }
+	})
+})
+
+// Used to update user account information
+router.put('/updateElement', function (req, res, next) {
+	Content.findOneAndUpdate( { "_id" : req.body._id}, req.body, function (err, element) {
+    	if (err) {
+      		console.log(err);
+      		return res.status(400).send(err);
+    	} else {
+      		return res.json(element);
+    	}
+    })
+})
+
 // Creates new FAQ entry and saves to database
 router.post('/addFaq', function (req, res, next) {
 
@@ -33,6 +93,16 @@ router.put('/updateFaq', function (req, res, next) {
       		return res.json(faq);
     	}
     })
+})
+
+router.put('/deleteFaq', function (req, res, next) {
+	ContentFaq.deleteOne({_id : req.body._id}, function (err, faq) {
+		if (err) {
+      		return res.status(400).send(err);
+    	} else {
+      		return res.json(faq)
+    	}
+	})
 })
 
 module.exports = router

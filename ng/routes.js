@@ -1,9 +1,9 @@
 angular.module('app')
 	.config(function ($routeProvider, $locationProvider) {
 			$routeProvider
-			.when('/', { templateUrl: 'index.html' })
-			.when('/classes', { templateUrl: 'classes.html' })
-			.when('/about', { templateUrl: 'about.html' })
+			.when('/', { controller: 'ContentCtrl', templateUrl: 'index.html' })
+			.when('/classes', { controller: 'ContentCtrl', templateUrl: 'classes.html' })
+			.when('/about', { controller: 'ContentCtrl', templateUrl: 'about.html' })
 			.when('/faq', { controller: 'ContentCtrl', templateUrl: 'faq.html' })
 
 			.when('/login', { controller: 'LoginCtrl', templateUrl: 'login.html' })
@@ -39,10 +39,17 @@ angular.module('app')
 			.when('/admin-payments', {templateUrl: 'admin/admin-payments.html'})
 			.when('/admin-forms', {templateUrl: 'admin/admin-forms.html'})
 
-			.when('/cm', { controller: 'ContentCtrl', templateUrl: 'cm/cm.html'})
-			.when('/cm-faq', { controller: 'ContentCtrl', templateUrl: 'cm/cm-faq.html'})
-			.when('/cm-faq-add', { controller: 'ContentCtrl', templateUrl: 'cm/cm-faq-add.html'})
-			.when('/cm-faq-edit', { controller: 'ContentCtrl', templateUrl: 'cm/cm-faq-edit.html'})
+			.when('/cm', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm.html'})
+			.when('/cm-element-add', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-element-add.html'})
+			.when('/cm-element-edit', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-element-edit.html'})
+
+			.when('/cm-homepage', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-homepage.html'})
+			.when('/cm-classes', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-classes.html'})
+			.when('/cm-about', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-about.html'})
+
+			.when('/cm-faq', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-faq.html'})
+			.when('/cm-faq-add', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-faq-add.html'})
+			.when('/cm-faq-edit', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-faq-edit.html'})
 
 	$locationProvider.html5Mode(true);
 })

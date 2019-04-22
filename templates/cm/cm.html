@@ -4,3 +4,24 @@
 	<div class="icon-bg-circle"><i class="fas fa-mouse-pointer user-icon"></i></div>
 	<p class="user-page-headline">Content Management</p>
 </div>
+
+<div class='container mb-3' ng-if='currentAdmin'>
+	<div class='row my-3'>
+		<div class='col'>
+			<a class="btn block mx-auto py-4 dwd-purple-bg text-light" href="/cm-homepage">Homepage Content</a>
+		</div>
+		<div class='col'>
+			<a class="btn block mx-auto py-4 dwd-red-bg text-light" href="/cm-classes">Classes Content</a>
+		</div>
+	</div>
+	<div class='row my-3'>
+		<div class='col'>
+			<a class="btn block mx-auto py-4 dwd-orange-bg text-light" href="/cm-about">About Dawn Content</a>
+		</div>
+		<div class='col'>
+			<a class="btn block mx-auto py-4 dwd-green-bg text-light" href="/cm-faq">FAQ Content</a>
+		</div>
+	</div>
+
+	<a class="btn btn-primary w-50 block mx-auto py-2 mt-5" href="/cm-element-add">Add New Text Element</a>
+</div>

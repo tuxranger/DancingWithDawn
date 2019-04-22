@@ -2,11 +2,21 @@
 
 <div class="mt-4 mx-auto text-center">
 	<div class="icon-bg-circle"><i class="fas fa-question user-icon"></i></div>
-	<p class="user-page-headline">Frequenty Asked Questions</p>
+	<p class="user-page-headline">FAQ Content</p>
 </div>
 
 <div class="container my-3" ng-if='currentAdmin'>
+	<h3 class="text-center">Page Content</h3>
+	<div ng-repeat="element in faq_content" class='container child-container p-3 mb-5'>
+		<a class='btn btn-primary float-right' href="/cm-element-edit" ng-click="">Edit</a>
 
+		<p><span class='font-weight-bold'>Element Name: </span>{{element.name}}<br>
+		   <span class='font-weight-bold'>Element Description: </span>{{element.description}}</p>
+		<p><span class='font-weight-bold'>Content:</span><br>{{element.value}}</p>
+	</div>
+
+
+	<h3 class="text-center">Questions and Answers</h3>
 	<div ng-repeat="qanda in faq" class='container child-container p-3 my-3'>
 		<a class='btn btn-primary float-right' href="/cm-faq-edit" ng-click="setFaqToUpdate(qanda)">Edit FAQ</a>
 
