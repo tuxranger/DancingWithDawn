@@ -66,6 +66,9 @@ body {
 .dwd-dk-gray { color: #555555; }
 .dwd-dk-gray-bg { background-color: #555555; }
 
+.dwd-lt-gray { color: #aaaaaa; }
+.dwd-lt-gray-bg { background-color: #aaaaaa; }
+
 
 .white-bg-row {
 	width:100%;
@@ -239,6 +242,42 @@ ul.parental-accounts {
 	font-size: 3.5em;
 	margin: -0.5em 0 0;
 	padding: 0;
+}
+
+.quote-divider {
+	width: 100%;
+	height: 3em;
+	margin: 1.5em 0;
+	text-align: center;
+	position: relative;
+}
+
+.quote-divider::before {
+	width: 45%;
+    height:1px;
+    border-top: 1px solid #cccccc;
+    display: inline-block;
+    content:'';
+    position:absolute;
+      left: 0;
+      top: 50%;
+}
+
+.quote-divider::after {
+	width: 45%;
+    height:1px;
+    border-top: 1px solid #cccccc;
+    display: inline-block;
+    content:'';
+    position:absolute;
+      right: 0;
+      top: 50%;
+}
+
+.divider-icon {
+	font-size: 3em;
+	line-height: 1em;
+	z-index: 10;
 }
 
 /* FAQ Page */

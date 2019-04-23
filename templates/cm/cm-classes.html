@@ -8,11 +8,21 @@
 <div class="container my-3" ng-if='currentAdmin'>
 	<h3 class="text-center">Page Content</h3>
 	<div ng-repeat="element in classes_content" class='container child-container p-3 mb-5'>
-		<a class='btn btn-primary float-right' href="/cm-element-edit" ng-click="">Edit</a>
+		<a class='btn btn-primary float-right' href="/cm-element-edit" ng-click="setElementToUpdate(element)">Edit</a>
 
 		<p><span class='font-weight-bold'>Element Name: </span>{{element.name}}<br>
 		   <span class='font-weight-bold'>Element Description: </span>{{element.description}}</p>
 		<p><span class='font-weight-bold'>Content:</span><br>{{element.value}}</p>
 	</div>
 
+	<h3 class="text-center">Class Descriptions</h3>
+	<div ng-repeat="class in classes" class='container child-container p-3 my-3'>
+		<a class='btn btn-primary float-right' href="/cm-class-edit" ng-click="setClassToUpdate(class)">Edit Class</a>
+
+		<p><span class='font-weight-bold'>Title</span><br>{{class.title}}</p>
+		<p><span class='font-weight-bold'>Subtitle</span><br>{{class.subtitle}}</p>
+		<p><span class='font-weight-bold'>Description</span><br>{{class.description}}</p>
+	</div>
+
+	<a class="btn w-50 block mx-auto py-2 dwd-blue-bg text-light" href="/cm-class-add">Add New Class Description</a>
 </div>

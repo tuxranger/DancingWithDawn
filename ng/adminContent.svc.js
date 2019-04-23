@@ -14,6 +14,10 @@ angular.module('app')
 		return $http.get('/api/content/getAllClassesElements')
 	}
 
+	svc.getAllClasses = function () {
+		return $http.get('/api/content/getAllClasses')
+	}
+
 	svc.getAllAboutElements = function () {
 		return $http.get('/api/content/getAllAboutElements')
 	}
@@ -52,6 +56,17 @@ angular.module('app')
 
 	svc.deleteFaq = function (faq) {
 		return $http.put('/api/content/deleteFaq', faq)
+	}
+
+	svc.addClass = function (title, subtitle, color, icon, desc) {
+		console.log('Service add class called!')
+		return $http.post('/api/content/addClass', {
+			title: title,
+			subtitle: subtitle,
+			icon: icon,
+			color: color,
+			description: desc
+		})
 	}
 
 })
