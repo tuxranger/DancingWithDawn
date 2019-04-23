@@ -1,0 +1,31 @@
+<ng-include src="'cm/cm-nav.html'"></ng-include>
+
+<div class="mt-4 mx-auto text-center">
+	<div class="icon-bg-circle"><i class="fas fa-pencil-alt user-icon"></i></div>
+	<p class="user-page-headline">Update a Frequently Asked Question</p>
+</div>
+
+<div class='container mb-3' ng-if='currentAdmin'>
+	<form ng-submit="updateFaq(currentAdmin.faqToUpdate)" class='col-md-9 mx-auto px-5 py-3 user-form'>
+
+		<div ng-show="inputError" class='alert alert-danger'>{{ errorMessage }}</div>
+
+		<div class="form-group">
+			<label>Question:</label>
+			<textarea rows="4" class="form-control" type="text" ng-model="currentAdmin.faqToUpdate.question"></textarea>
+		</div>
+
+		<div class="form-group">
+			<label>Answer:</label>
+			<textarea rows="4" class="form-control" type="text" ng-model="currentAdmin.faqToUpdate.answer"></textarea>
+		</div>
+	
+		<input class="btn btn-success btn-lg btn-block" type="submit" value="Update FAQ">
+	</form>
+
+	<div class='container col-md-6 my-5 mx-auto'>
+		<button class="btn btn-danger btn-lg btn-block text-white" ng-click="deleteFaq(currentAdmin.faqToUpdate)">Delete FAQ</button>
+	</div>
+
+</div>
+

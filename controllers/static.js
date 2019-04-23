@@ -25,6 +25,10 @@ router.get('/register', function (req, res) {
 	res.sendFile('layouts/app.html', { root: './'})
 })
 
+router.get('/reset-password', function (req, res) {
+	res.sendFile('layouts/app.html', { root: './'})
+})
+
 router.get('/user-account', function (req, res) {
 	res.sendFile('layouts/app.html', { root: './'})
 })
@@ -79,6 +83,14 @@ router.get('/admin-classes', function (req, res) {
 	res.sendFile('layouts/admin.html', {root: './'})
 })
 
+router.get('/admin-add-class', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/admin-update-class', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
 router.get('/admin-clients', function (req, res) {
 	res.sendFile('layouts/admin.html', {root: './'})
 })
@@ -111,7 +123,16 @@ router.get('/update-admin-password', function (req, res) {
 	res.sendFile('layouts/admin.html', {root: './'})
 })
 
+router.get('/cm', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-faq', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
 router.use(express.static(__dirname + '/../assets'))
 router.use(express.static(__dirname + '/../templates'))
+router.use(express.static(__dirname + '/../img'))
 
 module.exports = router

@@ -4,8 +4,8 @@ angular.module('app')
         $scope.clients = res.data
     })
 
-    AdminSvc.getAllChildren().then(function(res) {
-        $scope.children = res.data
-    })
+    // AdminSvc.getAllChildren().then(function(res) {
+    //     $scope.children = res.data
+    // })
 
 })

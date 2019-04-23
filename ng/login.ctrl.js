@@ -5,7 +5,9 @@ angular.module('app')
 		$scope.loginError = false
 		$scope.errorMessage = ''
 
-		UserSvc.login(email, password)
+		var modifiedEmail = email.toLowerCase()
+
+		UserSvc.login(modifiedEmail, password)
 		.then(function (res) {
 			if(res.status == 401) {
 				$scope.errorMessage = res.data

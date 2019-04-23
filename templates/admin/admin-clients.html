@@ -11,8 +11,7 @@
         <p><span class="font-weight-bold">Client Name: </span>{{client.firstName}} {{client.lastName}}</p>
         <p><span class="font-weight-bold">Client Email: </span>{{client.email}}</p>
         <p><span class="font-weight-bold">Client Phone Number: </span>{{client.phone}}</p>
-
-        <p ng-repeat="child in children"><span class="font-weight-bold">Child name: </span>{{child.firstName}} {{child.lastName}}</p>
+        <p ng-repeat="child in client.childrenName"><span class="font-weight-bold">Child name: </span>{{child}}</p>
     </div>
 
 </div>

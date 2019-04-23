@@ -10,7 +10,9 @@ angular.module('app')
 
 		$scope.registerError = false
 
-		UserSvc.register(email, password, firstName, lastName, streetAddress, city, state, zip, phone)
+		var modifiedEmail = email.toLowerCase()
+
+		UserSvc.register(modifiedEmail, password, firstName, lastName, streetAddress, city, state, zip, phone)
 		.then(function (response) {
 			$scope.$emit('login', response.data)
 			$location.path('/user-account')
