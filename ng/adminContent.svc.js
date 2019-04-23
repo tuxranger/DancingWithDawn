@@ -59,7 +59,6 @@ angular.module('app')
 	}
 
 	svc.addClass = function (title, subtitle, color, icon, desc) {
-		console.log('Service add class called!')
 		return $http.post('/api/content/addClass', {
 			title: title,
 			subtitle: subtitle,
@@ -67,6 +66,14 @@ angular.module('app')
 			color: color,
 			description: desc
 		})
+	}
+
+	svc.updateClass = function (element) {
+		return $http.put('/api/content/updateClass', element)
+	}
+
+	svc.deleteClass = function (element) {
+		return $http.put('/api/content/deleteClass', element)
 	}
 
 })

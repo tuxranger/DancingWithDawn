@@ -115,7 +115,6 @@ router.put('/deleteFaq', function (req, res, next) {
 
 // Creates new text element for content management
 router.post('/addClass', function (req, res, next) {
-	console.log('post add class called!')
 	var element = new ContentClass({
 		title: req.body.title,
 		subtitle: req.body.subtitle,
@@ -127,6 +126,27 @@ router.post('/addClass', function (req, res, next) {
 	element.save(function (err, newElement) {
 		if (err) { return next(err) }
 		else { return res.json(newElement) }
+	})
+})
+
+router.put('/updateClass', function (req, res, next) {
+	ContentClass.findOneAndUpdate( { "_id" : req.body._id}, req.body, function (err, element) {
+    	if (err) {
+      		console.log(err);
+      		return res.status(400).send(err);
+    	} else {
+      		return res.json(element);
+    	}
+    })
+})
+
+router.put('/deleteClass', function (req, res, next) {
+	ContentClass.deleteOne({_id : req.body._id}, function (err, faq) {
+		if (err) {
+      		return res.status(400).send(err);
+    	} else {
+      		return res.json(faq)
+    	}
 	})
 })
 

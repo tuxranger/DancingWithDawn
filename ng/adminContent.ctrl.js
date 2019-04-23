@@ -83,7 +83,6 @@ angular.module('app')
 	}
 
 	$scope.addClass = function (title, subtitle, color, icon, desc) {
-		console.log('addClass Called!')
 		$scope.inputError = false
 		$scope.errorMessage = ''
 
@@ -98,4 +97,23 @@ angular.module('app')
 			$location.path('/cm-classes')
 		})
 	}
+
+	$scope.setClassToUpdate = function(element) {
+		$scope.currentAdmin.classToUpdate = element
+	}
+
+	$scope.updateClass = function(element) {
+		AdminContentSvc.updateClass(element)
+		.then(function (response) {
+			$location.path('/cm-classes')
+		})
+	}
+
+	$scope.deleteClass = function(element) {
+		AdminContentSvc.deleteClass(element)
+		.then(function (response) {
+			$location.path('/cm-classes')
+		})
+	}
+
 })
