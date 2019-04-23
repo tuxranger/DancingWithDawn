@@ -1,6 +1,8 @@
 angular.module('app')
     .controller('ClassCtrl', function($scope, ClassSVC, $location) {
 
+        $scope.enrollment = []
+
         $scope.addClass = function (title, description, time, days, album) {
             ClassSVC.addClass(title, description, time, days, album)
                 .then(function (response) {
@@ -42,10 +44,14 @@ angular.module('app')
         //     $scope.currentAdmin.classToModifyRoster = classRoster
         // }
         //
-        // $scope.addToClass = function(class_id, childrenToEnroll) {
-        //     console.log('childrenToEnroll' + childrenToEnroll)
-        //     console.log('class_' + class_id)
-        //     ClassSVC.addToClass(class_id, childrenToEnroll)
-        // }
+        $scope.addToClass = function(class_) {
+            console.log(class_)
+            $scope.enrollment.push($scope.input)
+            class_.children = $scope.enrollment
+            ClassSVC.addToClass(class_)
+        }
 
+        $scope.removeFromClass = function(index) {
+            $scope.items.splice(index, 1)
+        };
     })
