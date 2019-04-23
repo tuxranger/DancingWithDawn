@@ -10,6 +10,10 @@ angular.module('app')
 		$scope.classes_content = elems.data
 	})
 
+	AdminContentSvc.getAllClasses().then(function(res) {
+		$scope.classes = res.data
+	})
+
 	AdminContentSvc.getAllAboutElements().then(function(elems) {
 		$scope.about_content = elems.data
 	})
@@ -75,6 +79,23 @@ angular.module('app')
 		AdminContentSvc.updateElement(element)
 		.then(function (response) {
 			$location.path('/cm')
+		})
+	}
+
+	$scope.addClass = function (title, subtitle, color, icon, desc) {
+		console.log('addClass Called!')
+		$scope.inputError = false
+		$scope.errorMessage = ''
+
+		if(!title || !desc) {
+			$scope.inputError = true
+			$scope.errorMessage = 'All text fields must contain content'
+			return
+		}
+
+		AdminContentSvc.addClass(title, subtitle, color, icon, desc)
+		.then(function (response) {
+			$location.path('/cm-classes')
 		})
 	}
 })

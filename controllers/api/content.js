@@ -1,5 +1,6 @@
 var router = require('express').Router()
 var Content = require('../../models/content')
+var ContentClass = require('../../models/contentClass')
 var ContentFaq = require('../../models/contentFaq')
 
 
@@ -19,6 +20,13 @@ router.get('/getAllHomepageElements', function (req, res, next) {
 router.get('/getAllClassesElements', function (req, res, next) {
 	Content.find({location: 'classes'}).then(function (elements) {
 		res.json(elements)
+	})
+})
+
+// Returns all children docs attached to a parent
+router.get('/getAllClasses', function (req, res, next) {
+	ContentClass.find().then(function (classes) {
+		res.json(classes)
 	})
 })
 
@@ -102,6 +110,23 @@ router.put('/deleteFaq', function (req, res, next) {
     	} else {
       		return res.json(faq)
     	}
+	})
+})
+
+// Creates new text element for content management
+router.post('/addClass', function (req, res, next) {
+	console.log('post add class called!')
+	var element = new ContentClass({
+		title: req.body.title,
+		subtitle: req.body.subtitle,
+		icon: req.body.icon,
+		color: req.body.color,
+		description: req.body.description
+	})
+
+	element.save(function (err, newElement) {
+		if (err) { return next(err) }
+		else { return res.json(newElement) }
 	})
 })
 

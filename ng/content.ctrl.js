@@ -7,6 +7,10 @@ angular.module('app')
 		})
 	})
 
+	ContentSvc.getAllClasses().then(function(res) {
+		$scope.classes = res.data
+	})
+
 	ContentSvc.getAllFaqs().then(function(res) {
 		$scope.faq = res.data
 	})

@@ -47,6 +47,9 @@ angular.module('app')
 			.when('/cm-classes', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-classes.html'})
 			.when('/cm-about', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-about.html'})
 
+			.when('/cm-class-add', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-class-add.html'})
+			.when('/cm-class-edit', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-class-edit.html'})
+
 			.when('/cm-faq', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-faq.html'})
 			.when('/cm-faq-add', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-faq-add.html'})
 			.when('/cm-faq-edit', { controller: 'AdminContentCtrl', templateUrl: 'cm/cm-faq-edit.html'})

@@ -17,30 +17,14 @@
       <p class='text-center col-sm-8 font-italic'>{{ about_page_desc }}</p>
     </div>
 
-    <div class="row py-3">
-
-      <div class="col-md-4">
-        <div class="homepage-icon-bg-circle text-center dwd-green-bg mx-auto mb-3"><i class="fas fa-running homepage-icon"></i></div>
-        <h3 class="text-center font-coiny">Creative Movement</h3>
-        <h5 class="text-center font-italic">Ages 2.6 through 6</h5>
-        <p>Children love to explore the many ways their bodies can move through space to create unique shapes and patterns. Gross and fine motor skills are presented through exciting themed songs. My favorite is about a lonely goldfish that travels to Jamaica!</p>
-       </div>
-
-      <div class="col-md-4">
-        <div class="homepage-icon-bg-circle text-center dwd-red-bg mx-auto mb-3"><i class="fas fa-female homepage-icon"></i></div>
-        <h3 class="text-center font-coiny">Pre-Ballet</h3>
-        <h5 class="text-center font-italic">Encourages grace, poise and self-confidence</h5>
-        <p>Real ballet technique is presented creatively in age appropriate steps. Basic body positions and <i>port de bras</i> are explored through many types of music and songs that present ballet stories dancers love to act out! My favorites include fairies, mermaids and princesses.</p>
+    <div class="row">
+      <div ng-repeat="class in classes" class="col-4">
+          <div class="homepage-icon-bg-circle text-center {{ class.color }} mx-auto mb-3"><i class="fas {{class.icon}} homepage-icon"></i></div>
+          <h3 class="text-center font-coiny">{{ class.title }}</h3>
+          <h5 class="text-center font-italic">{{ class.subtitle }}</h5>
+          <p>{{ class.description }}</p>
       </div>
-
-      <div class="col-md-4">
-        <div class="homepage-icon-bg-circle text-center dwd-purple-bg mx-auto mb-3"><i class="fas fa-dove homepage-icon"></i></div>
-        <h3 class="text-center font-coiny">Worship Dance</h3>
-        <h5 class="text-center font-italic">For boys and girls</h5>
-        <p>Children's worship music and bible songs make a great foundation for praise movement classes. I have taught for many denominations and would love to design a program for your location!</p>
-      </div>
-
-    </div><!-- /.row -->
+    </div>
 
    	<div class="row py-3">
 
