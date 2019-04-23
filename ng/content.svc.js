@@ -6,6 +6,10 @@ angular.module('app')
 		return $http.get('/api/content/getAllElements')
 	}
 
+	svc.getAllClasses = function () {
+		return $http.get('/api/content/getAllClasses')
+	}
+
 	svc.getAllFaqs = function () {
 		return $http.get('/api/content/getAllFaqs')
 	}

@@ -8,7 +8,7 @@
 <div class="container my-3" ng-if='currentAdmin'>
 	<h3 class="text-center">Page Content</h3>
 	<div ng-repeat="element in faq_content" class='container child-container p-3 mb-5'>
-		<a class='btn btn-primary float-right' href="/cm-element-edit" ng-click="">Edit</a>
+		<a class='btn btn-primary float-right' href="/cm-element-edit" ng-click="setElementToUpdate(element)">Edit</a>
 
 		<p><span class='font-weight-bold'>Element Name: </span>{{element.name}}<br>
 		   <span class='font-weight-bold'>Element Description: </span>{{element.description}}</p>
