@@ -127,12 +127,57 @@ router.get('/cm', function (req, res) {
 	res.sendFile('layouts/admin.html', {root: './'})
 })
 
+router.get('/cm-element-add', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-element-edit', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-homepage', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-classes', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-class-add', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-class-edit', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-bucket-add', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-bucket-edit', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-about', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
 router.get('/cm-faq', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-faq-add', function (req, res) {
+	res.sendFile('layouts/admin.html', {root: './'})
+})
+
+router.get('/cm-faq-edit', function (req, res) {
 	res.sendFile('layouts/admin.html', {root: './'})
 })
 
 router.use(express.static(__dirname + '/../assets'))
 router.use(express.static(__dirname + '/../templates'))
 router.use(express.static(__dirname + '/../img'))
+router.use(express.static(__dirname + '/../pdf'))
 
 module.exports = router

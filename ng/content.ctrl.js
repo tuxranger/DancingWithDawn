@@ -7,6 +7,10 @@ angular.module('app')
 		})
 	})
 
+	ContentSvc.getAllBuckets().then(function(res) {
+		$scope.buckets = res.data
+	})
+
 	ContentSvc.getAllClasses().then(function(res) {
 		$scope.classes = res.data
 	})
