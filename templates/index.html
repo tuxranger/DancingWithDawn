@@ -20,27 +20,13 @@
       <p class='text-center col-sm-8 font-italic'>{{ home_page_desc }}</p>
     </div>
 
-    <div class="row pt-3">
-
-      <div class="col-md-4">
-        <div class="homepage-icon-bg-circle text-center dwd-green-bg mx-auto mb-3"><i class="fas fa-drum homepage-icon"></i></div>
-        <h2 class="text-center font-coiny">Great Music</h2>
-        <p>Classes include fun and engaging music to encourage children to find many unique ways to move and groove. Song selections focus on positive messages to promote cooperation and life skills.</p>
-       </div>
-
-      <div class="col-md-4">
-        <div class="homepage-icon-bg-circle text-center dwd-blue-bg mx-auto mb-3"><i class="fas fa-hat-wizard homepage-icon"></i></div>
-        <h2 class="text-center font-coiny">Playful Props</h2>
-        <p>Classes include hands-on tactile experiences using everything from bean bags, bananas, ribbon wands, stuffed animals, magic strings, egg shakers, flags, hoops, scarves, and any other fun themes I can dream up!</p>
+    <div class="row py-3">
+      <div ng-repeat="bucket in buckets" class="col-md-4">
+          <div class="homepage-icon-bg-circle text-center {{ bucket.color }} mx-auto my-3"><i class="fas {{bucket.icon}} homepage-icon"></i></div>
+          <h2 class="text-center font-coiny">{{ bucket.title }}</h2>
+          <p>{{ bucket.description }}</p>
       </div>
-
-      <div class="col-md-4">
-        <div class="homepage-icon-bg-circle text-center dwd-orange-bg mx-auto mb-3"><i class="fas fa-child homepage-icon"></i></div>
-        <h2 class="text-center font-coiny">Fun for Any Age</h2>
-        <p>Each class is designed and customized with the specific needs of each age group in mind. Children can begin enjoying music and movement classes from age two-and-a-half and up!</p>
-      </div>
-
-    </div><!-- /.row -->
+    </div>
 
     <div class="row">
       <a class="btn dwd-purple-bg text-light p-2 mt-3 mb-4 mx-auto col-10 col-md-6" href="/classes">Learn More About Available Classes</a>
@@ -68,13 +54,13 @@
   </div>
 </div>
 
-
+<!-- Online Account Section -->
 <div class="white-bg-row py-5">
   <div class="container">  
     <div class="row">
   
       <div class="col-md-7">
-        <h2 class="font-coiny">Parental Accounts</h2>
+        <h2 class="font-coiny">Online Accounts</h2>
         <p>To make it easier to coordinate between myself and the parents or guardians of children in my class, participants can create user accounts to provide up-to-date contact information, pay for classes online, view photos from class, and much more!</p>
 
         <a class="btn dwd-purple-bg text-light py-2 px-4 mt-2 mr-3" href="/register">Register</a>
@@ -105,6 +91,7 @@
   </div>
 </div>
 
+<!-- Email Contact Form -->
 <div class="color-bg-row dwd-purple-bg pt-4">
   <div class="container text-center text-light">
     <h2>Free Demonstration Class</h2>

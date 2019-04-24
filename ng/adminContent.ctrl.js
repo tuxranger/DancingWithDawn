@@ -6,6 +6,10 @@ angular.module('app')
 		$scope.homepage_content = elems.data
 	})
 
+	AdminContentSvc.getAllBuckets().then(function(res) {
+		$scope.buckets = res.data
+	})
+
 	AdminContentSvc.getAllClassesElements().then(function(elems) {
 		$scope.classes_content = elems.data
 	})
@@ -83,7 +87,6 @@ angular.module('app')
 	}
 
 	$scope.addClass = function (title, subtitle, color, icon, desc) {
-		console.log('addClass Called!')
 		$scope.inputError = false
 		$scope.errorMessage = ''
 
@@ -96,6 +99,51 @@ angular.module('app')
 		AdminContentSvc.addClass(title, subtitle, color, icon, desc)
 		.then(function (response) {
 			$location.path('/cm-classes')
+		})
+	}
+
+	$scope.setClassToUpdate = function(element) {
+		$scope.currentAdmin.classToUpdate = element
+	}
+
+	$scope.updateClass = function(element) {
+		AdminContentSvc.updateClass(element)
+		.then(function (response) {
+			$location.path('/cm-classes')
+		})
+	}
+
+	$scope.deleteClass = function(element) {
+		AdminContentSvc.deleteClass(element)
+		.then(function (response) {
+			$location.path('/cm-classes')
+		})
+	}
+
+	$scope.addBucket = function (title, color, icon, desc) {
+		$scope.inputError = false
+		$scope.errorMessage = ''
+
+		if(!title || !desc) {
+			$scope.inputError = true
+			$scope.errorMessage = 'All text fields must contain content'
+			return
+		}
+
+		AdminContentSvc.addBucket(title, color, icon, desc)
+		.then(function (response) {
+			$location.path('/cm-homepage')
+		})
+	}
+
+	$scope.setBucketToUpdate = function(element) {
+		$scope.currentAdmin.bucketToUpdate = element
+	}
+
+	$scope.updateBucket = function(element) {
+		AdminContentSvc.updateBucket(element)
+		.then(function (response) {
+			$location.path('/cm-homepage')
 		})
 	}
 })

@@ -17,39 +17,14 @@
       <p class='text-center col-sm-8 font-italic'>{{ about_page_desc }}</p>
     </div>
 
-    <div class="row">
-      <div ng-repeat="class in classes" class="col-4">
-          <div class="homepage-icon-bg-circle text-center {{ class.color }} mx-auto mb-3"><i class="fas {{class.icon}} homepage-icon"></i></div>
-          <h3 class="text-center font-coiny">{{ class.title }}</h3>
+    <div class="row py-3">
+      <div ng-repeat="class in classes" class="col-md-6">
+          <div class="homepage-icon-bg-circle text-center {{ class.color }} mx-auto my-3"><i class="fas {{class.icon}} homepage-icon"></i></div>
+          <h3 class="text-center font-coiny mb-0">{{ class.title }}</h3>
           <h5 class="text-center font-italic">{{ class.subtitle }}</h5>
           <p>{{ class.description }}</p>
       </div>
     </div>
-
-   	<div class="row py-3">
-
-      <div class="col-md-4">
-        <div class="homepage-icon-bg-circle text-center dwd-orange-bg mx-auto mb-3"><i class="fas fa-shoe-prints homepage-icon"></i></div>
-        <h3 class="text-center font-coiny">Tap Dancing</h3>
-        <h5 class="text-center font-italic">Just add tap shoes</h5>
-        <p>Children can experience rhythms and the great fun in stomping out the beat in tap shoes. All you need is a solid surface for the metal taps to work their magic!</p>
-       </div>
-
-      <div class="col-md-4">
-        <div class="homepage-icon-bg-circle text-center dwd-green-bg mx-auto mb-3"><i class="fas fa-theater-masks homepage-icon"></i></div>
-        <h3 class="text-center font-coiny">Creative Dramatics</h3>
-        <h5 class="text-center font-italic">Learning emotional intellegence and self expression</h5>
-        <p>Children will learn to identify and express different emotions through pantomime, acting games and movement stories. This class is great for building self-esteem and speaking skills!</p>
-      </div>
-
-      <div class="col-md-4">
-        <div class="homepage-icon-bg-circle text-center dwd-red-bg mx-auto mb-3"><i class="fas fa-compact-disc homepage-icon"></i></div>
-        <h3 class="text-center font-coiny">Hippity Hop</h3>
-        <h5 class="text-center font-italic">Pre-school appropriate</h5>
-        <p>All the funky moves to lively music written just for the younger set. Children will work on locomotor and axial moves with confidence-boosting activities.</p>
-      </div>
-
-    </div><!-- /.row -->
 
   </div>
 </div>

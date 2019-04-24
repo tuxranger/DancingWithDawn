@@ -10,6 +10,10 @@ angular.module('app')
 		return $http.get('/api/content/getAllHomepageElements')
 	}
 
+	svc.getAllBuckets = function () {
+		return $http.get('/api/content/getAllBuckets')
+	}
+
 	svc.getAllClassesElements = function () {
 		return $http.get('/api/content/getAllClassesElements')
 	}
@@ -59,7 +63,6 @@ angular.module('app')
 	}
 
 	svc.addClass = function (title, subtitle, color, icon, desc) {
-		console.log('Service add class called!')
 		return $http.post('/api/content/addClass', {
 			title: title,
 			subtitle: subtitle,
@@ -69,4 +72,24 @@ angular.module('app')
 		})
 	}
 
+	svc.updateClass = function (element) {
+		return $http.put('/api/content/updateClass', element)
+	}
+
+	svc.deleteClass = function (element) {
+		return $http.put('/api/content/deleteClass', element)
+	}
+
+	svc.addBucket = function (title, color, icon, desc) {
+		return $http.post('/api/content/addBucket', {
+			title: title,
+			icon: icon,
+			color: color,
+			description: desc
+		})
+	}
+
+	svc.updateBucket = function (element) {
+		return $http.put('/api/content/updateBucket', element)
+	}
 })

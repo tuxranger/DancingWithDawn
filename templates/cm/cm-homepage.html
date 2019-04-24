@@ -1,6 +1,6 @@
 <ng-include src="'cm/cm-nav.html'"></ng-include>
 
-<div class="mt-4 mx-auto text-center">
+<div class="my-4 mx-auto text-center">
 	<div class="icon-bg-circle"><i class="fas fa-home user-icon"></i></div>
 	<p class="user-page-headline">Homepage Content</p>
 </div>
@@ -15,4 +15,11 @@
 		<p><span class='font-weight-bold'>Content:</span><br>{{element.value}}</p>
 	</div>
 
+	<h3 class="text-center">Service Descriptions</h3>
+	<div ng-repeat="bucket in buckets" class='container child-container p-3 my-3'>
+		<a class='btn btn-primary float-right' href="/cm-bucket-edit" ng-click="setBucketToUpdate(bucket)">Edit Bucket</a>
+
+		<p><span class='font-weight-bold'>Title</span><br>{{bucket.title}}</p>
+		<p><span class='font-weight-bold'>Description</span><br>{{bucket.description}}</p>
+	</div>
 </div>
