@@ -96,21 +96,37 @@ router.get('/getAllChildren', function (req, res, next) {
 
 
 
-// router.get('/getAllStudents', function (req, res, next) {
-//     if (!req.headers['x-auth']) {
-//         return res.sendStatus(401)
-//     }
-//
-//     var auth = jwt.decode(req.headers['x-auth'], config.secret)
-//     Admin.findOne({username: auth.username}, function (err) {
-//         if (err) { return next(err) }
-//     })
-//
-//     Class.findOne({_id: req.body._id}).then(function (class_) {
-//         console.log(class_.children)
-//         res.json(class_.children)
-//     })
-// })
+router.get('/getAllStudents', function (req, res, next) {
+    if (!req.headers['x-auth']) {
+        return res.sendStatus(401)
+    }
+
+    var auth = jwt.decode(req.headers['x-auth'], config.secret)
+    Admin.findOne({username: auth.username}, function (err) {
+        if (err) { return next(err) }
+    })
+
+    Class.distinct("children").then(function (class_) {
+        console.log("this is the class find children $all\n" + class_)
+        res.json(class_)
+    })
+})
+
+router.get('/getStudentsNames', function (req, res, next) {
+    if (!req.headers['x-auth']) {
+        return res.sendStatus(401)
+    }
+
+    var auth = jwt.decode(req.headers['x-auth'], config.secret)
+    Admin.findOne({username: auth.username}, function (err) {
+        if (err) { return next(err) }
+    })
+
+    console.log("req.body is " + req.body)
+    // Child.find({_id: req.body.id}).then(function (students) {
+    //     res.json(students)
+    // })
+})
 
 router.put('/addToClass', function (req, res, next) {
 

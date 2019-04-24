@@ -1,7 +1,8 @@
 angular.module('app')
     .controller('ClassCtrl', function($scope, ClassSVC, $location) {
 
-        $scope.students = [];
+        var enrolledStudents
+        $scope.enrollment = [];
 
         $scope.addClass = function (title, description, time, days, album) {
             ClassSVC.addClass(title, description, time, days, album)
@@ -36,9 +37,25 @@ angular.module('app')
             $scope.children = res.data
         })
 
-        // ClassSVC.getAllStudents().then(function(res) {
-        //     $scope.students = res.data
-        // })
+        ClassSVC.getAllStudents().then(function(res) {
+            enrolledStudents = res.data
+            $scope.enrollment = res.data
+
+            // ClassSVC.getStudentsNames(enrolledStudents).then(function(res) {
+            //     $scope.studentsList = res.data
+            // })
+        }).then(
+            $
+            ClassSVC.getStudentsNames(enrolledStudents).then(function(res) {
+                ("input").val(JSON.stringify(enrolledStudents));
+                var savedArray = JSON.parse($("input").val());
+                console.log("list of students" + savedArray)
+                $scope.studentsList = res.data
+            })
+        )
+
+
+
 
         // $scope.setClassToModifyRoster = function(classRoster) {
         //     $scope.currentAdmin.classToModifyRoster = classRoster
@@ -46,18 +63,25 @@ angular.module('app')
         //
         $scope.addToClass = function(class_, child) {
             console.log("class " + class_)
-            // $scope.enrollment.push(child)
+
             // console.log("enrollment " + $scope.enrollment)
-            // class_.children = $scope.enrollment
+
             console.log("students before put request " + class_.children)
             var dupeChild = class_.children.includes(child);
             if (!dupeChild){
-                class_.children.push(child)
+                $scope.enrollment.push(child)
+                class_.children = $scope.enrollment
+                // $scope.enrollment.splice(0, 1);
+                // class_.children.push(child)
+                ClassSVC.addToClass(class_)
             } else {
                 console.log("child already added")
             }
-            ClassSVC.addToClass(class_)
             console.log("students after put request " + class_.children)
+
+            ClassSVC.getAllStudents().then(function(res) {
+                $scope.enrolledStudents = res.data
+            })
         }
 
         $scope.removeFromClass = function(class_, student) {
@@ -69,6 +93,10 @@ angular.module('app')
             class_modified.children.push(student);
             class_modified.children = student;
             ClassSVC.removeFromClass(class_modified);
+
+            ClassSVC.getAllStudents().then(function(res) {
+                $scope.enrolledStudents = res.data
+            })
         };
 
         $scope.removeAll = function(class_) {
