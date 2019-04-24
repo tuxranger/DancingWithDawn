@@ -62,7 +62,7 @@
                     </tr>
                     <tr ng-repeat="child in children | filter: query | orderBy:'fullName'">
                         <td>
-                            <button type="button" class="btn btn-success btn-xs" ng-click="addToClass(currentAdmin.classToUpdate)" >
+                            <button type="button" class="btn btn-success btn-xs" ng-click="addToClass(currentAdmin.classToUpdate, child)" >
                   <span class="glyphicon glyphicon-plus" >
                     </span>
                             </button>
@@ -77,24 +77,25 @@
 
         <div class="form-group">
             <label>Currently enrolled: </label>
-            <div class="input-group" id="searchBar">
-                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"></span></span>
+            <div class="input-group" id="searchBar2">
+                <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-search"></span></span>
                 <input type="text" class="form-control" placeholder="Search for names..." ng-model="query">
             </div>
             <div class="tableWrapper">
-                <table class="table table-striped table-hover" id = "listingsTable">
+                <table class="table table-striped table-hover" id = "listingsTable2">
                     <tr class = "header">
                         <th></th>
                         <th>Name</th>
                     </tr>
-                    <tr ng-repeat="student in students | filter: query | orderBy:'fullName'" ng-click="showDetails($index)">
+<!--                    <tr ng-repeat="student in currentAdmin.classToUpdate.children | filter: query | orderBy:'fullName'" ng-click="showDetails(student)">-->
+                    <tr ng-repeat="student in currentAdmin.classToUpdate.children | filter: query | orderBy:'fullName'">
                         <td>
-                            <button type="button" class="btn btn-danger btn-xs" ng-click="removeFromClass($index)" >
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="removeFromClass(currentAdmin.classToUpdate, $index)" >
                   <span class="glyphicon minus" >
                     </span>
                             </button>
                         </td>
-                        <tdng-model="_id">{{student.fullName}}</td>
+                        <td ng-model="_id">{{student.fullName}}</td>
                     </tr>
                     <!--<td ng-click="deleteListing(listing._id)"><span style="color: red;" class="glyphicon glyphicon-remove"></span></td>-->
                     </tr>
@@ -102,6 +103,7 @@
             </div>
         </div>
 
+        <div><button type="button" class="btn btn-danger btn-lg" ng-click="removeAll(currentAdmin.classToUpdate)">remove all students</button></div>
         <!--<label>Current roster: </label>-->
 
         <!--<div class="input-group" >-->

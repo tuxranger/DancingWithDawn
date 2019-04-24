@@ -1,7 +1,7 @@
 angular.module('app')
     .controller('ClassCtrl', function($scope, ClassSVC, $location) {
 
-        $scope.enrollment = []
+        $scope.students = [];
 
         $scope.addClass = function (title, description, time, days, album) {
             ClassSVC.addClass(title, description, time, days, album)
@@ -44,14 +44,28 @@ angular.module('app')
         //     $scope.currentAdmin.classToModifyRoster = classRoster
         // }
         //
-        $scope.addToClass = function(class_) {
-            console.log(class_)
-            $scope.enrollment.push($scope.input)
-            class_.children = $scope.enrollment
+        $scope.addToClass = function(class_, child) {
+            console.log("class " + class_)
+            // $scope.enrollment.push(child)
+            // console.log("enrollment " + $scope.enrollment)
+            // class_.children = $scope.enrollment
+            console.log("students before put request " + class_.children)
+            var dupeChild = class_.children.includes(child);
+            if (!dupeChild){
+                class_.children.push(child)
+            } else {
+                console.log("child already added")
+            }
             ClassSVC.addToClass(class_)
+            console.log("students after put request " + class_.children)
         }
 
-        $scope.removeFromClass = function(index) {
-            $scope.items.splice(index, 1)
+        $scope.removeFromClass = function(class_, index) {
+            console.log(index)
+            class_.children.splice(index, 1)
         };
+
+        $scope.removeAll = function(class_) {
+            ClassSVC.removeAll(class_);
+        }
     })
