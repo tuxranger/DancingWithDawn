@@ -150,7 +150,7 @@ router.put('/removeFromClass', function (req, res, next) {
         if (err) { return next(err) }
     })
 
-    Class.findByIdAndUpdate(req.body._id,{$pull: {children: { id: req.body.children._id } } }, function (err, class_) {
+    Class.findByIdAndUpdate(req.body._id,{$pull: {children: req.body.children._id } }, function (err, class_) {
         if (err) {
             console.log(err)
             return res.status(400).send(err);
