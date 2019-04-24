@@ -40,9 +40,10 @@ angular.module('app')
             return $http.put('/api/classes/addToClass', class_)
         }
 
-        // svc.removeFromClass = function () {
-        //     return $http.get('/api/classes/removeFromClass')
-        // }
+        svc.removeFromClass = function (class_) {
+            // console.log("This is the class_     " + class_)
+            return $http.put('/api/classes/removeFromClass', class_)
+        }
 
         svc.removeAll = function (class_) {
             return $http.put('/api/classes/removeAll', class_)

@@ -90,7 +90,7 @@
 <!--                    <tr ng-repeat="student in currentAdmin.classToUpdate.children | filter: query | orderBy:'fullName'" ng-click="showDetails(student)">-->
                     <tr ng-repeat="student in currentAdmin.classToUpdate.children | filter: query | orderBy:'fullName'">
                         <td>
-                            <button type="button" class="btn btn-danger btn-xs" ng-click="removeFromClass(currentAdmin.classToUpdate, $index)" >
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="removeFromClass(currentAdmin.classToUpdate, student)" >
                   <span class="glyphicon minus" >
                     </span>
                             </button>

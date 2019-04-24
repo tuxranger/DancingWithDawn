@@ -60,12 +60,19 @@ angular.module('app')
             console.log("students after put request " + class_.children)
         }
 
-        $scope.removeFromClass = function(class_, index) {
-            console.log(index)
-            class_.children.splice(index, 1)
+        $scope.removeFromClass = function(class_, student) {
+            var index = class_.children.indexOf(student)
+            class_.children.splice(index, 1);
+
+            var class_modified = class_;
+            class_modified.children.splice(0);
+            class_modified.children.push(student);
+            class_modified.children = student;
+            ClassSVC.removeFromClass(class_modified);
         };
 
         $scope.removeAll = function(class_) {
+            console.log("I'm about to call svc remove all")
             ClassSVC.removeAll(class_);
         }
     })
