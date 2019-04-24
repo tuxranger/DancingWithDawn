@@ -36,9 +36,9 @@ angular.module('app')
         //     return $http.get('/api/classes/getAllStudents')
         // }
 
-        // svc.addToClass = function () {
-        //     return $http.patch('/api/classes/addToClass')
-        // }
+        svc.addToClass = function () {
+            return $http.put('/api/classes/addToClass')
+        }
 
         // svc.removeFromClass = function () {
         //     return $http.get('/api/classes/removeFromClass')

@@ -46,6 +46,7 @@ router.put('/updateClass', function (req, res, next) {
             console.log(err);
             return res.status(400).send(err);
         } else {
+            console.log(class_);
             return res.json(class_);
         }
     })
@@ -111,29 +112,29 @@ router.get('/getAllChildren', function (req, res, next) {
 //     })
 // })
 
-// router.patch('/addToClass', function (req, res, next) {
-//
-//     console.log(req.body)
-//     console.log(req.body.childrenToEnroll)
-//
-//     // if (!req.headers['x-auth']) {
-//     //     return res.sendStatus(401)
-//     // }
-//
-//     // var auth = jwt.decode(req.headers['x-auth'], config.secret)
-//     // Admin.findOne({username: auth.username}, function (err) {
-//     //     if (err) { return next(err) }
-//     // })
-//
-//     Class.findByIdAndUpdate(req.body._id,{$addToSet: {children: req}}, function (err, class_) {
-//         if (err) {
-//             console.log(err)
-//             return res.status(400).send(err);
-//         } else {
-//             console.log(class_)
-//             return res.json(class_)
-//         }
-//     })
-// })
+router.put('/addToClass', function (req, res, next) {
+
+    console.log(req.body)
+    console.log(req.body.childrenToEnroll)
+
+    // if (!req.headers['x-auth']) {
+    //     return res.sendStatus(401)
+    // }
+
+    // var auth = jwt.decode(req.headers['x-auth'], config.secret)
+    // Admin.findOne({username: auth.username}, function (err) {
+    //     if (err) { return next(err) }
+    // })
+
+    Class.findByIdAndUpdate(req.body._id,{$addToSet: {children: req}}, function (err, class_) {
+        if (err) {
+            console.log(err)
+            return res.status(400).send(err);
+        } else {
+            console.log(class_)
+            return res.json(class_)
+        }
+    })
+})
 
 module.exports = router
