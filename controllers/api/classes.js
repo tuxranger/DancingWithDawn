@@ -138,18 +138,18 @@ router.put('/addToClass', function (req, res, next) {
     })
 })
 
-// router.put('/removeAll', function (req, res, next) {
-//     console.log("before removal   " + req.body)
-//
-//     Class.findByIdAndUpdate(req.body._id,{$set: {children: []}}, function (err, class_) {
-//         if (err) {
-//             console.log(err)
-//             return res.status(400).send(err);
-//         } else {
-//             console.log("after removal   " + class_)
-//             return res.json(class_)
-//         }
-//     })
-// })
+router.put('/removeAll', function (req, res, next) {
+    console.log("before removal   " + req.body)
+
+    Class.findByIdAndUpdate(req.body._id,{$set: {children: []}}, function (err, class_) {
+        if (err) {
+            console.log(err)
+            return res.status(400).send(err);
+        } else {
+            console.log("after removal   " + class_)
+            return res.json(class_)
+        }
+    })
+})
 
 module.exports = router

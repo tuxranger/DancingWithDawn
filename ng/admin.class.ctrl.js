@@ -64,7 +64,7 @@ angular.module('app')
             $scope.items.splice(index, 1)
         };
 
-        // $scope.removeAll = function(class_) {
-        //     ClassSVC.removeAll(class_);
-        // }
+        $scope.removeAll = function(class_) {
+            ClassSVC.removeAll(class_);
+        }
     })

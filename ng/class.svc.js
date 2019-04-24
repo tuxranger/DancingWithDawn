@@ -44,7 +44,7 @@ angular.module('app')
         //     return $http.get('/api/classes/removeFromClass')
         // }
 
-        // svc.removeAll = function (class_) {
-        //     return $http.put('/api/classes/removeAll', class_)
-        // }
+        svc.removeAll = function (class_) {
+            return $http.put('/api/classes/removeAll', class_)
+        }
     })
