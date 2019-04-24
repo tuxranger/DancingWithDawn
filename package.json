@@ -2,6 +2,7 @@
 	"name": "dancewithdawn",
 	"scripts": {
 		"postinstall": "gulp build"
+		"test": "mocha"
 	},
 	"dependencies": {
 		"angular": "^1.7.8",
@@ -23,6 +24,8 @@
 		"sendgrid": "^5.2.3"
 	},
 	"devDependencies": {
-		"gulp": "^4.0.0"
+		"chai": "^4.2.0",
+		"gulp": "^4.0.0",
+		"mocha": "^6.1.4"
 	}
 }
