@@ -60,8 +60,9 @@ angular.module('app')
             console.log("students after put request " + class_.children)
         }
 
-        $scope.removeFromClass = function(index) {
-            $scope.items.splice(index, 1)
+        $scope.removeFromClass = function(class_, index) {
+            console.log(index)
+            class_.children.splice(index, 1)
         };
 
         $scope.removeAll = function(class_) {
