@@ -6,6 +6,10 @@ angular.module('app')
 		$scope.homepage_content = elems.data
 	})
 
+	AdminContentSvc.getAllBuckets().then(function(res) {
+		$scope.buckets = res.data
+	})
+
 	AdminContentSvc.getAllClassesElements().then(function(elems) {
 		$scope.classes_content = elems.data
 	})
@@ -116,4 +120,30 @@ angular.module('app')
 		})
 	}
 
+	$scope.addBucket = function (title, color, icon, desc) {
+		$scope.inputError = false
+		$scope.errorMessage = ''
+
+		if(!title || !desc) {
+			$scope.inputError = true
+			$scope.errorMessage = 'All text fields must contain content'
+			return
+		}
+
+		AdminContentSvc.addBucket(title, color, icon, desc)
+		.then(function (response) {
+			$location.path('/cm-homepage')
+		})
+	}
+
+	$scope.setBucketToUpdate = function(element) {
+		$scope.currentAdmin.bucketToUpdate = element
+	}
+
+	$scope.updateBucket = function(element) {
+		AdminContentSvc.updateBucket(element)
+		.then(function (response) {
+			$location.path('/cm-homepage')
+		})
+	}
 })

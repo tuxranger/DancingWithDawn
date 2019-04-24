@@ -10,6 +10,10 @@ angular.module('app')
 		return $http.get('/api/content/getAllHomepageElements')
 	}
 
+	svc.getAllBuckets = function () {
+		return $http.get('/api/content/getAllBuckets')
+	}
+
 	svc.getAllClassesElements = function () {
 		return $http.get('/api/content/getAllClassesElements')
 	}
@@ -76,4 +80,16 @@ angular.module('app')
 		return $http.put('/api/content/deleteClass', element)
 	}
 
+	svc.addBucket = function (title, color, icon, desc) {
+		return $http.post('/api/content/addBucket', {
+			title: title,
+			icon: icon,
+			color: color,
+			description: desc
+		})
+	}
+
+	svc.updateBucket = function (element) {
+		return $http.put('/api/content/updateBucket', element)
+	}
 })

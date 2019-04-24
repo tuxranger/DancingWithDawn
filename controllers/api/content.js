@@ -1,5 +1,6 @@
 var router = require('express').Router()
 var Content = require('../../models/content')
+var ContentBucket = require('../../models/contentBucket')
 var ContentClass = require('../../models/contentClass')
 var ContentFaq = require('../../models/contentFaq')
 
@@ -27,6 +28,13 @@ router.get('/getAllClassesElements', function (req, res, next) {
 router.get('/getAllClasses', function (req, res, next) {
 	ContentClass.find().then(function (classes) {
 		res.json(classes)
+	})
+})
+
+// Returns all children docs attached to a parent
+router.get('/getAllBuckets', function (req, res, next) {
+	ContentBucket.find().then(function (buckets) {
+		res.json(buckets)
 	})
 })
 
@@ -148,6 +156,31 @@ router.put('/deleteClass', function (req, res, next) {
       		return res.json(faq)
     	}
 	})
+})
+
+router.post('/addBucket', function (req, res, next) {
+	var element = new ContentBucket({
+		title: req.body.title,
+		icon: req.body.icon,
+		color: req.body.color,
+		description: req.body.description
+	})
+
+	element.save(function (err, newElement) {
+		if (err) { return next(err) }
+		else { return res.json(newElement) }
+	})
+})
+
+router.put('/updateBucket', function (req, res, next) {
+	ContentBucket.findOneAndUpdate( { "_id" : req.body._id}, req.body, function (err, element) {
+    	if (err) {
+      		console.log(err);
+      		return res.status(400).send(err);
+    	} else {
+      		return res.json(element);
+    	}
+    })
 })
 
 module.exports = router
