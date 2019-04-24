@@ -13,7 +13,6 @@ body {
 .font-pacifico { font-family: 'Pacifico', cursive; }
 
 
-
 .jumbotron {
  	border-radius: 0;
  	height: 22rem;
@@ -340,7 +339,7 @@ ul.parental-accounts {
 /* User Account Section */
 
 .child-container {	
-	border: 1px solid #aaa;
+	border: 1px solid #ccc;
 	background-color: #fff;
 }
 

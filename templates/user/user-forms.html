@@ -7,17 +7,19 @@
 	<p class="user-page-headline">Forms</p>
 </div>
 
-<!-- Add Photo Release Link-->
-<div class='container mb-3 w-75' ng-if='currentUser'>
-	<a href="#" target="_blank" class="btn btn-primary block mx-auto my-3 px-4 py-2">Download Liability Form</a>
-</div>
-
-<div class='container mb-3 w-75' ng-if='currentUser'>
-	<a href="#" target="_blank" class="btn btn-primary block mx-auto my-3 px-4 py-2">Download Photo Release</a>
-</div>
-
-<div class='container mb-3 w-75' ng-if='currentUser'>
-	<p  class="text-center font-italic mx-auto my-3 px-4 py-2">Please Print These Forms To Turn In During Your Child's First Class</p>
+<div class='container mb-3' ng-if='currentUser'>
+	<div class='row justify-content-center'>
+		<div class='col-md-10'>
+			<div class='container child-container py-2 my-3 text-center'>
+				<p>Please print and fill out these forms prior to your child's first class:</p>
+			
+			<div class='row'>
+				<a href="./pdf/waiver.pdf" target="_blank" class="col-10 col-md-5 btn block mx-auto my-3 py-2 dwd-blue-bg text-light">Download<br>Waiver Form</a>
+				<a href="./pdf/photo_release.pdf" target="_blank" class="col-10 col-md-5 btn block mx-auto my-3 py-2 dwd-blue-bg text-light">Download<br>Photo Release Form</a>
+			</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <ng-include src="'footer.html'"></ng-include>
