@@ -114,18 +114,21 @@ router.get('/getAllChildren', function (req, res, next) {
 
 router.put('/addToClass', function (req, res, next) {
 
-    // console.log(req.body)
-    console.log("these are the childer for req.body.children    " + req.body.children)
+    console.log("this is the child for req.body.children    " + req.body.children)
+    var howdy = req.body.children;
+    console.log(howdy);
+
 
     if (!req.headers['x-auth']) {
         return res.sendStatus(401)
     }
-    //
+
     var auth = jwt.decode(req.headers['x-auth'], config.secret)
     Admin.findOne({username: auth.username}, function (err) {
         if (err) { return next(err) }
     })
-    //
+
+
     // Class.findByIdAndUpdate(req.body._id,{$addToSet: {children: req.body.children}}, function (err, class_) {
     Class.findByIdAndUpdate(req.body._id,{$set: {children: req.body.children}}, function (err, class_) {
         if (err) {

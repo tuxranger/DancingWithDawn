@@ -62,9 +62,8 @@
                     </tr>
                     <tr ng-repeat="child in children | filter: query | orderBy:'fullName'">
                         <td>
-                            <button type="button" class="btn btn-success btn-xs" ng-click="addToClass(currentAdmin.classToUpdate, child)" >
-                  <span class="glyphicon glyphicon-plus" >
-                    </span>
+                            <button type="button" class="btn btn-success btn-xs" ng-click="addToClass(currentAdmin.classToUpdate, currentAdmin.child._id)" >
+                                <span class="glyphicon glyphicon-plus" ></span>
                             </button>
                         </td>
                         <td ng-model="_id">{{child.fullName}}</td>
