@@ -2,6 +2,20 @@
 <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Update Class</h1>
 </div>
+<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>-->
+<!--<script type="text/javascript">-->
+    <!--$(function() {-->
+        <!--// choose target dropdown-->
+        <!--var select = $('select');-->
+        <!--select.html(select.find('option').sort(function(x, y) {-->
+            <!--// to change to descending order switch "<" for ">"-->
+            <!--return $(x).text() > $(y).text() ? 1 : -1;-->
+        <!--}));-->
+
+        <!--// select default item after sorting (first item)-->
+        <!--// $('select').get(0).selectedIndex = 0;-->
+    <!--});-->
+<!--</script>-->
 
 <div class="container" ng-if="currentAdmin">
 
@@ -55,6 +69,7 @@
                         </td>
                         <td ng-model="_id">{{child.fullName}}</td>
                     </tr>
+                    <!--<td ng-click="deleteListing(listing._id)"><span style="color: red;" class="glyphicon glyphicon-remove"></span></td>-->
                     </tr>
                 </table>
             </div>
@@ -81,12 +96,15 @@
                         </td>
                         <td ng-model="_id">{{student.fullName}}</td>
                     </tr>
+                    <!--<td ng-click="deleteListing(listing._id)"><span style="color: red;" class="glyphicon glyphicon-remove"></span></td>-->
                     </tr>
                 </table>
             </div>
         </div>
 
+
 <!--        <div><button type="button" class="btn btn-danger btn-lg" ng-click="removeAll(currentAdmin.classToUpdate)">remove all students</button></div>-->
+
         <input class="btn btn-success btn-lg btn-block" type="submit" value="Update Class">
     </form>
 

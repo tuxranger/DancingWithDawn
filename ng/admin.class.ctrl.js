@@ -4,6 +4,7 @@ angular.module('app')
         var enrolledStudents
         $scope.enrollment = [];
 
+
         $scope.addClass = function (title, description, time, days, album) {
             ClassSVC.addClass(title, description, time, days, album)
                 .then(function (response) {
@@ -37,64 +38,22 @@ angular.module('app')
             $scope.children = res.data
         })
 
-        ClassSVC.getAllStudents().then(function(res) {
-            enrolledStudents = res.data
-            $scope.enrollment = res.data
-        }).then(function() {
-            if (enrolledStudents){
-                console.log(enrolledStudents)
-                ClassSVC.getStudentsNames(enrolledStudents).then(function (res) {
-                    $scope.studentsList = res.data
-                })
-            }
-        })
+        // ClassSVC.getAllStudents().then(function(res) {
+        //     $scope.students = res.data
+        // })
 
-
-
-
-        $scope.addToClass = function(class_, child) {
-            console.log("class " + class_)
-
-            // console.log("enrollment " + $scope.enrollment)
-
-            console.log("students before put request " + class_.children)
-            var dupeChild = class_.children.includes(child);
-            if (!dupeChild){
-                $scope.enrollment.push(child)
-                class_.children = $scope.enrollment
-                ClassSVC.addToClass(class_)
-            } else {
-                console.log("child already added")
-            }
-            console.log("students after put request " + class_.children)
-
-            $scope.apply(function () {
-                ClassSVC.getAllStudents().then(function(res) {
-                    $scope.enrolledStudents = res.data
-                })
-                ClassSVC.getStudentsNames(enrolledStudents).then(function (res) {
-                    $scope.studentsList = res.data
-                })
-            })
+        // $scope.setClassToModifyRoster = function(classRoster) {
+        //     $scope.currentAdmin.classToModifyRoster = classRoster
+        // }
+        //
+        $scope.addToClass = function(class_) {
+            console.log(class_)
+            $scope.enrollment.push($scope.input)
+            class_.children = $scope.enrollment
+            ClassSVC.addToClass(class_)
         }
 
-        $scope.removeFromClass = function(class_, student) {
-            var index = class_.children.indexOf(student)
-            class_.children.splice(index, 1);
-
-            var class_modified = class_;
-            class_modified.children.splice(0);
-            class_modified.children.push(student);
-            class_modified.children = student;
-            ClassSVC.removeFromClass(class_modified);
-
-            ClassSVC.getAllStudents().then(function(res) {
-                $scope.enrolledStudents = res.data
-            })
+        $scope.removeFromClass = function(index) {
+            $scope.items.splice(index, 1)
         };
-
-        $scope.removeAll = function(class_) {
-            console.log("I'm about to call svc remove all")
-            ClassSVC.removeAll(class_);
-        }
     })

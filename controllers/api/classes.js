@@ -33,6 +33,7 @@ router.post('/addClass', function (req, res, next) {
 
     class_.save(function (err) {
         if (err) { return next(err) }
+        //console.log('fullName is: ' + fullName_)
         console.log('Success saving: ' + class_)
         res.sendStatus(201)
     })
@@ -93,41 +94,27 @@ router.get('/getAllChildren', function (req, res, next) {
 
 
 
-router.get('/getAllStudents', function (req, res, next) {
-    if (!req.headers['x-auth']) {
-        return res.sendStatus(401)
-    }
-
-    var auth = jwt.decode(req.headers['x-auth'], config.secret)
-    Admin.findOne({username: auth.username}, function (err) {
-        if (err) { return next(err) }
-    })
-
-    Class.distinct("children").then(function (class_) {
-        console.log("this is the class find children $all\n" + class_)
-        res.json(class_)
-    })
-})
-
-router.put('/getNames', function (req, res, next) {
-    if (!req.headers['x-auth']) {
-        return res.sendStatus(401)
-    }
-
-    var auth = jwt.decode(req.headers['x-auth'], config.secret)
-    Admin.findOne({username: auth.username}, function (err) {
-        if (err) { return next(err) }
-    })
-
-    Child.find({_id: {"$in": req.body}}).then(function (students) {
-        console.log("this is the students from db query \n" + students)
-        res.json(students)
-    })
-})
+// router.get('/getAllStudents', function (req, res, next) {
+//     if (!req.headers['x-auth']) {
+//         return res.sendStatus(401)
+//     }
+//
+//     var auth = jwt.decode(req.headers['x-auth'], config.secret)
+//     Admin.findOne({username: auth.username}, function (err) {
+//         if (err) { return next(err) }
+//     })
+//
+//     Class.findOne({_id: req.body._id}).then(function (class_) {
+//         console.log(class_.children)
+//         res.json(class_.children)
+//     })
+// })
 
 router.put('/addToClass', function (req, res, next) {
 
     console.log(req.body)
+    console.log(req.body.childrenToEnroll)
+
 
     if (!req.headers['x-auth']) {
         return res.sendStatus(401)
@@ -175,6 +162,7 @@ router.put('/removeFromClass', function (req, res, next) {
 router.put('/removeAll', function (req, res, next) {
     console.log("before removal   " + req.body)
 
+
     Class.findByIdAndUpdate(req.body._id,{$set: {children: []}}, function (err, class_) {
         if (err) {
             console.log(err)
@@ -184,6 +172,5 @@ router.put('/removeAll', function (req, res, next) {
             return res.json(class_)
         }
     })
-})
 
 module.exports = router
