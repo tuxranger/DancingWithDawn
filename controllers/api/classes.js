@@ -172,5 +172,5 @@ router.put('/removeAll', function (req, res, next) {
             return res.json(class_)
         }
     })
-
+})
 module.exports = router
