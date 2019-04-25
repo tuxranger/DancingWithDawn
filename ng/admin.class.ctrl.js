@@ -1,7 +1,9 @@
 angular.module('app')
     .controller('ClassCtrl', function($scope, ClassSVC, $location) {
 
-        $scope.enrollment = []
+        var enrolledStudents
+        $scope.enrollment = [];
+
 
         $scope.addClass = function (title, description, time, days, album) {
             ClassSVC.addClass(title, description, time, days, album)
