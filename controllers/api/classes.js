@@ -62,33 +62,33 @@ router.put('/deleteClass', function (req, res, next) {
 })
 
 router.get('/getAllClasses', function (req, res, next) {
-	if (!req.headers['x-auth']) {
-		return res.sendStatus(401)
-	}
+    if (!req.headers['x-auth']) {
+        return res.sendStatus(401)
+    }
 
-	var auth = jwt.decode(req.headers['x-auth'], config.secret)
-	Admin.findOne({username: auth.username}, function (err) {
-		if (err) { return next(err) }
-	})
+    var auth = jwt.decode(req.headers['x-auth'], config.secret)
+    Admin.findOne({username: auth.username}, function (err) {
+        if (err) { return next(err) }
+    })
 
-	Class.find().then(function (class_) {
-		res.json(class_)
-	})
+    Class.find().then(function (class_) {
+        res.json(class_)
+    })
 })
 
 router.get('/getAllChildren', function (req, res, next) {
-	if (!req.headers['x-auth']) {
-		return res.sendStatus(401)
-	}
+    if (!req.headers['x-auth']) {
+        return res.sendStatus(401)
+    }
 
-	var auth = jwt.decode(req.headers['x-auth'], config.secret)
-	Admin.findOne({username: auth.username}, function (err) {
-		if (err) { return next(err) }
-	})
+    var auth = jwt.decode(req.headers['x-auth'], config.secret)
+    Admin.findOne({username: auth.username}, function (err) {
+        if (err) { return next(err) }
+    })
 
-	Child.find().then(function (children) {
-	    res.json(children)
-	})
+    Child.find().then(function (children) {
+        res.json(children)
+    })
 })
 
 
