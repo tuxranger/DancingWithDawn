@@ -2,9 +2,6 @@ angular.module('app')
     .service('ClassSVC', function ($http) {
         var svc = this
 
-        // svc.getAdmin = function () {
-        //     return $http.get('/api/classes')
-        // }
 
         svc.addClass = function (title, description, time, days, album) {
             return $http.post('/api/classes/addClass', {
@@ -32,16 +29,20 @@ angular.module('app')
             return $http.get('/api/classes/getAllChildren')
         }
 
-        // svc.getAllStudents = function () {
-        //     return $http.get('/api/classes/getAllStudents')
-        // }
+        svc.getAllStudents = function () {
+            return $http.get('/api/classes/getAllStudents')
+        }
+
+        svc.getStudentsNames = function (students) {
+            return $http.put('/api/classes/getNames', students)
+        }
 
         svc.addToClass = function () {
             return $http.put('/api/classes/addToClass')
         }
 
-        // svc.removeFromClass = function () {
-        //     return $http.get('/api/classes/removeFromClass')
-        // }
+        svc.removeFromClass = function (class_) {
+            return $http.put('/api/classes/removeFromClass', class_)
+        }
 
     })
