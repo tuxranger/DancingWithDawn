@@ -187,6 +187,5 @@ router.put('/removeFromClass', function (req, res, next) {
             return res.json(class_)
         }
     })
-})
 
 module.exports = router
