@@ -33,7 +33,6 @@ router.post('/addClass', function (req, res, next) {
 
     class_.save(function (err) {
         if (err) { return next(err) }
-        //console.log('fullName is: ' + fullName_)
         console.log('Success saving: ' + class_)
         res.sendStatus(201)
     })
@@ -73,7 +72,6 @@ router.get('/getAllClasses', function (req, res, next) {
 	})
 
 	Class.find().then(function (class_) {
-	    //console.log(class_)
 		res.json(class_)
 	})
 })
@@ -89,7 +87,6 @@ router.get('/getAllChildren', function (req, res, next) {
 	})
 
 	Child.find().then(function (children) {
-		//console.log(children)
 	    res.json(children)
 	})
 })
@@ -112,7 +109,7 @@ router.get('/getAllStudents', function (req, res, next) {
     })
 })
 
-router.get('/getStudentsNames', function (req, res, next) {
+router.put('/getNames', function (req, res, next) {
     if (!req.headers['x-auth']) {
         return res.sendStatus(401)
     }
@@ -122,16 +119,15 @@ router.get('/getStudentsNames', function (req, res, next) {
         if (err) { return next(err) }
     })
 
-    console.log("req.body is " + req.body)
-    // Child.find({_id: req.body.id}).then(function (students) {
-    //     res.json(students)
-    // })
+    Child.find({_id: {"$in": req.body}}).then(function (students) {
+        console.log("this is the students from db query \n" + students)
+        res.json(students)
+    })
 })
 
 router.put('/addToClass', function (req, res, next) {
 
     console.log(req.body)
-    // console.log("these are the childer for req.body.children    " + req.body.children)
 
     if (!req.headers['x-auth']) {
         return res.sendStatus(401)
@@ -141,8 +137,7 @@ router.put('/addToClass', function (req, res, next) {
     Admin.findOne({username: auth.username}, function (err) {
         if (err) { return next(err) }
     })
-    //
-    // Class.findByIdAndUpdate(req.body._id,{$addToSet: {children: req.body.children}}, function (err, class_) {
+
     Class.findByIdAndUpdate(req.body._id,{$set: {children: req.body.children}}, function (err, class_) {
         if (err) {
             console.log(err)

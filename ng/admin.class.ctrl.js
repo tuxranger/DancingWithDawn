@@ -40,27 +40,18 @@ angular.module('app')
         ClassSVC.getAllStudents().then(function(res) {
             enrolledStudents = res.data
             $scope.enrollment = res.data
-
-            // ClassSVC.getStudentsNames(enrolledStudents).then(function(res) {
-            //     $scope.studentsList = res.data
-            // })
-        }).then(
-            $
-            ClassSVC.getStudentsNames(enrolledStudents).then(function(res) {
-                ("input").val(JSON.stringify(enrolledStudents));
-                var savedArray = JSON.parse($("input").val());
-                console.log("list of students" + savedArray)
-                $scope.studentsList = res.data
-            })
-        )
+        }).then(function() {
+            if (enrolledStudents){
+                console.log(enrolledStudents)
+                ClassSVC.getStudentsNames(enrolledStudents).then(function (res) {
+                    $scope.studentsList = res.data
+                })
+            }
+        })
 
 
 
 
-        // $scope.setClassToModifyRoster = function(classRoster) {
-        //     $scope.currentAdmin.classToModifyRoster = classRoster
-        // }
-        //
         $scope.addToClass = function(class_, child) {
             console.log("class " + class_)
 
@@ -71,16 +62,19 @@ angular.module('app')
             if (!dupeChild){
                 $scope.enrollment.push(child)
                 class_.children = $scope.enrollment
-                // $scope.enrollment.splice(0, 1);
-                // class_.children.push(child)
                 ClassSVC.addToClass(class_)
             } else {
                 console.log("child already added")
             }
             console.log("students after put request " + class_.children)
 
-            ClassSVC.getAllStudents().then(function(res) {
-                $scope.enrolledStudents = res.data
+            $scope.apply(function () {
+                ClassSVC.getAllStudents().then(function(res) {
+                    $scope.enrolledStudents = res.data
+                })
+                ClassSVC.getStudentsNames(enrolledStudents).then(function (res) {
+                    $scope.studentsList = res.data
+                })
             })
         }
 
