@@ -172,15 +172,18 @@ router.put('/removeFromClass', function (req, res, next) {
     })
 })
 
-router.put('/removeAll', function (req, res, next) {
-    console.log("before removal   " + req.body)
 
-    Class.findByIdAndUpdate(req.body._id,{$set: {children: []}}, function (err, class_) {
+    // var auth = jwt.decode(req.headers['x-auth'], config.secret)
+    // Admin.findOne({username: auth.username}, function (err) {
+    //     if (err) { return next(err) }
+    // })
+
+    Class.findByIdAndUpdate(req.body._id,{$addToSet: {children: req}}, function (err, class_) {
         if (err) {
             console.log(err)
             return res.status(400).send(err);
         } else {
-            console.log("after removal   " + class_)
+            console.log(class_)
             return res.json(class_)
         }
     })

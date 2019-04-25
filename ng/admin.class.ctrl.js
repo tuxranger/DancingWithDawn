@@ -4,6 +4,7 @@ angular.module('app')
         var enrolledStudents
         $scope.enrollment = [];
 
+
         $scope.addClass = function (title, description, time, days, album) {
             ClassSVC.addClass(title, description, time, days, album)
                 .then(function (response) {

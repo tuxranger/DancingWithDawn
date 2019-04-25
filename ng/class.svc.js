@@ -37,15 +37,12 @@ angular.module('app')
             return $http.put('/api/classes/getNames', students)
         }
 
-        svc.addToClass = function (class_) {
-            return $http.put('/api/classes/addToClass', class_)
+        svc.addToClass = function () {
+            return $http.put('/api/classes/addToClass')
         }
 
         svc.removeFromClass = function (class_) {
             return $http.put('/api/classes/removeFromClass', class_)
         }
 
-        svc.removeAll = function (class_) {
-            return $http.put('/api/classes/removeAll', class_)
-        }
     })
